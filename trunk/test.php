@@ -6,6 +6,7 @@
 </head>
 <body>
 <h1>Projet Pâté</h1>
+<p>pâté</p>
 <div>
 <?php
 	// on se connecte à MySQL
