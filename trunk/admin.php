@@ -53,14 +53,14 @@
 				</thead>
 				<tbody>
 <?php
-			while($row = $results->fetch()) :
+			while($row = $results->fetch()) {
 ?>
 				<tr>
 					<td><?php echo $row->id;?></td>
 					<td><?php echo $row->nom;?></td>
 				</tr>
 <?php
-			endwhile;
+			}
 ?>
 
 				</tbody>
