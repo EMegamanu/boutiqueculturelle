@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Test</title>
+		<meta charset="utf-8" />
+		<style>
+			label.required:after {
+				content: "*";
+				font-size: 0.7em;
+				vertical-align: top;
+			}
+
+			ul.test li {
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="#">
+			<fieldset>
+				<label for="monChamp" class="required">Mon champ</label> :
+				<input type="text" name="monChamp" id="monChamp" required="required" />
+			</fieldset>
+		</form>
+
+		<ul class="test">
+			<li>toto</li>
+			<li>titi</li>
+			<li>tutu</li>
+			<li>tata</li>
+	</body>
+</html>
