@@ -42,7 +42,7 @@
 			$subtitle = 'Facture';
 		break;
 		case 'categories':
-			$results = $connection->query('SELECT * FROM Categorie');
+			$results = $db->query('SELECT * FROM Categorie');
 			$results->setFetchMode(PDO::FETCH_OBJ);
 ?>
 			<h2><?php echo 'Catégories de produits.';?></h2>

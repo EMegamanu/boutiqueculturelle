@@ -1,0 +1,191 @@
+body{
+    font-family:'Arial', sans-serif;
+    margin:0;padding:0;
+    width:100%;
+    height:100%;
+    color:#00000;
+    background-color:#008080;
+}
+h1 {
+font-family:verdana, sans-serif;
+font-size:300%;
+color:black;
+background-color:transparent;
+text-align:center;
+}
+
+body{
+    background-image:url('http://www.infoject.fr/images/articles/9_bg_lr_1_small.png'), url('http://www.infoject.fr/images/articles/9_bg_lr_2_small.png'), url('http://www.infoject.fr/images/articles/9_bg_lr_3_small.png');
+    background-position:0% 0px, 0% 0px, 0% 0px;
+    background-repeat:repeat-x;
+    background-size:contain;
+
+    -ms-animation: movingBg 25s linear infinite alternate;
+    -moz-animation: movingBg 25s linear infinite alternate;
+    -webkit-animation: movingBg 25s linear infinite alternate;
+}
+
+/*******************************
+** Animations
+*******************************/
+@-ms-keyframes movingBg{
+    0%{background-position:0% 0px, 50% 0px, 100% 0px;}
+    10%{background-position:3% 0px, 43% 0px, 92% 0px;}
+    20%{background-position:8% 5px, 33% -10px, 80% 0px;}
+    40%{background-position:15% 15px, 30% 0px, 60% 15px;}
+    60%{background-position:25% 20px, 20% 15px, 40% 0px;}
+    80%{background-position:31% 25px, 12% 25px, 20% 8px;}
+    90%{background-position:37% 29px, 5% 28px, 5% 13px;}
+    100%{background-position:40% 30px, 3% 30px, 0% 15px;}
+}
+
+@-moz-keyframes movingBg{
+    0%{background-position:0% 0px, 50% 0px, 100% 0px;}
+    10%{background-position:3% 0px, 43% 0px, 92% 0px;}
+    20%{background-position:8% 5px, 33% -10px, 80% 0px;}
+    40%{background-position:15% 15px, 30% 0px, 60% 15px;}
+    60%{background-position:25% 20px, 20% 15px, 40% 0px;}
+    80%{background-position:31% 25px, 12% 25px, 20% 8px;}
+    90%{background-position:37% 29px, 5% 28px, 5% 13px;}
+    100%{background-position:40% 30px, 3% 30px, 0% 15px;}
+}
+
+@-webkit-keyframes movingBg{
+    0%{background-position:0% 0px, 50% 0px, 100% 0px;}
+    10%{background-position:3% 0px, 43% 0px, 92% 0px;}
+    20%{background-position:8% 5px, 33% -10px, 80% 0px;}
+    40%{background-position:15% 15px, 30% 0px, 60% 15px;}
+    60%{background-position:25% 20px, 20% 15px, 40% 0px;}
+    80%{background-position:31% 25px, 12% 25px, 20% 8px;}
+    90%{background-position:37% 29px, 5% 28px, 5% 13px;}
+    100%{background-position:40% 30px, 3% 30px, 0% 15px;}
+}
+ #menu  ul {
+ padding:0;
+ margin:0;
+ list-style-type:none;
+ width:100%;
+ }
+ #menu li {
+ float:left; /*pour IE*/
+ border-left:1% solid grey;
+ width:20%;
+ }
+ #menu ul li a {
+ display:block;
+ float:left;   
+ width:99.5%;
+ line-height:45px; /*hauteur de l'image de fond*/
+ background:black url(http://www.psd-file.com/images/tuto_icone_glossy/01.jpg) repeat-x;
+ color:#DCDCDC;
+ text-decoration:none;
+ text-align:center;
+ }
+ 
+ #menu ul li a:hover {
+ background:black url(http://visionnervideo.com/images/degrade-noir-horizontal.jpg) repeat-x;
+ color:white;
+ }  
+
+#menu ul li ul {
+ display:none;
+ }
+ #menu ul li:hover ul {
+ display:block;
+ }
+#menu li:hover ul li {
+ float:none;
+ }
+
+#menu li ul {
+ position:absolute;
+ }
+
+#menu2 {
+  background: #333;
+  float:none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 800px;
+}
+#menu2 li {
+  font: 67.5% 'Lucida Sans Unicode', 'Bitstream Vera Sans', 'Trebuchet Unicode MS', 'Lucida Grande', Verdana, Helvetica, sans-serif;
+  float:none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#menu2 a {
+  background: #333;
+  float:none;
+  border-bottom: 1px solid #393939;
+  color: #ccc;
+  display: block;
+  margin: 0;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-weight: normal;
+}
+#menu2 a:hover {
+  background: #2580a2 url(hover.gif)left center no-repeat;
+  color: #fff;
+  padding-bottom: 8px;
+}
+form {
+    /* Pour le centrer dans la page */
+    margin: 0 auto;
+    width: 500px;
+    /* Pour voir les limites du formulaire */
+    padding: 3em;
+    border: 3px solid #CCC;
+    border-radius: 4em;
+}
+form div + div {
+    margin-top: 1em;
+}
+label {
+    /* Afin de s'assurer que toutes les étiquettes aient la même dimension et soient alignées correctement */
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+}
+input, textarea {
+    /* Afin de s'assurer que tous les champs textuels utilisent la même police
+       Par défaut, textarea utilise une police à espacement constant */
+    font: 1em sans-serif;
+
+    /* Pour donner la même dimension à tous les champs textuels */
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* Pour harmoniser l'apparence des bordures des champs textuels */
+    border: 4px solid #999;
+}
+input:focus, textarea:focus {
+    /* Afin de rehausser les éléments actifs */
+    border-color: #000;
+}
+textarea {
+    /* Pour aligner correctement les champs multilignes et leurs étiquettes */
+    vertical-align: top;
+
+    /* Pour donner assez d'espace pour entrer du texte */
+    height: 6em;
+
+    /* Pour permettre aux utilisateurs de redimensionner un champ textuel horizontalement
+       Cela ne marche pas avec tous les navigateurs  */
+    resize: vertical;
+}.button {
+    /* Pour positionner les boutons de la même manière que les champs textuels */
+    padding-left: 90px; /* même dimension que les étiquettes */
+}
+
+button {
+    /* Cette marge représente approximativement le même espace
+       que celui entre les étiquettes et les champs textuels */
+    margin-left: 3em;
+}
+</style>
+
