@@ -17,7 +17,7 @@
 		$user = 'Ciceron';
 		$password = '106AVJC';
 
-		$connection = new PDO($dns, $user, $password);
+		$db = new PDO($dns, $user, $password);
 	} catch (Exception $e) {
 ?>
 <pre>
