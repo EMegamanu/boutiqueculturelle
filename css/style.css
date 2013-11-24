@@ -1,0 +1,69 @@
+pre.log {
+    max-height: 300px;
+    overflow-y: scroll;
+    border: solid 1px #000000; 
+}
+
+p.result {
+    font-weight: bold;
+}
+
+p.success {
+    color: #006600;
+}
+
+p.fail {
+    color: #FF0000;
+}
+
+/*header {
+    border: solid 1px red;
+}*/
+
+#logo, header h1 {
+    /*border: solid 1px black;*/
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+}
+
+ul#menu-principal {
+    background: #CCCCCC;
+    color: #000000;
+    padding: 0;
+    height: 20px;
+    
+    position: relative;
+    z-index: 1;
+}
+
+ul#menu-principal a {
+    background: #CCCCCC;
+    color: #000000;
+}
+
+ul#menu-principal li:hover > a {
+    background: #000000;
+    color: #CCCCCC;
+}
+
+ul#menu-principal > li {
+    display: inline-block;
+    vertical-align: top;
+    width: 150px;
+} 
+
+ul#menu-principal li > a {
+    display: block;
+    width: 100%;
+}
+
+ul#menu-principal ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+ul#menu-principal > li:hover ul {
+    display: block;
+}
