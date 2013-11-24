@@ -56,6 +56,7 @@ CREATE TABLE Categorie (
 -- -----------------------------------------------------
 CREATE TABLE Produit (
   id INT NOT NULL AUTO_INCREMENT,
+  nom VARCHAR(45) NOT NULL,
   idCategorie INT NOT NULL,
   prixHT DECIMAL(5,2) NOT NULL,
   image VARCHAR(45) NULL,
@@ -69,7 +70,6 @@ CREATE TABLE Produit (
 CREATE TABLE Livre (
   id INT NOT NULL,
   genre VARCHAR(45) NOT NULL,
-  nom VARCHAR(45) NOT NULL,
   auteur VARCHAR(45) NOT NULL,
   dateParution DATE NOT NULL,
   PRIMARY KEY(id)
@@ -82,7 +82,6 @@ CREATE TABLE Livre (
 CREATE TABLE Disque (
   id INT NOT NULL,
   genre VARCHAR(45) NOT NULL,
-  nom VARCHAR(45) NOT NULL,
   compositeur VARCHAR(45) NOT NULL,
   anneeProduction DATE NOT NULL,
   PRIMARY KEY (id)
@@ -93,7 +92,6 @@ CREATE TABLE Disque (
 -- -----------------------------------------------------
 CREATE TABLE Film (
   id INT NOT NULL,
-  nom VARCHAR(45) NOT NULL,
   genre VARCHAR(45) NOT NULL,
   realisateur VARCHAR(45) NOT NULL,
   anneeProduction DATE NOT NULL,
