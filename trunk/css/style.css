@@ -2,6 +2,9 @@ body{
     font-family: sans-serif;
     min-width: 800px;
     overflow-x: auto;
+
+    margin: 0;
+    padding: 0;
 }
 pre.log {
     max-height: 300px;
@@ -21,41 +24,42 @@ p.fail {
     color: #FF0000;
 }
 
-/*header {
-    border: solid 1px red;
-}*/
 
-#logo, header h1 {
-    /*border: solid 1px black;*/
-    display: inline-block;
-    margin: 0;
+#logo {
     vertical-align: middle;
 }
 
-ul#menu-principal {
-    background: #000000;
-    color: #FFFFFF;
-    padding: 0;
+nav {    
     height: 35px;
+
+    /* Génération dégradé facile : http://www.colorzilla.com/gradient-editor/ */
+    background: #000000; /* Old browsers */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(12%,#595959), color-stop(25%,#666666), color-stop(39%,#474747), color-stop(50%,#2c2c2c), color-stop(51%,#000000), color-stop(60%,#111111), color-stop(76%,#2b2b2b), color-stop(91%,#1c1c1c), color-stop(100%,#131313)); /* Chrome,Safari4+ */
+    background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C */
+    color: #FFFFFF;
 
     position: relative;
     z-index: 1;
+}
 
-    background: #4c4c4c; /* Old browsers */
-    background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C */
+ul#menu-principal {
+    display:inline;
 
+    padding: 0;
 }
 
 ul#menu-principal li {
     /*border: 1px red solid;*/
+    min-width: 150px;
+    height: 35px;
 }
 
 ul#menu-principal a {
-    display: block;
-    height: 25px;
-    width: 150px;
+    display: inline-block;
+    height: 23px;
+    width: 100%;
 
-    padding-top: 10px;
+    padding-top: 7px;
 
     text-align: center;
 
@@ -66,17 +70,18 @@ ul#menu-principal a {
     /*border: 1px black solid;*/
 }
 
-ul#menu-principal ul a {
+ul#menu-principal ul {
     background: black;
     color: inherit;
 } 
 
 ul#menu-principal input {
-    display: block;
-    width: 150px;
+    margin-top: 7px;
+    /*display: block;*/
+    /*width: 150px;*/
 
-    margin-top: 5px;
-    padding-left: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 ul#menu-principal > li > a {
@@ -87,30 +92,32 @@ ul#menu-principal li:hover > a {
     color: #CCCCCC;
 }
 
-li#search-item {
-    display: block;
-    height: 35px;
-    width: 150px;
-
-    border-left: solid 1px #FFFFFF;
-    padding-left: 10px;
-}
 
 ul#menu-principal > li {
     display: inline-block;
     vertical-align: top;
 } 
 
+li#search-item {
+    float: right;
+    /*display: block;*/
+
+    border-left: solid 1px #FFFFFF;
+    /*padding-left: 10px;*/
+}
+
 ul#menu-principal li > a {
-    display: block;
+    /*display: block;*/
 }
 
 ul#menu-principal ul {
-    display: none;
+    /*display: none;*/
+    visibility: hidden;
     list-style: none;
     padding: 0;
 }
 
 ul#menu-principal > li:hover ul {
-    display: block;
+    /*display: block;*/
+    visibility: visible;
 }

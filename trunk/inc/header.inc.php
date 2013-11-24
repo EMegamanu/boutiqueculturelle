@@ -11,16 +11,17 @@
 	<body>
 
 	<header>
-		<img src="img/logo-64.png" alt="Boutique culturelle" id="logo"/>
-		<h1><?php echo $title; ?></h1>
-
+		<h1>
+			<img src="img/logo-64.png" alt="Boutique culturelle" id="logo"/>
+			<?php echo $title; ?>
+		</h1>
 		<nav>
 			<ul id="menu-principal">
 				<li>
 					<a href="disques.php">Disques</a>
 					<ul>
 						<li><a href="disques.php?cat=cd">CD</a></li>
-						<li><a href="disques.php?cat=demat">Dématérialisés</a></li>
+						<li><a href="disques.php?cat=mp3">MP3</a></li>
 					</ul>
 				</li>
 				<li>
