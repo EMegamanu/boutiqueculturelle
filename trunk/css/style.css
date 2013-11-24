@@ -1,3 +1,8 @@
+body{
+    font-family: sans-serif;
+    min-width: 800px;
+    overflow-x: auto;
+}
 pre.log {
     max-height: 300px;
     overflow-y: scroll;
@@ -31,15 +36,38 @@ ul#menu-principal {
     background: #CCCCCC;
     color: #000000;
     padding: 0;
-    height: 20px;
-    
+    height: 35px;
+
     position: relative;
     z-index: 1;
 }
 
+ul#menu-principal li {
+    /*border: 1px red solid;*/
+}
+
 ul#menu-principal a {
+    display: block;
+    height: 25px;
+    width: 150px;
+
+    padding-top: 10px;
+
+    text-align: center;
+
     background: #CCCCCC;
     color: #000000;
+
+    text-decoration: none;
+    /*border: 1px black solid;*/
+}
+
+ul#menu-principal input {
+    display: block;
+    width: 150px;
+
+    margin-top: 5px;
+    padding-left: 5px;
 }
 
 ul#menu-principal li:hover > a {
@@ -50,12 +78,11 @@ ul#menu-principal li:hover > a {
 ul#menu-principal > li {
     display: inline-block;
     vertical-align: top;
-    width: 150px;
+  
 } 
 
 ul#menu-principal li > a {
     display: block;
-    width: 100%;
 }
 
 ul#menu-principal ul {
