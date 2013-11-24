@@ -38,7 +38,7 @@
 					</ul>
 				</li>
 				<li><a href="packs.php">Pack Culture</a></li>
-				<li><input type="search" name="recherche" placeholder="Tapez votre recherche"/></li>
+				<li id="search-item"><input type="search" name="recherche" placeholder="Tapez votre recherche"/></li>
 
 			</ul>
 		</nav>

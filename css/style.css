@@ -33,13 +33,17 @@ p.fail {
 }
 
 ul#menu-principal {
-    background: #CCCCCC;
-    color: #000000;
+    background: #000000;
+    color: #FFFFFF;
     padding: 0;
     height: 35px;
 
     position: relative;
     z-index: 1;
+
+    background: #4c4c4c; /* Old browsers */
+    background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C */
+
 }
 
 ul#menu-principal li {
@@ -55,12 +59,17 @@ ul#menu-principal a {
 
     text-align: center;
 
-    background: #CCCCCC;
-    color: #000000;
+    background: transparent;
+    color: #FFFFFF;
 
     text-decoration: none;
     /*border: 1px black solid;*/
 }
+
+ul#menu-principal ul a {
+    background: black;
+    color: inherit;
+} 
 
 ul#menu-principal input {
     display: block;
@@ -70,15 +79,26 @@ ul#menu-principal input {
     padding-left: 5px;
 }
 
+ul#menu-principal > li > a {
+    font-weight: bold;
+}
 ul#menu-principal li:hover > a {
-    background: #000000;
+    /*background: transpare;*/
     color: #CCCCCC;
+}
+
+li#search-item {
+    display: block;
+    height: 35px;
+    width: 150px;
+
+    border-left: solid 1px #FFFFFF;
+    padding-left: 10px;
 }
 
 ul#menu-principal > li {
     display: inline-block;
     vertical-align: top;
-  
 } 
 
 ul#menu-principal li > a {
