@@ -14,6 +14,8 @@
 	/* Corps. */
 ?>
 <ul>
+	<li><a href="admin.php?p=bd">Base de données</a></li>
+	<li>--</li>
 	<li><a href="admin.php?p=utilisateurs">Utilisateurs</a></li>
 	<li><a href="admin.php?p=commandes">Commandes</a></li>
 	<li><a href="admin.php?p=factures">Factures</a></li>
@@ -32,6 +34,31 @@
 <?php
 
 	switch($page) {
+		case 'bd':
+			$subtitle = 'Base de données';
+?>
+	<h2>Base de données</h2>
+	<h3>Réinitialiser</h3>
+	<p>
+		<strong>Attention :</strong> La réinitialisation de la base de données effacera l'ensemble des données qui n'ont pas été exportées 
+		dans le fichier script.sql.
+	</p>
+	<p>
+		Pensez à préparer votre jeu d'essai dans ce fichier.
+	</p>
+	<p></p>
+	<form action="init_bd.php" method="post">
+		<fieldset>
+			<legend>Paramètres de connexion</legend>
+			<label for="mot_de_passe">Mot de passe 'root'</label> :
+			<input type="password" name="mot_de_passe" id="mot_de_passe" />
+		</fieldset>
+		<div>
+			<input type="submit" value="Réinitialiser la base" />
+		</div>
+	</form>
+<?php
+		break;
 		case 'utilisateurs':
 			$subtitle = 'Utilisateurs';
 		break;
@@ -87,7 +114,7 @@
 		default:
 	}
 ?>
-<h2><?php echo $subtitle;?></h2>
+<!-- <h2><?php echo $subtitle;?></h2> -->
 <?php
 	include('inc/footer.inc.php');
 ?>
