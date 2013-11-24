@@ -1,5 +1,5 @@
 DROP SCHEMA IF EXISTS BoutiqueCulturelle;
-CREATE SCHEMA BoutiqueCulturelle DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+CREATE SCHEMA BoutiqueCulturelle DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE BoutiqueCulturelle ;
 
 GRANT ALL PRIVILEGES ON BoutiqueCulturelle.* TO Ciceron@localhost IDENTIFIED BY '106AVJC';
