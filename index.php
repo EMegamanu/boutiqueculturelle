@@ -1,5 +1,5 @@
 <?php
-$title = 'Bienvenue sur notre site';
+	$title = 'Boutique Culturelle';
 
 	/* Inclusion script connexion base de données. */
 	require_once('inc/db.inc.php');
@@ -9,6 +9,7 @@ $title = 'Bienvenue sur notre site';
 ?>
 
 <section>
+
 	<article>
 		<p>Bienvenue sur la boutique culturelle en ligne.</p>
 

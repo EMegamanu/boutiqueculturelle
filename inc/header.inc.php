@@ -13,7 +13,13 @@
 	<header>
 		<h1>
 			<img src="img/logo-64.png" alt="Boutique culturelle" id="logo"/>
-			<?php echo $title; ?>
+				<span class="title-group">
+					<span class="title"><?php echo $title; ?></span>
+					<span class="subtitle">
+						Bienvenue sur votre site de référence pour 
+						l'achat de vos biens culturels en ligne.
+					</span>
+				</span>
 		</h1>
 		<nav>
 			<ul id="menu-principal">

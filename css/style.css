@@ -1,11 +1,52 @@
-body{
+body {
     font-family: sans-serif;
     min-width: 800px;
     overflow-x: auto;
 
     margin: 0;
     padding: 0;
+
+    background: #C0C0C0;
 }
+
+body > * {
+    max-width: 1200px;
+    margin: auto;
+    /*background: #FFFFFF;*/
+}
+
+h1 .title-group {
+    display: inline-block;
+    vertical-align: middle;
+}
+h1 .title {
+    display: block;
+}
+h1 .subtitle {
+    display: block;
+    font-size: 0.6em;
+    font-style: oblique;
+}
+
+body > section {
+    background: #FFFFFF;
+    /*border-radius: 10px;*/
+
+    margin-top: 10px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*padding-top: 10px;*/
+}
+
+body > section > * {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+body > section :first-child {
+    /*margin-top: 0;*/
+}
+
 pre.log {
     max-height: 300px;
     overflow-y: scroll;
@@ -31,6 +72,7 @@ p.fail {
 
 nav {    
     height: 35px;
+    border-radius: 10px;
 
     /* Génération dégradé facile : http://www.colorzilla.com/gradient-editor/ */
     background: #000000; /* Old browsers */
@@ -40,6 +82,11 @@ nav {
 
     position: relative;
     z-index: 1;
+}
+
+ul#menu-principal ul {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 ul#menu-principal {
@@ -99,11 +146,24 @@ ul#menu-principal > li {
 } 
 
 li#search-item {
-    float: right;
+    display :block;
+    /*float: right;*/
+    position: absolute;
+    right: 0;
     /*display: block;*/
 
     border-left: solid 1px #FFFFFF;
     /*padding-left: 10px;*/
+}
+
+/* Dégradation progressive type search pour Firefox. */
+li#search-item input {
+    display: block;
+    margin: 7px 10px;
+
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 ul#menu-principal li > a {
