@@ -60,9 +60,20 @@ CREATE TABLE Produit (
   idCategorie INT NOT NULL,
   prixHT DECIMAL(5,2) NOT NULL,
   image VARCHAR(45) NULL,
+  idSupport INT NOT NULL,
   PRIMARY KEY(id)
 ) ENGINE = InnoDB;
 
+
+-- -----------------------------------------------------
+-- Table boutiqueculturelle.Support
+-- -----------------------------------------------------
+CREATE TABLE Support (
+  id INT NOT NULL AUTO_INCREMENT,
+  idCategorie INT NOT NULL,
+  nom VARCHAR(45) NOT NULL,
+  PRIMARY KEY(id)
+) ENGINE = InnoDB;
 
 -- -----------------------------------------------------
 -- Table boutiqueculturelle.Livre
@@ -134,6 +145,14 @@ ALTER TABLE Facture
     -- ON UPDATE NO ACTION
 ;
 ALTER TABLE Produit
+  ADD FOREIGN KEY(idCategorie) REFERENCES Categorie(id),
+    -- ON DELETE NO ACTION
+    -- ON UPDATE NO ACTION
+  ADD FOREIGN KEY(idSupport) REFERENCES Support(id)
+    -- ON DELETE NO ACTION
+    -- ON UPDATE NO ACTION
+;
+ALTER TABLE Support
   ADD FOREIGN KEY(idCategorie) REFERENCES Categorie(id)
     -- ON DELETE NO ACTION
     -- ON UPDATE NO ACTION
