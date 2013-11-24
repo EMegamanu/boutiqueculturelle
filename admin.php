@@ -27,7 +27,7 @@
 			<li><a href="admin.php?p=produits&amp;cat=films">Films</a></li>
 			<li><a href="admin.php?p=produits&amp;cat=livres">Livres</a></li>
 			<li>--</li>
-			<li><a href="admin.php?p=produits&amps;cat=packs">Packs</a></li>
+			<li><a href="admin.php?p=produits&amp;cat=packs">Packs</a></li>
 		</ul>
 	</li>
 </ul>
@@ -51,7 +51,7 @@
 		<fieldset>
 			<legend>Paramètres de connexion</legend>
 			<label for="mot_de_passe">Mot de passe 'root'</label> :
-			<input type="password" name="mot_de_passe" id="mot_de_passe" />
+			<input type="password" name="mot_de_passe" id="mot_de_passe" placeholder="Vide par défaut" />
 		</fieldset>
 		<div>
 			<input type="submit" value="Réinitialiser la base" />
