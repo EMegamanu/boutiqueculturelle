@@ -12,7 +12,7 @@ try {
 	$server = 'localhost';
 	$dbName = '';
 
-	$dns = 'mysql:host=' . $server . ';charset=UTF-8';
+	$dns = 'mysql:host=' . $server;
 
 	$user = 'root';
 	$password = $_POST['mot_de_passe'];
