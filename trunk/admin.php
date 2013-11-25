@@ -13,25 +13,28 @@
 
 	/* Corps. */
 ?>
-<section>
-	<ul>
-		<li><a href="admin.php?p=bd">Base de données</a></li>
-		<li>--</li>
-		<li><a href="admin.php?p=utilisateurs">Utilisateurs</a></li>
-		<li><a href="admin.php?p=commandes">Commandes</a></li>
-		<li><a href="admin.php?p=factures">Factures</a></li>
-		<li>Produits 
-			<ul>
-				<li><a href="admin.php?p=categories">Catégories</a></li>
-				<li>--</li>
-				<li><a href="admin.php?p=produits&amp;cat=disques">Disques</a></li>
-				<li><a href="admin.php?p=produits&amp;cat=films">Films</a></li>
-				<li><a href="admin.php?p=produits&amp;cat=livres">Livres</a></li>
-				<li>--</li>
-				<li><a href="admin.php?p=produits&amp;cat=packs">Packs</a></li>
-			</ul>
-		</li>
-	</ul>
+<section id="section-admin">
+	<nav>
+		<ul>
+			<li><a href="admin.php?p=bd">Base de données</a></li>
+			<li><hr /></li>
+			<li><a href="admin.php?p=utilisateurs">Utilisateurs</a></li>
+			<li><a href="admin.php?p=commandes">Commandes</a></li>
+			<li><a href="admin.php?p=factures">Factures</a></li>
+			<li>Produits 
+				<ul>
+					<li><a href="admin.php?p=categories">Catégories</a></li>
+					<li><hr /></li>
+					<li><a href="admin.php?p=produits&amp;cat=disques">Disques</a></li>
+					<li><a href="admin.php?p=produits&amp;cat=films">Films</a></li>
+					<li><a href="admin.php?p=produits&amp;cat=livres">Livres</a></li>
+					<li><hr /></li>
+					<li><a href="admin.php?p=produits&amp;cat=packs">Packs</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<article>
 <?php
 
 	switch($page) {
@@ -116,6 +119,7 @@
 	}
 ?>
 <!-- <h2><?php echo $subtitle;?></h2> -->
+</article>
 </section>
 <?php
 	include('inc/footer.inc.php');
