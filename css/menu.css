@@ -1,0 +1,158 @@
+/* ------------------------- */
+/* Bloc de menu principal. */
+nav#menu-principal {
+    /* Hauteur : 35px non redimensionnable. */  
+    height: 35px;
+
+    /* Génération dégradé facile : http://www.colorzilla.com/gradient-editor/ */
+    background: #000000; /* Old browsers */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(12%,#595959), color-stop(25%,#666666), color-stop(39%,#474747), color-stop(50%,#2c2c2c), color-stop(51%,#000000), color-stop(60%,#111111), color-stop(76%,#2b2b2b), color-stop(91%,#1c1c1c), color-stop(100%,#131313)); /* Chrome,Safari4+ */
+    background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C */
+    color: #FFFFFF;
+
+    /** Bordures arrondies. */
+    border-radius: 10px;
+
+    /* Pour passer au dessus du contenu. */
+    position: relative;
+    z-index: 1;
+}
+
+/* Listes constituantes du menu. */
+nav#menu-principal ul {
+    /* Réinitialisation : pas de puces, pas de marges intérieures. */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Liens du menu principal. */
+nav#menu-principal a {
+    /* Affichage en ligne, redimenssionnables. */
+    display: inline-block;
+
+    /* Texte aligné sans sous-lignement. */
+    text-align: center;
+    text-decoration: none;
+
+    /* Texte blanc. */   
+    background: transparent;
+    color: #FFFFFF;
+
+    /* Hauteur : 35 = 26px + 2 x 2px marge + 7px marge intérieure haute. */
+    height: 26px;
+    padding-top: 7px;
+
+    /* Largeur de base. */
+    width: 150px;
+}
+
+
+/* Liens au survol de leur item parent direct. */
+nav#menu-principal li:hover > a {
+    /* Gris clair. */
+    color: #CCCCCC;
+    background: transparent;
+}
+
+/* Liens au survol de leur item parent direct et d'eux-même. */
+nav#menu-principal li:hover > a:hover {
+    /* Dégradé. */
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.16) 3%,rgba(21,21,21,0.8) 15%,rgba(28,28,28,1) 19%,rgba(81,81,81,1) 50%,rgba(28,28,28,1) 81%,rgba(21,21,21,0.8) 85%,rgba(0,0,0,0.16) 97%,rgba(0,0,0,0) 100%); /* W3C */
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.16) 3%,rgba(21,21,21,0.8) 15%,rgba(28,28,28,1) 19%,rgba(81,81,81,1) 50%,rgba(28,28,28,1) 81%,rgba(21,21,21,0.8) 85%,rgba(0,0,0,0.16) 97%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+}
+
+/* Menu de premier niveau du menu principal. */
+nav#menu-principal > ul {
+    /* 
+        Affichage sur une ligne. 
+        Nécessaire pour conjuguer vertical-align: top et alignement droit.
+     */
+    display:inline;
+}
+
+/* Items de premier niveau du menu principal. */
+nav#menu-principal > ul > li {
+    /* Disposition horizontale, alignement haut. */
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Premier item du menu de premier niveau. */
+nav#menu-principal > ul > li:first-child {
+    /* Arrondi pour coller arrière-plan à forme du menu. */
+    border-top-left-radius: 10px;
+}
+
+/* Items de premier niveau du menu principal au survol. */
+nav#menu-principal > ul > li:not(.search-item):hover {
+    /* Fond noir. */
+    background: #000000;
+    color: inherit;
+
+    /* Bordure grise. */
+    border: solid 2px #4C4C4C;
+
+    /* Bords bas arrondis. */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+/* Liens hypertextes enfants de l'item de premier niveau survolé. */
+nav#menu-principal > ul > li:hover a {
+    /* Largeur : 150px - 2 x 2px bordure. */
+    width: 146px;
+}
+
+/* Liens du menu de premier niveau. */
+nav#menu-principal > ul > li > a {
+    font-weight: bold;
+}
+/* Liens des items de premier niveau au survol. */
+nav#menu-principal > ul > li:hover > a {
+    /* On retranche sous forme de marges l'épaisseur de la bordure. */
+    margin-top: -2px;
+}
+
+/* Sous-menus du menu principal. */
+nav#menu-principal li ul {
+    /* Masquer par défaut. */
+    display: none;
+}
+
+/* Sous-menus du menu principal au survol d'items de ce dernier. */
+nav#menu-principal li:hover > ul {
+    /* Afficher. */
+    display: block;
+}
+
+/* Item du champ de recherche. */
+nav#menu-principal li.search-item {
+    /* Aligné à droite. */
+    position: absolute;
+    right: 0;
+
+    /* 
+        Hauteur : celle du menu. 
+        Largeir : celle du champ + marges.
+     */
+    height: 100%;
+    width: auto;
+
+    /* Ligne de séparation. */
+    border-left: solid 1px #FFFFFF;
+}
+
+/* Champ de recherche. */
+nav#menu-principal li.search-item input {
+    /* Largeur 150, centré horizontalement et verticalement. */
+    display: block;
+    width: 150px;   
+    margin: 7px 15px;
+
+    /* Dégradation progressive type search pour Firefox. */
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

@@ -6,6 +6,30 @@
 
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="icon" href="img/logo-16.png" />
+
+		<!-- Bibliothèques. -->
+		<script src="js/jquery/jquery-2.0.3.min.js"></script>
+		<script src="js/jquery/jquery-ui.min.js"></script>
+		<script src="js/jquery/jquery-ui-i18n.min.js"></script> <!-- Localisation de jQuery-ui -->
+		<script src="js/jquery/jquery.tablesorter.min.js"></script>
+		<script src="js/jquery/jquery.tablesorter.widgets.min.js"></script>
+		<script src="js/jquery/jquery.tablesorter.pager.min.js"></script>
+
+
+		<link rel="stylesheet" href="css/jquery-ui/base/jquery-ui.css" />
+		<link rel="stylesheet" href="css/jquery.tablesorter/theme.default.css" />
+		<link rel="stylesheet" href="css/jquery.tablesorter/jquery.tablesorter.pager.css" />
+
+		<script>
+			/* Au chargement de la page achevé... */
+			$(function() {
+				/* Initialisation de jQuery.tablesorter pour tous les tableaux de résultat. */
+				$("table.results").each(function() {
+					var $table = $(this);
+					$table.tablesorter();
+				})			
+			});
+		</script>
 	</head>
 
 	<body>

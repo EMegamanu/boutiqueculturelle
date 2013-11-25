@@ -77,7 +77,7 @@
 			$results->setFetchMode(PDO::FETCH_OBJ);
 ?>
 				<h2><?php echo 'Catégories de produits.';?></h2>
-				<table>
+				<table class="results">
 					<thead>
 						<th>#</th>
 						<th>Nom</th>
