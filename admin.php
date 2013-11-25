@@ -101,7 +101,68 @@
 		case 'produits':
 			switch($cat) {
 				case 'disques':
-					$subtitle = 'Produits : disques';
+			$categorieResult = $db->query(
+				'SELECT id FROM Categorie ' .
+				'WHERE nom LIKE "Disque"'
+			);
+			$categorieResult->setFetchMode(PDO::FETCH_OBJ);
+			$categorieId = $categorieResult->fetch()->id;
+
+			$supportsResult = $db->query(
+				'SELECT * FROM Support ' .
+				'WHERE idCategorie = ' . $categorieId
+			);
+			$supportsResult->setFetchMode(PDO::FETCH_OBJ);
+			$date = new DateTime("now", new DateTimeZone('Europe/Paris'));
+?>				
+		<form action="ajout_produit.php" method="post" enctype="multipart/form-data">
+			<div class="field-group">
+				<label for="nom">Nom</label> : 
+				<input type="text" id="nom" name="nom" />
+			</div>
+			<div class="field-group">
+				<input type="hidden" id="categorie" name="categorie" value="<?php echo $idCategorie; ?>"/>
+			</div>
+			<div class="field-group">
+				<label for="support">Support</label> :
+				<select id="support" name="support">
+
+<?php
+				while($support = $supportsResult->fetch()) {
+?>
+					<option value="<?php echo $support->id; ?>"><?php echo $support->nom; ?></option>
+<?php
+				}
+?>
+				</select>
+			</div>
+
+			<div class="field-group">
+				<label for="prix-ht">Prix HT</label> : 
+				<input type="number" id="prix-ht" name="prix-ht" step="any" />
+			</div>
+
+			<div class="field-group">
+				<label for="genre">Genre</label> : 
+				<input type="text" id="genre" name="genre" />
+			</div>
+			<div class="field-group">
+				<label for="compositeur">Compositeur</label> : 
+				<input type="text" id="compositeur" name="compositeur" />
+			</div>
+			<div class="field-group">
+				<label for="annee-production">Année de production</label> : 
+				<input type="number" id="annee-production" name="annee-production" step=1 min=1900 max=<?php echo $date->format('Y');?> />
+			</div>
+			<div class="field-group">
+				<label for="image">Image</label> : 
+				<input type="file" id="image" name="image" accept="image/png, image/jpeg"/>
+			</div>
+			<div>
+				<input type="submit" value="Ajouter" />
+			</div>
+		</form>
+<?php
 				break;
 				case 'films':
 					$subtitle = 'Produits : films';
