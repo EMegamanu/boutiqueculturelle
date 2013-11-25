@@ -1,20 +1,50 @@
-body {
-    font-family: sans-serif;
-    min-width: 800px;
-    overflow-x: auto;
+@import url("menu.css");
 
+#section-admin nav {
+    display: inline-block;
+    width: 150px;
+
+    vertical-align: top;
+}
+
+#section-admin nav ul {
+    list-style: none;
+    padding-left: 15px;
+}
+
+
+#section-admin article {
+    display: inline-block;
+}
+
+/* Corps. */
+body {
+    /* Police sans chasse (façon Arial) */
+    font-family: sans-serif;
+    /* Largeur minimale : 850px. */
+    min-width: 850px;
+
+    /* Pas de marges. */
     margin: 0;
     padding: 0;
 
+    /* Fond gris. */
     background: #C0C0C0;
 }
+/* ------------------------- */
 
+/* Enfants directs du corps. */
 body > * {
+    /* Largeur max: 1200px. */
     max-width: 1200px;
-    margin: auto;
-    /*background: #FFFFFF;*/
-}
 
+    /* Centrés. */
+    margin-left: auto;
+    margin-right: auto;
+}
+/* ------------------------- */
+
+/* Titre de la page. */
 h1 .title-group {
     display: inline-block;
     vertical-align: middle;
@@ -27,157 +57,43 @@ h1 .subtitle {
     font-size: 0.6em;
     font-style: oblique;
 }
-
-body > section {
-    background: #FFFFFF;
-    /*border-radius: 10px;*/
-
-    margin-top: 10px; 
-    padding-top: 10px;
-    padding-bottom: 10px;
-    /*padding-top: 10px;*/
+#logo {
+    vertical-align: middle;
 }
 
+/* ------------------------- */
+/* Sections de page de premier niveau. */
+body > section {
+    /* Fond blanc. */
+    background: #FFFFFF;
+
+    /* Marges verticales intérieures : 10px. */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /* Marge verticale haute extérieure : 10px. */
+    margin-top: 10px; 
+}
+/* Enfants directs des sections de premier niveau. */
 body > section > * {
+    /* Marges extérieures horizontales 10px. */
     margin-left: 10px;
     margin-right: 10px;
 }
 
-body > section :first-child {
-    /*margin-top: 0;*/
-}
 
+/* ------------------------- */
+/* Messages partie administration. */
 pre.log {
     max-height: 300px;
     overflow-y: scroll;
     border: solid 1px #000000; 
 }
-
 p.result {
     font-weight: bold;
 }
-
 p.success {
     color: #006600;
 }
-
 p.fail {
     color: #FF0000;
-}
-
-
-#logo {
-    vertical-align: middle;
-}
-
-nav {    
-    height: 35px;
-    border-radius: 10px;
-
-    /* Génération dégradé facile : http://www.colorzilla.com/gradient-editor/ */
-    background: #000000; /* Old browsers */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(12%,#595959), color-stop(25%,#666666), color-stop(39%,#474747), color-stop(50%,#2c2c2c), color-stop(51%,#000000), color-stop(60%,#111111), color-stop(76%,#2b2b2b), color-stop(91%,#1c1c1c), color-stop(100%,#131313)); /* Chrome,Safari4+ */
-    background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C */
-    color: #FFFFFF;
-
-    position: relative;
-    z-index: 1;
-}
-
-ul#menu-principal ul {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-ul#menu-principal {
-    display:inline;
-
-    padding: 0;
-}
-
-ul#menu-principal li {
-    /*border: 1px red solid;*/
-    min-width: 150px;
-    height: 35px;
-}
-
-ul#menu-principal a {
-    display: inline-block;
-    height: 23px;
-    width: 100%;
-
-    padding-top: 7px;
-
-    text-align: center;
-
-    background: transparent;
-    color: #FFFFFF;
-
-    text-decoration: none;
-    /*border: 1px black solid;*/
-}
-
-ul#menu-principal ul {
-    background: black;
-    color: inherit;
-} 
-
-ul#menu-principal input {
-    margin-top: 7px;
-    /*display: block;*/
-    /*width: 150px;*/
-
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-ul#menu-principal > li > a {
-    font-weight: bold;
-}
-ul#menu-principal li:hover > a {
-    /*background: transpare;*/
-    color: #CCCCCC;
-}
-
-
-ul#menu-principal > li {
-    display: inline-block;
-    vertical-align: top;
-} 
-
-li#search-item {
-    display :block;
-    /*float: right;*/
-    position: absolute;
-    right: 0;
-    /*display: block;*/
-
-    border-left: solid 1px #FFFFFF;
-    /*padding-left: 10px;*/
-}
-
-/* Dégradation progressive type search pour Firefox. */
-li#search-item input {
-    display: block;
-    margin: 7px 10px;
-
-    border-radius: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-ul#menu-principal li > a {
-    /*display: block;*/
-}
-
-ul#menu-principal ul {
-    /*display: none;*/
-    visibility: hidden;
-    list-style: none;
-    padding: 0;
-}
-
-ul#menu-principal > li:hover ul {
-    /*display: block;*/
-    visibility: visible;
 }
