@@ -1,7 +1,7 @@
 <?php
     $title = 'Réinitialisation de la base de données';
     /* Inclusion de l'en-tête. */
-    include_once('inc/header.inc.php');
+    include_once('inc/header.inc.php'); 
 ?>
 <h2>Résultat</h2>
 <?php
