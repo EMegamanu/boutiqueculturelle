@@ -22,3 +22,8 @@
 	</article>
 
 </section>
+
+<?php
+	/* Inclusion de l'en-tête. */
+	include_once('inc/footer.inc.php');
+?>
