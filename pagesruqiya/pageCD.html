@@ -107,7 +107,16 @@
 </div>
 <br/> <br/><br/> 
 <div>
-	<table id="tableau-catalogue" result="tableau-catalogue" border="1">
+<?php
+{
+	// On se connecte à MySQL
+	$bdd = new PDO('mysql:host=localhost;dbname=test', 'root', '');
+}
+$results = $db->query('SELECT * FROM Disque');
+			$results->setFetchMode(PDO::FETCH_OBJ);
+?>
+<h2><?php echo 'Disque';?></h2>
+	<table id="tableau-catalogue" classe="results" border="1">
 		<tr>
 			<th>Pochette/Couverture</th>
 			<th>Nom</th>
@@ -116,22 +125,21 @@
 			<th>Date de sortie</th>
 		</tr>
 		<tr>
+<?php
+			while($row = $results->fetch()) {
+?>
 			<td class="image">
 				<image scr="#" />
 			</td>
-			<td class="renseignements">
-				Nom
-			</td>
-			<td>
-				Genre
-			</td>
-			<td>
-				Compositeur
-			</td>
-			<td>
-				Date de Sortie
-			</td>
+			<td><?php echo $row->nom;?></td>
+			<td><?php echo $row->genre;?></td>
+			<td><?php echo $row->compositeur;?></td>
+			<td><?php echo $row->anneeProduction;?></td>
 		</tr>
+<?php
+			}
+?>
 	</table>
 </div>
+
 
