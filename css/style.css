@@ -97,3 +97,9 @@ p.success {
 p.fail {
     color: #FF0000;
 }
+footer > ul > li{
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+}
