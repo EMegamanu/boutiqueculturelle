@@ -1,4 +1,4 @@
-DROP SCHEMA IF EXISTS BoutiqueCulturelle;
+ProduitidCategorieDROP SCHEMA IF EXISTS BoutiqueCulturelle;
 CREATE SCHEMA BoutiqueCulturelle DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE BoutiqueCulturelle ;
 
@@ -135,7 +135,7 @@ ALTER TABLE Facture
     -- ON UPDATE NO ACTION
 ;
 ALTER TABLE Produit
-  ADD FOREIGN KEY(idCategorie) REFERENCES Categorie(id),
+  ADD FOREIGN KEY(idCategorie) REFERENCES Categorie(id)
     -- ON DELETE NO ACTION
     -- ON UPDATE NO ACTION
 ;
@@ -203,10 +203,10 @@ Insert into produit values (3,2,10.00, './img/bab.jpg');
 Insert into produit values (4,2,10.00, './img/leseigneurs.jpg');
 Insert into produit values (5,2,10.00, './img/sexeentreamis.jpg');
 Insert into produit values (6,2,12.99, './img/taken2.jpg');
-Insert into produit values (7,2,15.00, './img/héritage.jpg');
+Insert into produit values (7,2,15.00, './img/heritage.jpg');
 Insert into produit values (8,2,15.99, './img/faf.jpg');
 Insert into produit values (9,2,11.99, './img/jb.jpg');
-Insert into produit values (10,2,9.99, './img/étalon noir.jpg');
+Insert into produit values (10,2,9.99, './img/etalon_noir.jpg');
 Insert into produit values (11,2,6.99, './img/missiong.jpg');
 Insert into produit values (12,2,9.99, './img/noel.jpg');
 Insert into produit values (13,2,7.99, './img/narnia.jpg');
@@ -219,7 +219,7 @@ Insert into produit values (19,1,8.99, './img/nanami.jpg');
 Insert into produit values (20,1,7.99, './img/king.jpg');
 Insert into produit values (21,1,6.99, './img/tintin1.jpg');
 Insert into produit values (22,1,9.99, './img/titeuf.jpg');
-Insert into produit values (23,1,10.99, './img/légendaire.jpg');
+Insert into produit values (23,1,10.99, './img/legendaire.jpg');
 Insert into produit values (24,1,10.99, './img/triple.jpg');
 Insert into produit values (25,1,9.99, './img/game.jpg');
 Insert into produit values (26,1,19.99, './img/absence.jpg');
