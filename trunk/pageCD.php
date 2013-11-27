@@ -83,6 +83,7 @@
 <?php
 		$results = $db->query('SELECT * FROM Disque');
 			while($data = $results->fetch()) {
+		print_r($row);
 ?>
 			<td class="image">
 				<image scr="#" />
