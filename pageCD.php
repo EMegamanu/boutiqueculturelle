@@ -77,20 +77,20 @@
 			<th>Nom</th>
 			<th>Genre</th>
 			<th>Compositeur</th>
-			<th>Date de sortie</th>
+			<th>Annee de Production</th>
 		</tr>
 		<tr>
 <?php
 		$results = $db->query('SELECT * FROM Disque');
-			while($row = $results->fetch()) {
+			while($data = $results->fetch()) {
 ?>
 			<td class="image">
 				<image scr="#" />
 			</td>
-			<td><?php echo $donnees['nom'];?></td>
-			<td><?php echo $donnees['genre'];?></td>
-			<td><?php echo $donnees['compositeur'];?></td>
-			<td><?php echo $donnees['anneeProduction'];?></td>
+			<td><?php echo $data['nom'];?></td>
+			<td><?php echo $data['genre'];?></td>
+			<td><?php echo $data['compositeur'];?></td>
+			<td><?php echo $data['anneeProduction'];?></td>
 		</tr>
 <?php
 			}
