@@ -22,7 +22,6 @@
 <?php		
 /* Inclusion script connexion base de données. */
 	require_once('inc/db.inc.php');
-
 	/* Inclusion de l'en-tête. */
 	include_once('inc/header.inc.php');
 ?>
@@ -88,10 +87,10 @@
 			<td class="image">
 				<image scr="#" />
 			</td>
-			<td><?php echo $row->nom;?></td>
-			<td><?php echo $row->genre;?></td>
-			<td><?php echo $row->compositeur;?></td>
-			<td><?php echo $row->anneeProduction;?></td>
+			<td><?php echo $donnees['nom'];?></td>
+			<td><?php echo $donnees['genre'];?></td>
+			<td><?php echo $donnees['compositeur'];?></td>
+			<td><?php echo $donnees['anneeProduction'];?></td>
 		</tr>
 <?php
 			}
