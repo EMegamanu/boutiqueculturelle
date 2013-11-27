@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="utf-8" />
-		<title>Boutique culturelle - <?php echo $title; ?></title>
 
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="icon" href="img/logo-16.png" />
-
-		<!-- Bibliothèques. -->
-		<script src="js/jquery/jquery-2.0.3.min.js"></script>
-		<script src="js/jquery/jquery-ui.min.js"></script>
-		<script src="js/jquery/jquery-ui-i18n.min.js"></script> <!-- Localisation de jQuery-ui -->
-		<script src="js/jquery/jquery.tablesorter.min.js"></script>
-		<script src="js/jquery/jquery.tablesorter.widgets.min.js"></script>
-		<script src="js/jquery/jquery.tablesorter.pager.min.js"></script>
-
-
-		<link rel="stylesheet" href="jquery-ui/base/jquery-ui.css" />
-		<link rel="stylesheet" href="jquery.tablesorter/theme.default.css" />
-		<link rel="stylesheet" href="jquery.tablesorter/jquery.tablesorter.pager.css" />
 <?php		
 /* Inclusion script connexion base de données. */
 	require_once('inc/db.inc.php');
@@ -48,14 +28,14 @@
 				<li><a href="#">Classique </a></li>
 			</ul>
 		</li>
-		<li  class ="item2"><a href="DVD.html">DVD</a>
+		<li  class ="item2"><a href="DVD.php">DVD</a>
 			<ul class= "hidden">
 				<li><a href="#">Action </a></li>
 				<li><a href="#">Comédie </a></li>
 				<li><a href="#">Jeunesse </a></li>
 			</ul>
 		</li>
-		<li  class="item3"><a href="livre.html">Livres</a>
+		<li  class="item3"><a href="livre.php">Livres</a>
 			<ul class= "hidden">
 				<li><a href="#">Manga </a></li>
 				<li><a href="#">BD</a></li>
@@ -82,6 +62,7 @@
 		<tr>
 <?php
 		$results = $db->query('SELECT * FROM Disque');
+		$results->setFetchMode(PDO::FETCH_OBJ);
 			while($data = $results->fetch()) {
 		print_r($row);
 ?>
