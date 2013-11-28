@@ -6,17 +6,12 @@
 	include_once('inc/header.inc.php');
 ?>
 		<script>
-			/* Au chargement de la page achevé... */
-			$(function() {
-				/* Initialisation de jQuery.tablesorter pour tous les tableaux de résultat. */
-				$("table.results").each(function() {
-					var $table = $(this);
-					$table.tablesorter();
-				})			
-			});
-		</script>
-	
-<br/> <br/><br/> 
+		$(document).ready(function() 
+    { 
+        $("tableau-catalogue").tablesorter(); 
+    } 
+</script> 
+</br></br></br></br>	 
 <div id="menu2">
 
 	<ul class="menu">
@@ -46,18 +41,18 @@
 	</ul>
 </div>
 <div>
-
-
 <h2><?php echo 'Disque';?></h2>
-	<table id="tableau-catalogue" classe="results" border="1">
-
+	 <table id="tableau-catalogue" class="results" class="tablesorter" border="1">
+	 	<thead>
         <tr>
             <th>Pochette/Couverture</th>
             <th>Nom</th>
             <th>Genre</th>
             <th>Compositeur</th>
             <th>Annee de Production</th>
+            <th>Prix</th>
         </tr>
+    	</thead>
         <tr>
 <?php
         $results = $db->query('SELECT * FROM Disque D JOIN Produit P ON D.id = P.id');
@@ -72,10 +67,11 @@
             <td><?php echo $data['genre'];?></td>
             <td><?php echo $data['compositeur'];?></td>
             <td><?php echo $data['anneeProduction'];?></td>
+            <td><?php echo $data['prixHT'];?></td>
         </tr>
 <?php
             }
-?>
+?> 
     </table>
 </div>
 <?php
