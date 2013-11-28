@@ -51,6 +51,22 @@
 ?> 
 	</tbody>
     </table>
+    <nav class="pager">
+		<form>
+			<img src="img/jquery.tablesorter/pager/icons/first.png" class="first">
+			<img src="img/jquery.tablesorter/pager/icons/prev.png" class="prev">
+			<input type="text" class="pagedisplay">
+			<img src="img/jquery.tablesorter/pager/icons/next.png" class="next">
+			<img src="img/jquery.tablesorter/pager/icons/last.png" class="last">
+			<select class="pagesize">
+				<option selected="selected" value="5">5</option>
+				<option value="10">10</option>
+				<option value="20">20</option>
+				<option value="30">30</option>
+				<option value="40">40</option>
+			</select>
+		</form>
+	</nav>
 </div>
 <?php
 	/* Inclusion du pied de page */

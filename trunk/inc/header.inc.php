@@ -39,9 +39,11 @@
 						widgets: ["zebra", "filter"],
 						 widgetOptions: {
 						 	filter_hideFilters : true,
-						 	filter_reset : '#menu2 a.reset'
+						 	filter_reset: '#menu2 a.reset',
+					     	filter_filteredRow: 'filtered',
 						 }
-					});
+					})
+					.tablesorterPager({container: $(this).next(".pager")});
 				});
 
 				  // External search
