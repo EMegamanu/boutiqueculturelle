@@ -17,47 +17,29 @@
 		</script>
 
 </br></br></br></br></br>
-<div id="menu2">
-
-	<ul class="menu">
-		<li  classe ="item1"><a href="pageCD.php">Disques</a>
-
-			<ul class= "hidden">
-				<li><a href="#">Pop-Rock </a></li>
-				<li><a href="#">RnB </a></li>
-				<li><a href="#">Classique </a></li>
-			</ul>
-		</li>
-		<li  class ="item2"><a href="DVD.php">Films</a>
-			<ul class= "hidden">
-				<li><a href="#">Action </a></li>
-				<li><a href="#">Comédie </a></li>
-				<li><a href="#">Jeunesse </a></li>
-			</ul>
-		</li>
-		<li  class="item3"><a href="#">Livres</a>
-			<ul class= "shown">
-				<li><a href="#">Manga </a></li>
-				<li><a href="#">BD</a></li>
-				<li><a href="#">Roman  </a></li>
-				<li><a href="#">Policier </a></li>
-			</ul>
-		</li>
+<nav id="menu2">
+	<ul>
+		<li><a href="#manga">Manga</a></li>
+		<li><a href="#BD">BD</a></li>
+		<li><a href="#Roman Policier">Roman Policier</a></li>
+		<li><hr /></li>
+		<li><a href="#" class="reset">Tout</a></li>
 	</ul>
-</div>
+</nav>
 <div>
-	<h2><?php echo 'Livres';?></h2>
-	<table id="tableau-catalogue" class="results" class="tablesorter" border="1">
+	<h2><?php echo 'Livre';?></h2>
+	<table id="tableau-catalogue" class="results tablesorter">
 		<thead>
-		<tr>
-			<th>Pochette/Couverture</th>
-			<th>Nom</th>
-			<th>Genre</th>
-			<th>Auteur</th>
-			<th>Date de Parution</th>
-			<th>Prix</th>
-		</tr>
+			<tr>
+				<th>Pochette/Couverture</th>
+				<th>Nom</th>
+				<th>Genre</th>
+				<th>Auteur</th>
+				<th>Date de Parution</th>
+				<th>Prix</th>
+			</tr>
 		</thead>
+		<tbody>
 		<tr>
 <?php
 		$results = $db->query('SELECT * FROM Livre D JOIN Produit P ON D.id = P.id');
@@ -77,7 +59,29 @@
 <?php
 			}
 ?>
+	</tbody>
 	</table>
+	 <nav class="pager">
+		<form>
+			<img src="img/jquery.tablesorter/pager/icons/first.png" class="first" />
+			<img src="img/jquery.tablesorter/pager/icons/prev.png" class="prev" />
+			<span class="pagedisplay"></span>
+			<img src="img/jquery.tablesorter/pager/icons/next.png" class="next" />
+			<img src="img/jquery.tablesorter/pager/icons/last.png" class="last" />
+			<select class="pagesize">
+				<option selected="selected" value="5">5</option>
+				<option value="10">10</option>
+				<option value="20">20</option>
+				<option value="30">30</option>
+				<option value="40">40</option>
+			</select>
+		</form>
+	</nav>
+</div>
+<?php
+	/* Inclusion du pied de page */
+	include_once('inc/footer.inc.php');
+?>
 </div>
 <?php
 	/* Inclusion du pied de page. */
