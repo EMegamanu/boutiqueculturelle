@@ -53,11 +53,11 @@
     </table>
     <nav class="pager">
 		<form>
-			<img src="img/jquery.tablesorter/pager/icons/first.png" class="first">
-			<img src="img/jquery.tablesorter/pager/icons/prev.png" class="prev">
-			<input type="text" class="pagedisplay">
-			<img src="img/jquery.tablesorter/pager/icons/next.png" class="next">
-			<img src="img/jquery.tablesorter/pager/icons/last.png" class="last">
+			<img src="img/jquery.tablesorter/pager/icons/first.png" class="first" />
+			<img src="img/jquery.tablesorter/pager/icons/prev.png" class="prev" />
+			<span class="pagedisplay"></span>
+			<img src="img/jquery.tablesorter/pager/icons/next.png" class="next" />
+			<img src="img/jquery.tablesorter/pager/icons/last.png" class="last" />
 			<select class="pagesize">
 				<option selected="selected" value="5">5</option>
 				<option value="10">10</option>
