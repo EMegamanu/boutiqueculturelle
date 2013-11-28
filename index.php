@@ -7,9 +7,8 @@
 	/* Inclusion de l'en-tête. */
 	include_once('inc/header.inc.php');
 ?>
-
 <section>
-
+	
 	<article>
 		<p>Bienvenue sur la boutique culturelle en ligne.</p>
 
