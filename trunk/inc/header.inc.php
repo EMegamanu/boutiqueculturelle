@@ -23,10 +23,25 @@
 		<script>
 			/* Au chargement de la page achevé... */
 			$(function() {
+				var indiceColGenre = -1;
+
+			  	$(".results th").each(function(i) {
+			  		if($(this).text() == "Genre") {
+			  			indiceColGenre = i;
+			  			return false;
+			  		}
+			  	});
+
 				/* Initialisation de jQuery.tablesorter pour tous les tableaux de résultat. */
 				$("table.results").each(function() {
 					var $table = $(this);
-					$table.tablesorter();
+					$table.tablesorter({
+						widgets: ["zebra", "filter"],
+						 widgetOptions: {
+						 	filter_hideFilters : true,
+						 	filter_reset : '#menu2 a.reset'
+						 }
+					});
 				});
 
 				  // External search
@@ -34,12 +49,18 @@
   // <button type="button" data-filter-column="4" data-filter-text="2?%">Saved Search</button>
 
 
-  $("#menu2 a").click(function(evt) {
-  	var $lien = $(this);
+			  $("#menu2 a:not(.reset)").click(function(evt) {
+			  	var $lien = $(this);
+
+			    var filters = [];
+			    filters[indiceColGenre] = $lien.text();
+
+			    // using "table.hasFilters" here to make sure we aren't targetting a sticky header
+			    $.tablesorter.setFilters( $('table.results'), filters, true ); // new v2.9
 
 
-  	evt.preventDefault();
-  });
+			  	evt.preventDefault();
+			  });
 
 
   $('button[data-filter-column]').click(function(){
