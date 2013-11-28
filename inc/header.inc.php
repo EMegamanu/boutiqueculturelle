@@ -45,7 +45,7 @@
 					})
 					.tablesorterPager({
 						container: $(this).next(".pager"),
-						output: '{page} / {totalPages}'
+						output: '{page} / {filteredPages}'
 					});
 				});
 
