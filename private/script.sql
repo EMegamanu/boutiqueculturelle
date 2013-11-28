@@ -282,34 +282,34 @@ Insert into produit values (30, 'Harlan promet moi Coben',  1, 7.99, './img/cobe
 Insert into livre values(30, 'Roman Policier', 'Prost', 2009);
 
 Insert into produit values (31, 'Carrington Street', 3, 16.99, './img/carrington.jpg');
-Insert into Disque values (31, 'Pop Rock', 'Adèle et Glen', 2008);
+Insert into Disque values (31, 'Pop-Rock', 'Adèle et Glen', 2008);
 
 Insert into produit values (32, 'Leaving records', 3, 20.99, './img/leaving.jpg');
-Insert into Disque values (32, 'Pop Rock', 'Dual Form', 2009);
+Insert into Disque values (32, 'Pop-Rock', 'Dual Form', 2009);
 
 Insert into produit values (33, 'Melvins', 3, 18.99, './img/melvins.jpg');
-Insert into Disque values (33, 'Pop Rock', 'The Bootlicker', 2008);
+Insert into Disque values (33, 'Pop-Rock', 'The Bootlicker', 2008);
 
 Insert into produit values (34, 'Robert Soul', 3, 19.99, './img/robert.jpg');
-Insert into Disque values (34, 'Pop Rock', 'Robert', 2010);
+Insert into Disque values (34, 'Pop-Rock', 'Robert', 2010);
 
 Insert into produit values (35, 'Too wet to plow', 3, 20.99, './img/too.jpg');
-Insert into Disque values (35, 'Pop Rock', 'Johnny Shines', 2007);
+Insert into Disque values (35, 'Pop-Rock', 'Johnny Shines', 2007);
 
 Insert into produit values (36,'Stuff Like That', 3, 59.99, './img/stuff.jpg');
-Insert into Disque values (36, 'RNB', 'Joe Hugues' , 2003);
+Insert into Disque values (36, 'RnB', 'Joe Hugues' , 2003);
 
 Insert into produit values (37,'Shame Shame Shame', 3, 41.99, './img/lewis.jpg');
-Insert into Disque values (37, 'RNB', 'Smiley Lewis' , 1993);
+Insert into Disque values (37, 'RnB', 'Smiley Lewis' , 1993);
 
 Insert into produit values (38, 'Vanguard Visionnaries', 3, 29.99, './img/big.jpg');
-Insert into Disque values (38, 'RNB', 'Big mamma Thorton' , 2007);
+Insert into Disque values (38, 'RnB', 'Big mamma Thorton' , 2007);
 
 Insert into produit values (39, 'Shake Rattle & Roll in Concert', 3, 29.99, './img/joe.jpg');
-Insert into Disque values (39, 'RNB', 'Big Joe Turner' , 1998);
+Insert into Disque values (39, 'RnB', 'Big Joe Turner' , 1998);
 
 Insert into produit values (40, 'The Valentines', 3, 28.99, './img/the.jpg');
-Insert into Disque values (40, 'RNB', 'Lily Maebelle' , 2005);
+Insert into Disque values (40, 'RnB', 'Lily Maebelle' , 2005);
 
 Insert into produit values (41, 'Sonates pour piano', 3, 11.99, './img/mozart.jpg');
 Insert into Disque values (41, 'Classique', 'Mozart' , 1821);

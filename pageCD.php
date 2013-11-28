@@ -12,7 +12,7 @@
 		<li><a href="#rnb">RnB</a></li>
 		<li><a href="#classique">Classique</a></li>
 		<li><hr /></li>
-		<li><a href="#">Tout</a></li>
+		<li><a href="#" class="reset">Tout</a></li>
 	</ul>
 </nav>
 
