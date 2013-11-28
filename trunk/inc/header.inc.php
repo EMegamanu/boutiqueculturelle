@@ -27,7 +27,37 @@
 				$("table.results").each(function() {
 					var $table = $(this);
 					$table.tablesorter();
-				})			
+				});
+
+				  // External search
+  // buttons set up like this:
+  // <button type="button" data-filter-column="4" data-filter-text="2?%">Saved Search</button>
+
+
+  $("#menu2 a").click(function(evt) {
+  	var $lien = $(this);
+
+
+  	evt.preventDefault();
+  });
+
+
+  $('button[data-filter-column]').click(function(){
+    /*** first method *** data-filter-column="1" data-filter-text="!son"
+      add search value to Discount column (zero based index) input */
+ var filters = [],
+      $t = $(this),
+      col = $t.data('filter-column'), // zero-based index
+      txt = $t.data('filter-text') || $t.text(); // text to add to filter
+
+    filters[col] = txt;
+    // using "table.hasFilters" here to make sure we aren't targetting a sticky header
+    $.tablesorter.setFilters( $('table.hasFilters'), filters, true ); // new v2.9
+
+    
+
+    return false;
+  });
 			});
 		</script>
 	</head>

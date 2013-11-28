@@ -1,7 +1,7 @@
 $(function() {
 
   // call the tablesorter plugin
-  $("table.tablesorter").tablesorter({
+  $("table.results").tablesorter({
     theme: 'black',
 
     // hidden filter input/selects will resize the columns, so try to minimize the change
