@@ -20,7 +20,7 @@
 <div id="menu2">
 
 	<ul class="menu">
-		<li  classe ="item1"><a href="pageCD.php">Disque</a>
+		<li  classe ="item1"><a href="pageCD.php">Disques</a>
 
 			<ul class= "hidden">
 				<li><a href="#">Pop-Rock </a></li>
