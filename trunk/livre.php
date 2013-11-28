@@ -75,5 +75,8 @@
 ?>
 	</table>
 </div>
-
+<?php
+	/* Inclusion du pied de page. */
+	include_once('inc/footer.inc.php');
+?>
 

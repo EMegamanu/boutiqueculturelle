@@ -23,6 +23,6 @@
 </section>
 
 <?php
-	/* Inclusion de l'en-tête. */
+	/* Inclusion du pied de page. */
 	include_once('inc/footer.inc.php');
 ?>
