@@ -44,30 +44,19 @@
 						l'achat de vos biens culturels en ligne.
 					</span>
 				</span>
+			<div id="espace_client">
+				<ul>
+					<li><a href="inscription.php">Inscription</a></li>
+					<li><a href="Connexion">Espace client</a></li>
+				</ul>
+			</div>
 		</h1>
+		
 		<nav id="menu-principal">
 			<ul>
-				<li>
-					<a href="disques.php" tabindex="1">Disques</a>
-					<ul>
-						<li><a href="disques.php?cat=cd">CD</a></li>
-						<li><a href="disques.php?cat=mp3">MP3</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="films.php" tabindex="11">Films</a>
-					<ul>
-						<li><a href="films.php?cat=dvd">DVD</a></li>
-						<li><a href="films.php?cat=bluray">Blu-ray</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="livres.php" tabindex="21">Livres</a>
-					<ul>
-						<li><a href="livres.php?cat=relie">Reliés</a></li>
-						<li><a href="livres.php?cat=ebook">E-books</a></li>
-					</ul>
-				</li>
+				<li><a href="pageCD.php" tabindex="1">Disques</a></li>
+				<li><a href="DVD.php" tabindex="11">Films</a></li>
+				<li><a href="livre.php" tabindex="21">Livres</a></li>
 				<li><a href="packs.php" tabindex="31">Pack Culture</a></li>
 				<li><a href="admin.php" tabindex="41">Administration</a></li>
 				<li class="search-item"><input type="search" name="recherche" placeholder="Tapez votre recherche" tabindex="51"/></li>

@@ -60,6 +60,16 @@ h1 .subtitle {
 #logo {
     vertical-align: middle;
 }
+#espace_client {
+  font-size: 0.4em;
+  float: right;
+  margin-top: 20px;
+
+}
+#espace_client a{
+  color: #000000;
+  }
+
 
 /* ------------------------- */
 /* Sections de page de premier niveau. */
@@ -96,12 +106,6 @@ p.success {
 }
 p.fail {
     color: #FF0000;
-}
-footer > ul > li{
-    text-decoration: none;
-    display: inline-block;
-    margin-right: 5px;
-    margin-left: 5px;
 }
 
 .hidden {
@@ -326,6 +330,8 @@ width: 10px;
 padding: 5px;
 text-align: left;
 }
+
+/*Pied de page */
 #information ul { 
     list-style: none; 
     padding: 0;
@@ -339,3 +345,6 @@ text-align: left;
 #information { 
     text-align: center; 
 }
+/* --------------- */
+
+
