@@ -20,7 +20,7 @@
 <div id="menu2">
 
 	<ul class="menu">
-		<li  classe ="item1"><a href="#">CD</a>
+		<li  classe ="item1"><a href="#">Disques</a>
 
 			<ul class= "shown">
 				<li><a href="#">Pop-Rock </a></li>
@@ -28,7 +28,7 @@
 				<li><a href="#">Classique </a></li>
 			</ul>
 		</li>
-		<li  class ="item2"><a href="DVD.php">DVD</a>
+		<li  class ="item2"><a href="DVD.php">Films</a>
 			<ul class= "hidden">
 				<li><a href="#">Action </a></li>
 				<li><a href="#">Comédie </a></li>
@@ -45,39 +45,38 @@
 		</li>
 	</ul>
 </div>
-<br/> <br/><br/> 
 <div>
 
 
 <h2><?php echo 'Disque';?></h2>
 	<table id="tableau-catalogue" classe="results" border="1">
 
-		<tr>
-			<th>Pochette/Couverture</th>
-			<th>Nom</th>
-			<th>Genre</th>
-			<th>Compositeur</th>
-			<th>Annee de Production</th>
-		</tr>
-		<tr>
+        <tr>
+            <th>Pochette/Couverture</th>
+            <th>Nom</th>
+            <th>Genre</th>
+            <th>Compositeur</th>
+            <th>Annee de Production</th>
+        </tr>
+        <tr>
 <?php
-		$results = $db->query('SELECT * FROM Disque');
-		$results->setFetchMode(PDO::FETCH_OBJ);
-			while($data = $results->fetch()) {
-		print_r($row);
+        $results = $db->query('SELECT * FROM Disque D JOIN Produit P ON D.id = P.id');
+        // $results->setFetchMode(PDO::FETCH_OBJ);
+            while($data = $results->fetch()) {
+        print_r($row);
 ?>
-			<td class="image">
-				<image scr="#" />
-			</td>
-			<td><?php echo $data['nom'];?></td>
-			<td><?php echo $data['genre'];?></td>
-			<td><?php echo $data['compositeur'];?></td>
-			<td><?php echo $data['anneeProduction'];?></td>
-		</tr>
+            <td class="image">
+                <img src="<?php echo $data['image'];?>" alt=""/>
+            </td>
+            <td><?php echo $data['nom'];?></td>
+            <td><?php echo $data['genre'];?></td>
+            <td><?php echo $data['compositeur'];?></td>
+            <td><?php echo $data['anneeProduction'];?></td>
+        </tr>
 <?php
-			}
+            }
 ?>
-	</table>
+    </table>
 </div>
 
 

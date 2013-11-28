@@ -20,7 +20,7 @@
 <div id="menu2">
 
 	<ul class="menu">
-		<li  classe ="item1"><a href="pageCD.php">CD</a>
+		<li  classe ="item1"><a href="pageCD.php">Disque</a>
 
 			<ul class= "hidden">
 				<li><a href="#">Pop-Rock </a></li>
@@ -28,7 +28,7 @@
 				<li><a href="#">Classique </a></li>
 			</ul>
 		</li>
-		<li  class ="item2"><a href="DVD.php">DVD</a>
+		<li  class ="item2"><a href="DVD.php">Films</a>
 			<ul class= "hidden">
 				<li><a href="#">Action </a></li>
 				<li><a href="#">Comédie </a></li>
@@ -45,9 +45,8 @@
 		</li>
 	</ul>
 </div>
-<br/> <br/><br/> 
 <div>
-	<h2><?php echo 'Livre';?></h2>
+	<h2><?php echo 'Livres';?></h2>
 	<table id="tableau-catalogue" result="tableau-catalogue" border="1">
 		<tr>
 			<th>Pochette/Couverture</th>
@@ -58,13 +57,14 @@
 		</tr>
 		<tr>
 <?php
-		$results = $db->query('SELECT * FROM Livre');
-		$results->setFetchMode(PDO::FETCH_OBJ);
-			while($data = $results->fetch()) {
+		$results = $db->query('SELECT * FROM Livre D JOIN Produit P ON D.id = P.id');
+        // $results->setFetchMode(PDO::FETCH_OBJ);
+            while($data = $results->fetch()) {
+        print_r($row);
 ?>
 			<td class="image">
-				<image scr="#" />
-			</td>
+                <img src="<?php echo $data['image'];?>" alt=""/>
+            </td>
 			<td><?php echo $data['nom'];?></td>
 			<td><?php echo $data['genre'];?></td>
 			<td><?php echo $data['auteur'];?></td>
