@@ -195,12 +195,7 @@ ul, ul ul {
 }
 .menu > li > a {
   background-color: #000000;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(114, 122, 134)),to(rgb(80, 88, 100)));
-  background-image: -webkit-linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
-  background-image: -moz-linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
-  background-image: -o-linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
-  background-image: -ms-linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
-  background-image: linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
+  background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#000000');
   border-bottom: 1px solid #000000;
   -webkit-box-shadow: inset 0px 1px 0px 0px #000000;
