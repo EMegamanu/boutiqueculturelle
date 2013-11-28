@@ -3,20 +3,15 @@
 	require_once('inc/db.inc.php');
 	/* Inclusion de l'en-tête. */
 	include_once('inc/header.inc.php');
+
 ?>
-		<script>
-			/* Au chargement de la page achevé... */
-			$(function() {
-				/* Initialisation de jQuery.tablesorter pour tous les tableaux de résultat. */
-				$("table.results").each(function() {
-					var $table = $(this);
-					$table.tablesorter();
-				})			
-			});
-		</script>
-
-<br/> <br/><br/> 
-
+<script>
+		$(document).ready(function() 
+    { 
+        $("tableau-catalogue").tablesorter(); 
+    } 
+</script> 
+</br></br></br></br></br>
 <div id="menu2">
 
 	<ul class="menu">
@@ -47,14 +42,17 @@
 </div>
 <div>
 	<h2><?php echo 'Livres';?></h2>
-	<table id="tableau-catalogue" result="tableau-catalogue" border="1">
+	<table id="tableau-catalogue" class="results" class="tablesorter" border="1">
+		<thead>
 		<tr>
 			<th>Pochette/Couverture</th>
 			<th>Nom</th>
 			<th>Genre</th>
 			<th>Auteur</th>
 			<th>Date de Parution</th>
+			<th>Prix</th>
 		</tr>
+		</thead>
 		<tr>
 <?php
 		$results = $db->query('SELECT * FROM Livre D JOIN Produit P ON D.id = P.id');
@@ -69,6 +67,7 @@
 			<td><?php echo $data['genre'];?></td>
 			<td><?php echo $data['auteur'];?></td>
 			<td><?php echo $data['dateParution'];?></td>
+			<td><?php echo $data['prixHT'];?></td>
 		</tr>
 <?php
 			}
