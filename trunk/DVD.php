@@ -44,7 +44,6 @@
 		</li>
 	</ul>
 </div>
-<br/> <br/><br/> 
 <div>
 	<h2><?php echo 'Films';?></h2>
 	<table id="tableau-catalogue" result="tableau-catalogue" border="1">
@@ -57,13 +56,14 @@
 		</tr>
 		<tr>
 <?php
-		$results = $db->query('SELECT * FROM Film');
-		$results->setFetchMode(PDO::FETCH_OBJ);
-			while($data = $results->fetch()) {
+		$results = $db->query('SELECT * FROM Film D JOIN Produit P ON D.id = P.id');
+        // $results->setFetchMode(PDO::FETCH_OBJ);
+            while($data = $results->fetch()) {
+        print_r($row);
 ?>
 			<td class="image">
-				<image scr="#" />
-			</td>
+                <img src="<?php echo $data['image'];?>" alt=""/>
+            </td>
 			<td><?php echo $data['nom'];?></td>
 			<td><?php echo $data['genre'];?></td>
 			<td><?php echo $data['realisateur'];?></td>
