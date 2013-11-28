@@ -5,12 +5,17 @@
 	/* Inclusion de l'en-tête. */
 	include_once('inc/header.inc.php');
 ?>
+<script language="JavaScript" src="js/genre.js"></script>
 		<script>
-		$(document).ready(function() 
-    { 
-        $("tableau-catalogue").tablesorter(); 
-    } 
-</script> 
+			/* Au chargement de la page achevé... */
+			$(function() {
+				/* Initialisation de jQuery.tablesorter pour tous les tableaux de résultat. */
+				$("table.results").each(function() {
+					var $table = $(this);
+					$table.tablesorter();
+				})			
+			});
+		</script>
 </br></br></br></br>	 
 <div id="menu2">
 
@@ -42,15 +47,16 @@
 </div>
 <div>
 <h2><?php echo 'Disque';?></h2>
+Search <button type="button" data-filter-column="3" data-filter-text="RNB">RNB</button>
 	 <table id="tableau-catalogue" class="results" class="tablesorter" border="1">
 	 	<thead>
         <tr>
-            <th>Pochette/Couverture</th>
-            <th>Nom</th>
-            <th>Genre</th>
-            <th>Compositeur</th>
-            <th>Annee de Production</th>
-            <th>Prix</th>
+            <th data-placeholder="" class="filter-false">Pochette/Couverture</th>
+            <th data-placeholder="" class="filter-match">Nom</th>
+            <th data-placeholder="">Genre</th>
+            <th data-placeholder="">Compositeur</th>
+            <th data-placeholder="">Annee de Production</th>
+            <th data-placeholder="">Prix</th>
         </tr>
     	</thead>
         <tr>

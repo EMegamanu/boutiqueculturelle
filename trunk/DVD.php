@@ -14,8 +14,7 @@
 				})			
 			});
 		</script>
-<br/> <br/><br/> 
-
+</br></br></br></br>
 <div id="menu2">
 
 	<ul class="menu">
@@ -46,13 +45,14 @@
 </div>
 <div>
 	<h2><?php echo 'Films';?></h2>
-	<table id="tableau-catalogue" result="tableau-catalogue" border="1">
+	<table id="tableau-catalogue" class="results tablesorter" border="1">
 		<tr>
 			<th>Pochette/Couverture</th>
 			<th>Nom</th>
 			<th>Genre</th>
 			<th>Réalisateur</th>
 			<th>Année Production</th>
+			<th>Prix</th>
 		</tr>
 		<tr>
 <?php
@@ -68,6 +68,7 @@
 			<td><?php echo $data['genre'];?></td>
 			<td><?php echo $data['realisateur'];?></td>
 			<td><?php echo $data['anneeProduction'];?></td>
+			<td><?php echo $data['prixHT'];?></td>
 		</tr>
 <?php
 			}
@@ -77,5 +78,4 @@
 <?php
 	/* Inclusion du pied de page. */
 	include_once('inc/footer.inc.php');
-?>
 
