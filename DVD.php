@@ -19,7 +19,7 @@
 <div id="menu2">
 
 	<ul class="menu">
-		<li  classe ="item1"><a href="pageCD.php">CD</a>
+		<li  classe ="item1"><a href="pageCD.php">Disques</a>
 
 			<ul class= "hidden">
 				<li><a href="#">Pop-Rock </a></li>
@@ -27,7 +27,7 @@
 				<li><a href="#">Classique </a></li>
 			</ul>
 		</li>
-		<li  class ="item2"><a href="#">DVD</a>
+		<li  class ="item2"><a href="#">Films</a>
 			<ul class= "shown">
 				<li><a href="#">Action </a></li>
 				<li><a href="#">Comédie </a></li>
