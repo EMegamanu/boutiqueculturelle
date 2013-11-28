@@ -6,11 +6,16 @@
 
 ?>
 <script>
-		$(document).ready(function() 
-    { 
-        $("tableau-catalogue").tablesorter(); 
-    } 
-</script> 
+			/* Au chargement de la page achevé... */
+			$(function() {
+				/* Initialisation de jQuery.tablesorter pour tous les tableaux de résultat. */
+				$("table.results").each(function() {
+					var $table = $(this);
+					$table.tablesorter();
+				})			
+			});
+		</script>
+
 </br></br></br></br></br>
 <div id="menu2">
 
