@@ -6,7 +6,7 @@
 ?>
 
 <H2 class="formulaire"> Formulaire de contact</H2>
-<form action="traitement.php" method="post">
+<form action="traitementcontact.php" method="post">
 	<div>
         <label for="nom">Nom :</label>
         <input type="text" id="formulaire" name="nom" />
@@ -33,7 +33,7 @@
         <textarea id="message"></textarea>
     </div>
     <div class="button">
-        <input type="button" value="Envoyer" onClick="return verif()"/>
+        <input type="submit" value="Envoyer"/>
     </div>
 </form>
 <br/> <br/><br/> <br/><br/><br/> <br/><br/> <br/><br/> 
