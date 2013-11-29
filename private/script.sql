@@ -257,7 +257,7 @@ Insert into livre values(21, 'BD', 'Hergé',2008);
 Insert into produit values (22, 'Titeuf', 1, 9.99, './img/titeuf.jpg');
 Insert into livre values(22, 'BD', 'ZEP',2007);
 
-Insert into produit values (23,  'Légendaire', 1, 10.99, './img/legendaire.jpg');
+Insert into produit values (23,  'Légendaire', 1, 10.99, './img/legendaires.jpg');
 Insert into livre values(23, 'BD', 'Patrick Sobral', 2010);
 
 Insert into produit values (24, 'Triple Galop', 1, 10.99, './img/triple.jpg');

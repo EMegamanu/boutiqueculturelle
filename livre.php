@@ -18,12 +18,16 @@
 
 </br></br></br></br></br>
 <nav id="menu2">
-	<ul>
-		<li><a href="#manga">Manga</a></li>
-		<li><a href="#BD">BD</a></li>
-		<li><a href="#Roman Policier">Roman Policier</a></li>
-		<li><hr /></li>
-		<li><a href="#" class="reset">Tout</a></li>
+	<ul class="menu">
+		<li  classe ="item3">Genre
+			<ul>
+				<li><a href="#manga">Manga</a></li>
+				<li><a href="#BD">BD</a></li>
+				<li><a href="#Roman Policier">Roman Policier</a></li>
+				<li><hr /></li>
+				<li><a href="#" class="reset">Tout</a></li>
+			</ul>
+		</li>	
 	</ul>
 </nav>
 <div>

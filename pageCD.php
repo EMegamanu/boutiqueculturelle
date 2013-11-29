@@ -5,14 +5,18 @@
 	/* Inclusion de l'en-tête. */
 	include_once('inc/header.inc.php');
 ?>
-
+<script scr="js/genre.js"></script>
 <nav id="menu2">
-	<ul>
-		<li><a href="#pop-rock">Pop-Rock</a></li>
-		<li><a href="#rnb">RnB</a></li>
-		<li><a href="#classique">Classique</a></li>
-		<li><hr /></li>
-		<li><a href="#" class="reset">Tout</a></li>
+	<ul class="menu">
+		<li  classe ="item1">Genre
+			<ul>
+				<li><a href="#pop-rock">Pop-Rock</a></li>
+				<li><a href="#rnb">RnB</a></li>
+				<li><a href="#classique">Classique</a></li>
+				<li><hr /></li>
+				<li><a href="#" class="reset">Tout</a></li>
+			</ul>
+		</li>
 	</ul>
 </nav>
 

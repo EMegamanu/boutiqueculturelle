@@ -14,14 +14,18 @@
 				})			
 			});
 		</script>
-</br></br></br></br>
+
 <nav id="menu2">
-	<ul>
-		<li><a href="#action">Action</a></li>
-		<li><a href="#comedie">Comédie</a></li>
-		<li><a href="#jeunesse">Jeunesse</a></li>
-		<li><hr /></li>
-		<li><a href="#" class="reset">Tout</a></li>
+	<ul class="menu">
+		<li  class ="item2">Genre
+			<ul class="shown">
+				<li><a href="#action">Action</a></li>
+				<li><a href="#comedie">Comédie</a></li>
+				<li><a href="#jeunesse">Jeunesse</a></li>
+				<li><hr /></li>
+				<li><a href="#" class="reset">Tout</a></li>
+			</ul>
+		</li>
 	</ul>
 </nav>
 <div>
