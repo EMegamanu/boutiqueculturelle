@@ -13,9 +13,10 @@ echo "votre nom est : $nom<br />";
  $prenom = $_POST["prenom"];
 echo "votre prénom est : $prenom<br />";
 $courriel = $_POST["email"];
+echo "votre adresse e-mail est : $courriel<br />";
 $idUtilisateur = $_POST["idUtilisateur"];
 echo "votre identifiant est : $idUtilisateur<br />";
-echo "votre adresse e-mail est : $courriel<br />";
+
 $adresse = $_POST["Adresse"];
 echo "votre adresse est : $adresse<br />";
 $cp = $_POST["CP"];
@@ -25,6 +26,8 @@ echo "votre ville est : $ville<br />";
 
 
 $motDePasse = sha1($passe);
+$requete = "INSERT INTO table_utilisateur (idUtilisateur, nom, prenom, adresse, motDePasse, courriel, cp, ville)
+                  VALUES ('$idUtilisateur','$nom','$prenom','$adresse', '$motDePasse', '$courriel', '$cp', '$ville' )";
 
 else
 {
