@@ -1,5 +1,5 @@
  <?php
- if(!empty($_POST['pseudo']))
+ if(!empty($_POST['idUtilisateur']))
 {
 
 mysql_connect("localhost", "root", "");
