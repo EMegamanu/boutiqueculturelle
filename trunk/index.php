@@ -7,9 +7,9 @@
 	/* Inclusion de l'en-tête. */
 	include_once('inc/header.inc.php');
 ?>
-<section>
+<section id=accueil>
 	
-	<article>
+	<article id= presentation>
 		<p>Bienvenue sur la boutique culturelle en ligne.</p>
 
 		<p>Nous proposons de nombreux <strong>Livres</strong>, <strong>Disques</strong> et <strong>Films</strong>. Notre catalogue de produits se compose ainsi de classiques mais aussi de nouveautés.</p>
@@ -19,8 +19,12 @@
 		<p>Notre équipe reste à votre disposition en cas de question ou de problème de navigation.</p>
 
 	</article>
-
+	
+	<aside>
+		<h1>Composez votre <a href="packs.php">pack culture!</a></h1>
+	</aside>
 </section>
+
 
 <?php
 	/* Inclusion du pied de page. */
