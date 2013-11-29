@@ -17,19 +17,27 @@
     display: inline-block;
 }
 
+html {
+  min-height: 100%;
+
+}
+
 /* Corps. */
 body {
     /* Police sans chasse (façon Arial) */
     font-family: sans-serif;
     /* Largeur minimale : 850px. */
     min-width: 850px;
+    
 
     /* Pas de marges. */
     margin: 0;
     padding: 0;
 
     /* Fond gris. */
-    background: #C0C0C0;
+    /*background: #85AFC7;*/
+    /*background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%);*/
+    background: linear-gradient(to bottom, rgba(125,185,232,0.37) 0%,rgba(95,154,207,0.7) 32%,rgba(41,99,163,0.73) 88%,rgba(30,87,153,1) 100%); /* W3C */
 }
 /* ------------------------- */
 
@@ -43,25 +51,27 @@ body > * {
     margin-right: auto;
 }
 /* ------------------------- */
-
 header {
+  color: black;
   position: relative;
   margin-top: 20px;
   margin-bottom: 20px;
-}
 
+}
 h1 {
+   /* text-shadow: 0px 0px 10px #444444;*/
   display: inline-block;
   margin: 0;
 }
-
 /* Titre de la page. */
 h1 .title-group {
     display: inline-block;
     vertical-align: middle;
+    
 }
 h1 .title {
     display: block;
+  
 }
 h1 .subtitle {
     display: block;
@@ -71,7 +81,6 @@ h1 .subtitle {
 #logo {
     vertical-align: middle;
 }
-
 #espace_client {
   display: inline-block;
   position: absolute;
@@ -83,9 +92,6 @@ h1 .subtitle {
   vertical-align: bottom;
   margin-top: 20px;
 
-  /*font-size: 0.4em;*/
-  /*float: right;*/
-  /*margin-top: 20px;*/
 
 }
 #espace_client a{
@@ -291,6 +297,9 @@ aside#pub {
 }
 #information { 
     text-align: center; 
+}
+#information a {
+  color: black
 }
 
 /* --------------- */
