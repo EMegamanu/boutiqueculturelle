@@ -17,11 +17,11 @@
 
 <nav id="menu2">
 	<ul>
+		<li><a href="#" class="reset">Tout</a></li>
+		<li><hr /></li>
 		<li><a href="#action">Action</a></li>
 		<li><a href="#comedie">Comédie</a></li>
 		<li><a href="#jeunesse">Jeunesse</a></li>
-		<li><hr /></li>
-		<li><a href="#" class="reset">Tout</a></li>
 	</ul>
 </nav>
 <div>

@@ -17,11 +17,11 @@
 		</script>
 <nav id="menu2">
 	<ul>
+		<li><a href="#" class="reset">Tout</a></li>
+		<li><hr /></li>
 		<li><a href="#manga">Manga</a></li>
 		<li><a href="#BD">BD</a></li>
 		<li><a href="#Roman Policier">Roman Policier</a></li>
-		<li><hr /></li>
-		<li><a href="#" class="reset">Tout</a></li>
 	</ul>
 </nav>
 <div>
