@@ -68,8 +68,11 @@ h1 .subtitle {
 }
 #espace_client a{
   color: #000000;
+  text-decoration: none;
   }
-
+#espace_client ul{
+  list-style-type: none;
+}
 
 /* ------------------------- */
 /* Sections de page de premier niveau. */
