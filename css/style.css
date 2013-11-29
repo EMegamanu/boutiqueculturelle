@@ -58,22 +58,22 @@ header {
   margin-bottom: 20px;
 
 }
-h1 {
+header h1 {
    /* text-shadow: 0px 0px 10px #444444;*/
   display: inline-block;
   margin: 0;
 }
 /* Titre de la page. */
-h1 .title-group {
+header h1 .title-group {
     display: inline-block;
     vertical-align: middle;
     
 }
-h1 .title {
+header h1 .title {
     display: block;
   
 }
-h1 .subtitle {
+header h1 .subtitle {
     display: block;
     font-size: 0.6em;
     font-style: oblique;
