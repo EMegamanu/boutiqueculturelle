@@ -79,7 +79,7 @@
 				</span>
 			<div id="espace_client">
 				<ul>
-					<li><a href="inscription.php">Inscription</a></li>
+					<li><a href="inscription.html">Inscription</a></li>
 					<li><a href="Connexion">Espace client</a></li>
 				</ul>
 			</div>

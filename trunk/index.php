@@ -7,21 +7,21 @@
 	/* Inclusion de l'en-tête. */
 	include_once('inc/header.inc.php');
 ?>
-<section id=accueil>
+<section>
 	
-	<article id= presentation>
+	<article>
 		<p>Bienvenue sur la boutique culturelle en ligne.</p>
 
 		<p>Nous proposons de nombreux <strong>Livres</strong>, <strong>Disques</strong> et <strong>Films</strong>. Notre catalogue de produits se compose ainsi de classiques mais aussi de nouveautés.</p>
 
-		<p>Nous vous proposons également de composer un <strong>Pack Culture</strong> économique composé d'un Disque, d'un Film et d'un Livre pour seulement 30 euros.</p>
+		<p>Nous vous proposons également de composer un <strong>Pack Culture</strong> économique composé d'un Disque, d'un Film et d'un Livre pour seulement 29,99 euros.</p>
 
 		<p>Notre équipe reste à votre disposition en cas de question ou de problème de navigation.</p>
 
 	</article>
 	
 	<aside>
-		<h1>Composez votre <a href="packs.php">pack culture!</a></h1>
+		<a href="packs.php"><img src="img/pub.png" alt="offre_promotionnelle" id="pub"/></a>
 	</aside>
 </section>
 

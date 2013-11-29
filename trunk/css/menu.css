@@ -48,13 +48,6 @@ nav#menu-principal a {
 }
 
 
-/* Liens au survol de leur item parent direct. */
-nav#menu-principal li:hover > a {
-    /* Gris clair. */
-    color: #CCCCCC;
-    background: transparent;
-}
-
 /* Liens au survol de leur item parent direct et d'eux-même. */
 nav#menu-principal li:hover > a:hover {
     /* Dégradé. */
