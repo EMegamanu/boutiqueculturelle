@@ -1,4 +1,6 @@
 <?php
+
+  include_once('inc/header.inc.php');
  
    // On va chercher la définition de la classe
    require('class.phpmailer.php');
