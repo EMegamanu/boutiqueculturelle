@@ -17,10 +17,6 @@
     display: inline-block;
 }
 
-h2 {
-  text-align: center;
-  
-}
 /* Corps. */
 body {
     /* Police sans chasse (façon Arial) */
@@ -64,6 +60,16 @@ h1 .subtitle {
 #logo {
     vertical-align: middle;
 }
+#espace_client {
+  font-size: 0.4em;
+  float: right;
+  margin-top: 20px;
+
+}
+#espace_client a{
+  color: #000000;
+  }
+
 
 /* ------------------------- */
 /* Sections de page de premier niveau. */
@@ -101,8 +107,6 @@ p.success {
 p.fail {
     color: #FF0000;
 }
-
-
 
 .hidden {
 display:none;
@@ -179,6 +183,7 @@ ul, ul ul {
 #menu2 {  
   width: 220px;
   float:left;
+  margin-top: 100px;
   margin: 50px auto;
   font-size: 0.8125em;
 }
@@ -191,13 +196,6 @@ ul, ul ul {
 }
 .menu > li > a {
   background-color: #000000;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(114, 122, 134)),to(rgb(80, 88, 100)));
-  background-image: -webkit-linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
-  background-image: -moz-linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
-  background-image: -o-linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
-  background-image: -ms-linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
-  background-image: linear-gradient(top, rgb(114, 122, 134), rgb(80, 88, 100));
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#000000');
   border-bottom: 1px solid #000000;
   -webkit-box-shadow: inset 0px 1px 0px 0px #000000;
   -moz-box-shadow: inset 0px 1px 0px 0px #000000;
@@ -265,7 +263,7 @@ ul, ul ul {
   font-weight: 500;
 }
 
-.menu > li > ul li a:before{
+.menu > ul li a:before{
   content: '▶';
   font-size: 8px;
   color: #bcbcbf;
@@ -312,7 +310,7 @@ width: 80%;
 }
 th {
 border: thin solid #000000;
-width: 10px; 
+width: 1px; 
 padding: 5px;
 }
 td {
@@ -327,4 +325,41 @@ padding: 5px;
 text-align: left;
 }
 
-</style>
+
+#presentation {
+
+  text-align: justify;
+  width: 500px;
+  margin-left: 100px;
+  border: solid;
+
+}
+aside h1{
+  border: solid;
+  text-align: right;
+  margin-left: 80%; 
+}
+aside{
+padding: 0;
+top: 0;
+}
+
+/*Pied de page */
+#information ul { 
+    list-style: none; 
+    padding: 0;
+}
+
+#information li { 
+    display: inline-block; 
+    margin-left: 5px; 
+    margin-right: 5px; 
+}
+#information { 
+    text-align: center; 
+}
+/* --------------- */
+
+table.results tr.tablesorter-filter-row {
+  display: none;
+}

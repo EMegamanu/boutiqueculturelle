@@ -57,7 +57,7 @@
 			    var filters = [];
 			    filters[indiceColGenre] = $lien.text();
 
-			    // using "table.hasFilters" here to make sure we aren't targetting a sticky header
+			   
 			    $.tablesorter.setFilters( $('table.results'), filters, true ); // new v2.9
 
 

@@ -116,10 +116,14 @@ display:none;
 display:visible;
 }
 
- 
+h2.formulaire {
+text-align: center;
+margin-top: 2cm;
+}
+
 form {
     /* Pour le centrer dans la page */
-  margin: 0 auto;
+  margin-top: 1cm;
     width: 500px;
     /* Pour voir les limites du formulaire */
     padding: 3em;
@@ -135,21 +139,20 @@ label {
     width: 120px;
     text-align: right;
 }
-input, textarea {
+input#formulaire, textarea {
     /* Afin de s'assurer que tous les champs textuels utilisent la même police
        Par défaut, textarea utilise une police à espacement constant */
     font: 1em sans-serif;
 
     /* Pour donner la même dimension à tous les champs textuels */
     width: 300px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  
 
     /* Pour harmoniser l'apparence des bordures des champs textuels */
-    border: 2px solid #000000;
+    border: 2px solid black;
     box-shadow:1px 1px 2px #000000 inset;
 }
-input:focus, textarea:focus {
+input#formulaire:focus, textarea:focus {
     /* Afin de rehausser les éléments actifs */
   border-color: #000;
 }
@@ -165,20 +168,8 @@ textarea {
   resize: vertical;
 }.button {
     /* Pour positionner les boutons de la même manière que les champs textuels */
-/*    padding-left: 90px; /* même dimension que les étiquettes */
-}
+   padding-left: 120px; /* même dimension que les étiquettes */
 
-button {
-  margin-left: 11em;
-}
-
-a {
-  text-decoration: none;
-}
-ul, ul ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 #menu2 ul {
@@ -188,26 +179,28 @@ padding:0;
 list-style-type:none;
 }
 #menu2 ul li {
-display: inline; /*IE 6*/
+display: inline; 
 }
 
 #menu2 ul li a {
 display:block;
-background:#d9d9d9;
+background:#d9d9d9; /*gris*/
 width:200px;
 text-decoration:none;
 padding:4px/*padding for top, bottom*/ 7px /*padding for left, right*/;
-border-bottom:1px solid #eeeeee;
-border-top:1px solid #cccccc;
-border-left:5px solid #333333;
+border-left:5px solid black;
 color:#333333;
 }
 #menu2 ul li a:hover {
-border-left-color:#0099FF;
+border-left-color:#0099FF;/*bleu*/
 color:#0066FF;
-background:#c4c4c4;
+background:white;
 }
-
+#menu2 hr{
+color:black;
+background-color: black;
+height:2px;
+}
 #tableau-catalogue {
 border: medium solid #000000;
 border-collapse: collapse;
@@ -215,22 +208,27 @@ width: 80%;
 }
 
 th {
+font-size: 50px;
 border: thin solid #000000;
-width: 1px; 
-padding: 5px;
+width:auto; 
+padding: 3px;
 }
 
 td {
+font-size: 15px;
+text-align: center;
+vertical-align: middle;
 border: thin solid #000000;
-width: 10px;
+width: auto;
 padding: 5px;
 }
 
 tr {
 border: thin solid #000000;
+text-align: center;
+vertical-align: middle;
 width: 10px;
 padding: 5px;
-text-align: left;
 }
 
 section#accueil div {
@@ -272,4 +270,8 @@ aside#pub {
 
 table.results tr.tablesorter-filter-row {
   display: none;
+}
+
+.pager {
+  text-align: center;
 }
