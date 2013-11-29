@@ -44,6 +44,17 @@ body > * {
 }
 /* ------------------------- */
 
+header {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  display: inline-block;
+  margin: 0;
+}
+
 /* Titre de la page. */
 h1 .title-group {
     display: inline-block;
@@ -60,10 +71,21 @@ h1 .subtitle {
 #logo {
     vertical-align: middle;
 }
+
 #espace_client {
-  font-size: 0.4em;
-  float: right;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+
+  font-weight: bold;
+  font-size: 0.8em;
+  
+  vertical-align: bottom;
   margin-top: 20px;
+
+  /*font-size: 0.4em;*/
+  /*float: right;*/
+  /*margin-top: 20px;*/
 
 }
 #espace_client a{

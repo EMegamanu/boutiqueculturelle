@@ -72,30 +72,29 @@
 	<header>
 		<h1>
 			<a href="."><img src="img/logo-64.png" alt="Boutique culturelle" id="logo"/></a>
-				<span class="title-group">
-					<span class="title">Boutique culturelle - <?php echo $title; ?></span>
-					<span class="subtitle">
-						Bienvenue sur votre site de référence pour 
-						l'achat de vos biens culturels en ligne.
-					</span>
+			<span class="title-group">
+				<span class="title">Boutique culturelle - <?php echo $title; ?></span>
+				<span class="subtitle">
+					Bienvenue sur votre site de référence pour 
+					l'achat de vos biens culturels en ligne.
 				</span>
-			<div id="espace_client">
-				<ul>
-					<li><a href="inscription.html">Inscription</a></li>
-					<li><a href="Connexion">Espace client</a></li>
-				</ul>
-			</div>
+			</span>
 		</h1>
-		
-		<nav id="menu-principal">
+		<nav id="espace_client">
 			<ul>
-				<li><a href="pageCD.php" tabindex="1">Disques</a></li>
-				<li><a href="DVD.php" tabindex="11">Films</a></li>
-				<li><a href="livre.php" tabindex="21">Livres</a></li>
-				<li><a href="packs.php" tabindex="31">Pack Culture</a></li>
-				<li><a href="admin.php" tabindex="41">Administration</a></li>
-				<li class="search-item"><input type="search" name="recherche" placeholder="Tapez votre recherche" tabindex="51"/></li>
+				<li><a href="inscription.html">Inscription</a></li>
+				<li><a href="Connexion">Espace client</a></li>
 			</ul>
 		</nav>
-
 	</header>
+		
+	<nav id="menu-principal">
+		<ul>
+			<li><a href="pageCD.php" tabindex="1">Disques</a></li>
+			<li><a href="DVD.php" tabindex="11">Films</a></li>
+			<li><a href="livre.php" tabindex="21">Livres</a></li>
+			<li><a href="packs.php" tabindex="31">Pack Culture</a></li>
+			<li><a href="admin.php" tabindex="41">Administration</a></li>
+			<li class="search-item"><input type="search" name="recherche" placeholder="Tapez votre recherche" tabindex="51"/></li>
+		</ul>
+	</nav>
