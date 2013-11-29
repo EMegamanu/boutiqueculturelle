@@ -26,7 +26,7 @@ echo "votre ville est : $ville<br />";
 
 
 $motDePasse = sha1($passe);
-$requete = "INSERT INTO table_utilisateur (idUtilisateur, nom, prenom, adresse, motDePasse, courriel, cp, ville)
+$requete = "INSERT INTO utilisateur (idUtilisateur, nom, prenom, adresse, motDePasse, courriel, cp, ville)
                   VALUES ('$idUtilisateur','$nom','$prenom','$adresse', '$motDePasse', '$courriel', '$cp', '$ville' )";
 
 else
