@@ -21,11 +21,15 @@
 			<p>Nous vous proposons également de composer un <strong>Pack Culture</strong> économique composé d'un Disque, d'un Film et d'un Livre pour seulement 29,99 euros.</p>
 
 			<p>Notre équipe reste à votre disposition en cas de question ou de problème de navigation.</p>
-
+			<p>Bonne visite sur notre site !</p>
 		</article>
 	</div>
 	
 </section>
+<section>
+	<h2>Nouveautés du mois</h2>
+</section>
+		
 
 
 <?php

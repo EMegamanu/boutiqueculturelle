@@ -90,7 +90,7 @@ header h1 .subtitle {
   font-size: 0.8em;
   
   vertical-align: bottom;
-  margin-top: 20px;
+  margin-top: 10px;
 
 
 }
@@ -262,6 +262,7 @@ width: 10px;
 padding: 5px;
 }
 
+/* Page d'accueil ---------- */
 section#accueil div {
   position: relative;
   min-height: 323px;
@@ -270,8 +271,14 @@ section#accueil div {
 article#bienvenue {
   text-align: justify;
   margin-left: 517px;
+  margin-right: 5px;
   /*width: 400px;*/
   /*margin-right: 455px;*/
+}
+
+#bienvenue p:first-child {
+  text-align: center;
+  font-weight: bold;
 }
 
 aside#pub {
@@ -282,7 +289,7 @@ aside#pub {
     border: solid 1px;
     float: left;
 }
-
+/* ------------------------ */
 
 /*Pied de page */
 #information ul { 
@@ -299,7 +306,7 @@ aside#pub {
     text-align: center; 
 }
 #information a {
-  color: black
+  color: black;
 }
 
 /* --------------- */
