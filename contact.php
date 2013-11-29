@@ -39,3 +39,7 @@
 
 </form>
 <br/> <br/><br/> <br/><br/><br/> <br/><br/> <br/><br/> 
+<?php
+    /* Inclusion du pied de page. */
+    include_once('inc/footer.inc.php');
+?>
