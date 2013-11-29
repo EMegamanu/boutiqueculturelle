@@ -13,10 +13,8 @@ include_once('inc/header.inc.php');
 	<ul>
 		<li><a href="#">Action</a></li>
 		<li><a href="#">Com&#233die</a></li>
-		<li><a href="#">Drame</a></li>
-		<li><a href="#">Documentaire</a></li>
-		<li><a href="#">Fantastique</a></li>
-		<li><a href="#">Jeunesse</a></li>
+		<li><a href="#">Jeunsse</a></li>
+		<li><a href="#">Tout</a></li>
 	</ul>
 </div>	
   

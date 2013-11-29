@@ -19,11 +19,11 @@ include_once('inc/header.inc.php');
   	 
 <div id="menu2">
 	<ul>
-  				<li><a href="#">Vari&#233t&#233</a></li>
                 <li><a href="#">Pop-Rock</a></li>
-                <li><a href="#">Dancefloor</a></li>
-                <li><a href="#">Rap/Hip-Hop</a></li>
+                <li><a href="#">RnB</a></li>
                 <li><a href="#">Classique</a></li>
+                <li><a href="#">Tout</a></li>
 	</ul>
 <div/>
+
 
