@@ -82,8 +82,8 @@
 		</h1>
 		<nav id="espace_client">
 			<ul>
-				<li><a href="inscription.html" tabindex="61">Inscription</a></li>
-				<li><a href="Connexion" tabindex="71">Espace client</a></li>
+				<li><a href="inscription.php" tabindex="61">Inscription</a></li>
+				<li><a href="connexion.php" tabindex="71">Espace client</a></li>
 			</ul>
 		</nav>
 	</header>
