@@ -326,6 +326,25 @@ padding: 5px;
 text-align: left;
 }
 
+
+#presentation {
+
+  text-align: justify;
+  width: 500px;
+  margin-left: 100px;
+  border: solid;
+
+}
+aside h1{
+  border: solid;
+  text-align: right;
+  margin-left: 80%; 
+}
+aside{
+padding: 0;
+top: 0;
+}
+
 /*Pied de page */
 #information ul { 
     list-style: none; 
