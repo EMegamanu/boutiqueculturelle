@@ -269,7 +269,7 @@ section#accueil div {
 article#bienvenue {
   text-align: justify;
   margin-left: 517px;
-  margin-right: 5px;
+  margin-right: 7px;
   /*width: 400px;*/
   /*margin-right: 455px;*/
 }
@@ -281,7 +281,7 @@ article#bienvenue {
 
 aside#pub {
     position: relative;
-    width: 495px;
+    width: 493px;
     height: 323px;
     overflow: hidden;
     border: solid 1px;
