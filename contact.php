@@ -5,32 +5,32 @@
 	include_once('inc/header.inc.php');
 ?>
 
-<H2 class="formulaire"> Formulaire de contact</H2>
+<h2> Formulaire de contact</h2>
 <form action="traitementcontact.php" method="post">
 	<div>
         <label for="nom">Nom :</label>
-        <input type="text" id="formulaire" name="nom" />
+        <input type="text" id="identifiant" name="nom" />
     </div>
     <div>
         <label for="prenom">Prénom :</label>
-        <input type="texte" id="formulaire" name="prenom" />
+        <input type="texte" id="identifiant" name="prenom" />
     </div>
  	
     <div>
         <label for="courriel">Courriel :</label>
-        <input type="email" id="formulaire" name="courriel"/>
+        <input type="email" id="identifiant" name="courriel"/>
     </div>
     <div>
         <label for="telephone">Téléphone:</label>
-        <input type="texte" id="formulaire" name="telephone"/>
+        <input type="texte" id="identifiant" name="telephone"/>
     </div>
     <div>
-        <label for="n°commande">N°Commande:</label>
-        <input type="number" id="formulaire" name="n°commande"/>
+        <label for="num_commande">N°Commande:</label>
+        <input type="number" id="identifiant" name="num_commande"/>
     </div>
     <div>
         <label for="message">Message :</label>
-        <textarea id="message"></textarea>
+        <textarea id="identifiant" name="message"></textarea>
     </div>
     <div class="button">
         <input type="submit" value="Envoyer"/>

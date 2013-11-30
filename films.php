@@ -25,7 +25,7 @@
 	</ul>
 </nav>
 <div>
-	<h2><?php echo 'Film';?></h2>
+	<h2><?php echo 'Films';?></h2>
 	 <table id="tableau-catalogue" class="results tablesorter">
 		<thead>
 			<tr>
