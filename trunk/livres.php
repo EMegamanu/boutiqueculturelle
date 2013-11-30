@@ -35,6 +35,7 @@
 				<th>Auteur</th>
 				<th>Date de Parution</th>
 				<th>Prix</th>
+				<th>Ajouter au panier</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -53,6 +54,7 @@
 			<td><?php echo $data['auteur'];?></td>
 			<td><?php echo $data['dateParution'];?></td>
 			<td><?php echo $data['prixHT'];?></td>
+			<td><input type="image" src="img/ajouter-au-panier"/></td>
 		</tr>
 <?php
 			}
