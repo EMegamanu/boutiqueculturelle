@@ -10,7 +10,7 @@
 <section id="accueil">
 	<div class="group">
 		<aside id="pub">
-			<a href="packs.php"><img src="img/pub.png" alt="Composez votre pack culture"/></a>
+			<a href="packs.php"><img src="img/pub2.png" alt="Composez votre pack culture"/></a>
 		</aside>
 
 		<article id="bienvenue">
