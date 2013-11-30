@@ -1,9 +1,12 @@
 /* Au chargement de la page achevé... */
 $(function() {
+	/* Tableaux de résultats issus de la base. */
+	var $tableResults = $("table.results");
+
 	/* Indice de la colonne du genre dans le tableau de résultats de la page courante. */
 	var indiceColGenre = -1;
 
-  	$(".results th").each(function(i) {
+  	$tableResults.find("th").each(function(i) {
   		if($(this).text() == "Genre") {
   			indiceColGenre = i;
   			return false; /* Trouvé ! On sort de la boucle. */
@@ -11,7 +14,7 @@ $(function() {
   	});
 
 	/* Initialisation de jQuery.tablesorter pour tous les tableaux de résultat. */
-	$("table.results").each(function() {
+	$tableResults.each(function() {
 		var $table = $(this);
 		$table.tablesorter({ /* Trie du tableau. */
 			widgets: ["zebra", "filter"],
@@ -22,7 +25,7 @@ $(function() {
 			 }
 		})
 		.tablesorterPager({ /* Pagination. */
-			container: $(this).next(".pager"),
+			container: $table.next(".pager"),
 			output: '{page} / {filteredPages}'
 		});
 	});
@@ -35,15 +38,39 @@ $(function() {
 	    var filters = [];
 	    filters[indiceColGenre] = $lien.text();
 
-	    $.tablesorter.setFilters( $('table.results'), filters, true );
-
+	    $.tablesorter.setFilters($tableResults, filters, true);
 
 	  	evt.preventDefault();
 	});
 
-	/* Fallback gestion des champs de type Date sur navigateurs ne les gérant pas encore. (Ex : Firefox) */
-	$inputDate = $("input[type='date']");
+	/* ---------------------- */
+
+	/* Méthode de rabatage de la gestion des champs de type Date sur navigateurs ne les gérant pas encore. (Ex : Firefox) */
+	var $inputDate = $("input[type='date']");
 	if($inputDate.prop("type") == "text") {
-		$inputDate.datepicker($.datepicker.regional[ "fr" ] );
+		$inputDate.datepicker($.datepicker.regional["fr"]);
 	}
+
+	/* ---------------------- */
+	/* Champs indiquant le nombre d'articles actuellement dans le panier. */
+	var $nbArticles = $(".nb-articles");
+	var classCoche = "fa-checked-square";
+	var classDecoche = "fa-square-o";
+
+	var $liensAjoutPanier = $tableResults.find(".ajout-panier a");
+
+	$liensAjoutPanier.data("coche", false);
+
+	$liensAjoutPanier.click(function(evt) {
+		var $lien = $(this);
+
+		if($lien.data(coche)) {
+
+		} else {
+			
+		}
+
+		evt.preventDefault();
+	});
+
 });
