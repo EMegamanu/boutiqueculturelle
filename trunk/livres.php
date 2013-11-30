@@ -49,7 +49,7 @@
 ?>
 			<td class="ajout-panier">
 <!--				<a href="panier.php?ajout=<?php echo $date['id']; ?>" class="fa fa-check-square"> -->
-				<a href="panier.php?ajout=<?php echo $date['id']; ?>" class="fa fa-square-o">
+				<a href="panier.php?ajout=<?php echo $data['id']; ?>" class="fa fa-square-o" data-id="<?php echo $data['id']; ?>">
 					<span class="hidden">+</span>
 				</a>
 			</td>

@@ -54,29 +54,68 @@ $(function() {
 	/* ---------------------- */
 	/* Champs indiquant le nombre d'articles actuellement dans le panier. */
 	var $nbArticles = $(".nb-articles");
-	var nbArticles = parseInt($nbArticles.text());
+
+	/* Articles du panier. */
+	var articles = $.storage.getItem("articles", "localStorage");
+
+	if(articles) {
+		articles = JSON.parse(articles);
+	} else {
+		articles = {};
+	}
+
+	/* Nombre d'articles dans le panier. */
+	var nbArticles = Object.keys(articles).length;
+
+	$nbArticles.text(nbArticles);
 
 	var classCoche = "fa-check-square";
 	var classDecoche = "fa-square-o";
 
 	var $liensAjoutPanier = $tableResults.find(".ajout-panier a");
 
-	$liensAjoutPanier.data("coche", false);
+	$liensAjoutPanier.each(function() {
+		var $lien = $(this);
+		var id = $lien.data("id");
+
+		// console.log(articles);
+
+		var cocher = articles.hasOwnProperty(id);
+
+		$lien.data("coche", cocher);
+		if(cocher) {
+			$lien.addClass(classCoche);
+			$lien.removeClass(classDecoche);
+		}
+	});
 
 	$liensAjoutPanier.click(function(evt) {
+		evt.preventDefault();
+
 		var $lien = $(this);
+		var id = $lien.data("id");
 
 		if($lien.data("coche")) {
 			$lien.data("coche", false);
-			$lien.addClass(classCoche);
-			$lien.removeClass(classDecoche);
-		} else {
-			$lien.data("coche", true);
 			$lien.removeClass(classCoche);
 			$lien.addClass(classDecoche);
-		}
 
-		evt.preventDefault();
+			delete articles[id];
+			$.storage.setItem("articles", JSON.stringify(articles), "localStorage");
+
+			nbArticles = Object.keys(articles).length;
+			$nbArticles.text(nbArticles);
+		} else {
+			$lien.data("coche", true);
+			$lien.addClass(classCoche);
+			$lien.removeClass(classDecoche);
+
+			articles[id] = id;
+			$.storage.setItem("articles", JSON.stringify(articles), "localStorage");
+			
+			nbArticles = Object.keys(articles).length;
+			$nbArticles.text(nbArticles);
+		}
 	});
 
 });
