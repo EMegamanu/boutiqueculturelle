@@ -181,8 +181,8 @@ input#identifiant, textarea {
   
 
     /* Pour harmoniser l'apparence des bordures des champs textuels */
-    border: 2px solid #87CEEB;
-    box-shadow:1px 1px 2px #87CEEB inset;
+    border: 2px solid #0099FF;
+    box-shadow:1px 1px 2px #0099FF inset;
 }
 input#identifiant:focus, textarea:focus {
     /* Afin de rehausser les éléments actifs */
@@ -265,7 +265,7 @@ padding: 5px;
 }
 
 tr {
-border: thin solid #000000;
+border: 2px thin solid #000000;
 text-align: center;
 vertical-align: middle;
 width: 10px;
@@ -328,3 +328,4 @@ table.results tr.tablesorter-filter-row {
 .pager {
   text-align: center;
 }
+
