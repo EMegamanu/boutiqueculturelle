@@ -152,7 +152,8 @@ margin-top: 2cm;
 
 form {
     /* Pour le centrer dans la page */
-  margin-top: 1cm;
+	background-color:#FAFAFA;
+    margin-top: 1cm;
     width: 500px;
     /* Pour voir les limites du formulaire */
     padding: 3em;
@@ -178,13 +179,22 @@ input#formulaire, textarea {
   
 
     /* Pour harmoniser l'apparence des bordures des champs textuels */
-    border: 2px solid black;
-    box-shadow:1px 1px 2px #000000 inset;
+    border: 2px solid #87CEEB;
+    box-shadow:1px 1px 2px #87CEEB inset;
 }
 input#formulaire:focus, textarea:focus {
     /* Afin de rehausser les éléments actifs */
   border-color: #000;
 }
+input[type=submit], input[type=reset] {
+ width:100px;
+ margin-left:5px;
+ box-shadow:1px 1px 1px #87CEEB;
+ cursor:pointer;
+ }
+ input[type=submit]:hover, input[type=reset]:hover {
+ background-color:#87CEEB;
+ }
 textarea {
     /* Pour aligner correctement les champs multilignes et leurs étiquettes */
   vertical-align: top;
