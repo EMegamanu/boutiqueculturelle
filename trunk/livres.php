@@ -25,7 +25,7 @@
 	</ul>
 </nav>
 <div>
-	<h2><?php echo 'Livre';?></h2>
+	<h2><?php echo 'Livres';?></h2>
 	<table id="tableau-catalogue" class="results tablesorter">
 		<thead>
 			<tr>
@@ -81,8 +81,4 @@
 	include_once('inc/footer.inc.php');
 ?>
 </div>
-<?php
-	/* Inclusion du pied de page. */
-	include_once('inc/footer.inc.php');
-?>
 
