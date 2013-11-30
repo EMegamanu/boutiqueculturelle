@@ -26,6 +26,7 @@
 	            <th>Compositeur</th>
 	            <th>Annee de Production</th>
 	            <th>Prix</th>
+	            <th>Ajouter au panier</th>
 	        </tr>
     	</thead>
     	<tbody>
@@ -43,6 +44,7 @@
             <td><?php echo $data['compositeur'];?></td>
             <td><?php echo $data['anneeProduction'];?></td>
             <td><?php echo $data['prixHT'];?></td>
+            <td><input type="image" src="img/ajouter-au-panier"/></td>
         </tr>
 <?php
             }
