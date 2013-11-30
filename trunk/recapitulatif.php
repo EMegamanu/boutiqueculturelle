@@ -1,8 +1,9 @@
 <?php
 include_once('inc/header.inc.php');;
 ?>
+<link rel="stylesheet" href="stylepack.css" />
    <br> <br>
-       <h1 align="center"> Recapitulatif de votre pack </h1>
+ <h1> Recapitualif </h1> 
 	
 <table align="center">
    <tr>
@@ -37,7 +38,7 @@ alert("Attention une fois votre commande confirmée il ne sera plus possible de 
 </script>
 
 <body>
-<p align="center"><button type="button" onclick="toggle_text();"> Confirmer la commande </button></p>
+<p1><button type="button" onclick="toggle_text();"> Confirmer la commande </button></p1>
 <script>
 function toggle_text() {
   var span = document.getElementById("span_test");
@@ -54,7 +55,11 @@ function toggle_text() {
  
  <form method="get"action="paiement.html">
   
-  <p align ="center"><input type="submit" value="Passer au paiement -> " rows=6 COLS=26 style="font-family:arial" style="border style:solid" style="background:#9900ff" style="color:#ff66ff"></form> </p>
+  <p><input type="submit" value="Passer au paiement -> " rows=6 COLS=26 style="font-family:arial" style="border style:solid" style="background:#9900ff" style="color:#ff66ff"></form> </p>
   <body/>
   
+  <?php
+	/* Inclusion du pied de page */
+	include_once('inc/footer.inc.php');
+?>
   
