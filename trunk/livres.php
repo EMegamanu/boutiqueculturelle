@@ -36,7 +36,6 @@
 				<th>Auteur</th>
 				<th>Date de Parution</th>
 				<th>Prix</th>
-				<th>Ajouter au panier</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -50,7 +49,7 @@
 			<td class="ajout-panier">
 <!--				<a href="panier.php?ajout=<?php echo $date['id']; ?>" class="fa fa-check-square"> -->
 				<a href="panier.php?ajout=<?php echo $data['id']; ?>" class="fa fa-square-o" data-id="<?php echo $data['id']; ?>">
-					<span class="hidden">+</span>
+					<span class="hidden action">+</span>
 				</a>
 			</td>
 			<td class="image">
@@ -61,7 +60,6 @@
 			<td><?php echo $data['auteur'];?></td>
 			<td><?php echo $data['dateParution'];?></td>
 			<td><?php echo $data['prixHT'];?></td>
-			<td><input type="image" src="img/ajouter-au-panier"/></td>
 		</tr>
 <?php
 			}

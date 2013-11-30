@@ -84,8 +84,13 @@ $(function() {
 
 		$lien.data("coche", cocher);
 		if(cocher) {
+			var $action = $lien.find(".action");
+
 			$lien.addClass(classCoche);
 			$lien.removeClass(classDecoche);
+
+
+			$action.text("-");
 		}
 	});
 
@@ -93,6 +98,8 @@ $(function() {
 		evt.preventDefault();
 
 		var $lien = $(this);
+		var $action = $lien.find(".action");
+
 		var id = $lien.data("id");
 
 		if($lien.data("coche")) {
@@ -105,6 +112,8 @@ $(function() {
 
 			nbArticles = Object.keys(articles).length;
 			$nbArticles.text(nbArticles);
+
+			$action.text("+");
 		} else {
 			$lien.data("coche", true);
 			$lien.addClass(classCoche);
@@ -115,6 +124,8 @@ $(function() {
 			
 			nbArticles = Object.keys(articles).length;
 			$nbArticles.text(nbArticles);
+
+			$action.text("-");
 		}
 	});
 

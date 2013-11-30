@@ -20,13 +20,13 @@
 	 <table id="tableau-catalogue" class="results tablesorter">
 	 	<thead>
 	        <tr>
+				<th><span class="fa fa-shopping-cart"><span class="hidden">Panier</span></span></th>
 	            <th>Pochette/Couverture</th>
 	            <th>Nom</th>
 	            <th>Genre</th>
 	            <th>Compositeur</th>
 	            <th>Annee de Production</th>
 	            <th>Prix</th>
-	            <th>Ajouter au panier</th>
 	        </tr>
     	</thead>
     	<tbody>
@@ -36,6 +36,12 @@
         // $results->setFetchMode(PDO::FETCH_OBJ);
             while($data = $results->fetch()) {
 ?>
+			<td class="ajout-panier">
+<!--				<a href="panier.php?ajout=<?php echo $date['id']; ?>" class="fa fa-check-square"> -->
+				<a href="panier.php?ajout=<?php echo $data['id']; ?>" class="fa fa-square-o" data-id="<?php echo $data['id']; ?>">
+					<span class="hidden action">+</span>
+				</a>
+			</td>
             <td class="image">
                 <img src="<?php echo $data['image'];?>" alt=""/>
             </td>
@@ -44,7 +50,6 @@
             <td><?php echo $data['compositeur'];?></td>
             <td><?php echo $data['anneeProduction'];?></td>
             <td><?php echo $data['prixHT'];?></td>
-            <td><input type="image" src="img/ajouter-au-panier"/></td>
         </tr>
 <?php
             }
