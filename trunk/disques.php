@@ -16,7 +16,7 @@
 </nav>
 
 <div>
-	<h2><?php echo 'Disque';?></h2>
+	<h2><?php echo 'Disques';?></h2>
 	 <table id="tableau-catalogue" class="results tablesorter">
 	 	<thead>
 	        <tr>
