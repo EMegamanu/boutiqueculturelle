@@ -207,7 +207,9 @@ textarea {
       /* Pour permettre aux utilisateurs de redimensionner un champ textuel horizontalement
        Cela ne marche pas avec tous les navigateurs  */
   resize: vertical;
-}.button {
+}
+
+.button {
     /* Pour positionner les boutons de la même manière que les champs textuels */
    padding-left: 120px; /* même dimension que les étiquettes */
 
@@ -248,7 +250,9 @@ border-collapse: collapse;
 width: 80%;
 }
 
-th {
+/* NOOOOOON !
+   Faîtes des règles de style + précises, sinon ça rentre en conflit !! */
+/*th {
 font-size: 50px;
 border: thin solid #000000;
 width:auto; 
@@ -270,7 +274,7 @@ text-align: center;
 vertical-align: middle;
 width: 10px;
 padding: 5px;
-}
+}*/
 
 /* Page d'accueil ---------- */
 section#accueil div {
@@ -346,4 +350,12 @@ section.Commande
 	Margin : 10%;
 	Margin-left : 30%;
 	
+}
+
+option[selected][disabled] {
+  display: none;
+}
+
+#ui-datepicker-div { 
+  font-size: .8em; 
 }

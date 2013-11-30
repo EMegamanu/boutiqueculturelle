@@ -44,6 +44,6 @@ $(function() {
 	/* Fallback gestion des champs de type Date sur navigateurs ne les gérant pas encore. (Ex : Firefox) */
 	$inputDate = $("input[type='date']");
 	if($inputDate.prop("type") == "text") {
-		$inputDate.datepicker();
+		$inputDate.datepicker($.datepicker.regional[ "fr" ] );
 	}
 });
