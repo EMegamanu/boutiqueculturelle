@@ -171,7 +171,7 @@ label {
     width: 120px;
     text-align: right;
 }
-input#formulaire, textarea {
+input#identifiant, textarea {
     /* Afin de s'assurer que tous les champs textuels utilisent la même police
        Par défaut, textarea utilise une police à espacement constant */
     font: 1em sans-serif;
@@ -184,12 +184,12 @@ input#formulaire, textarea {
     border: 2px solid #87CEEB;
     box-shadow:1px 1px 2px #87CEEB inset;
 }
-input#formulaire:focus, textarea:focus {
+input#identifiant:focus, textarea:focus {
     /* Afin de rehausser les éléments actifs */
   border-color: #000;
 }
 input[type=submit], input[type=reset] {
- width:100px;
+ /*width:100px;*/
  margin-left:5px;
  box-shadow:1px 1px 1px #87CEEB;
  cursor:pointer;

@@ -5,7 +5,7 @@
 	include_once('inc/header.inc.php');
 ?>
 
-<h2> Formulaire de contact</h2>
+<h2 class="formulaire"> Formulaire de contact</h2>
 <form action="traitementcontact.php" method="post">
 	<div>
         <label for="nom">Nom :</label>
