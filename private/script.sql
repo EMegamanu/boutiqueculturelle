@@ -200,7 +200,7 @@ insert into film values (2, 'Comédie', 'Set MacFarlane',2013);
 Insert into produit values (3, 'Bienvenue à bord', 2, 10.00, './img/bab.jpg');
 insert into film values (3, 'Comédie', 'Eric Lavaine', 2012);
 
-Insert into produit values (4, 'Les seigneurs', 2, 10.00, './img/leseigneurs.jpg');
+Insert into produit values (4, 'Les seigneurs', 2, 10.00, './img/lesseigneurs.jpg');
 insert into film values (4, 'Comédie', 'Olivier Dahan', 2013);
 
 Insert into produit values (5, 'Sexe entre amis', 2, 10.00, './img/sexeentreamis.jpg');
