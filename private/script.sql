@@ -240,13 +240,13 @@ Insert into produit values (16, 'Naruto', 1, 29.99, './img/naruto.jpg');
 Insert into livre values(16, 'manga', 'Masashi Kasimoto', 2010);
 
 Insert into produit values (17, 'Fairy Tail', 1, 6.99, './img/f.jpg');
-Insert into livre values(17, 'manga', 'Yoko', 2003);
+Insert into livre values(17, 'manga', 'Hiro Mashima', 2003);
 
 Insert into produit values (18, 'Death Note', 1, 7.99, './img/dn.jpg');
 Insert into livre values(18, 'manga', 'Tsugumi Obas', 2006);
 
 Insert into produit values (19, 'Nanami', 1, 8.99, './img/nanami.jpg');
-Insert into livre values(19, 'manga', 'Yoko', 2004);
+Insert into livre values(19, 'manga', 'SUZUKI Julietta ', 2004);
 
 Insert into produit values (20, 'King', 1, 7.99, './img/king.jpg');
 Insert into livre values(20, 'manga', 'Masashi pero', 2004);
