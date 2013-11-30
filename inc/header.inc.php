@@ -11,12 +11,19 @@
 
 		<!-- Bibliothèques. -->
 		<script src="js/jquery/jquery-2.0.3.min.js"></script>
+
+		<!-- Éléments d'interfaces, dont DatePicker. -->
 		<script src="js/jquery/jquery-ui.min.js"></script>
-		<script src="js/jquery/jquery-ui-i18n.min.js"></script> <!-- Localisation de jQuery-ui -->
+		<script src="js/jquery/jquery-ui-i18n.min.js"></script> <!-- Pour langues étrangères, dont Français -->
+
+		<!-- Tri, filtres et pagination des tableaux. -->
 		<script src="js/jquery/jquery.tablesorter.min.js"></script>
 		<script src="js/jquery/jquery.tablesorter.widgets.min.js"></script>
 		<script src="js/jquery/jquery.tablesorter.pager.min.js"></script>
-
+		
+		<!-- Compatibilité de localStorage sur vieux navigateurs via les cookies. -->
+		<script src="js/jquery/jcookie-min.js"></script>
+		<script src="js/jquery/jstorage.min.js"></script>
 
 		<link rel="stylesheet" href="css/jquery-ui/base/jquery-ui.css" />
 		<link rel="stylesheet" href="css/jquery.tablesorter/theme.default.css" />
