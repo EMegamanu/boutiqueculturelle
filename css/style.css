@@ -329,3 +329,21 @@ table.results tr.tablesorter-filter-row {
   text-align: center;
 }
 
+/* Espace perso ---------- */
+
+nav.menu-nav
+{
+	border :2px solid black;
+	Float: Left;
+	
+	width: 24%;
+	
+}
+
+section.Commande
+{
+	border:2px solid black;
+	Margin : 10%;
+	Margin-left : 30%;
+	
+}
