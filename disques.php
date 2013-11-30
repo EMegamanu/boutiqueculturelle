@@ -34,7 +34,6 @@
         $results = $db->query('SELECT * FROM Disque D JOIN Produit P ON D.id = P.id');
         // $results->setFetchMode(PDO::FETCH_OBJ);
             while($data = $results->fetch()) {
-        print_r($row);
 ?>
             <td class="image">
                 <img src="<?php echo $data['image'];?>" alt=""/>

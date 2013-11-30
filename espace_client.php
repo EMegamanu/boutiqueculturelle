@@ -1,11 +1,3 @@
-<!doctype html>
-<html lang="fr">
-    <head>
-	
-
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-       
-        <title>Espace client</title>
 <?php		
 /* Inclusion script connexion base de données. */
 	require_once('inc/db.inc.php');

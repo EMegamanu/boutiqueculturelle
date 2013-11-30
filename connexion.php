@@ -1,13 +1,16 @@
- <?php
+<?php		
+	/* Inclusion script connexion base de données. */
+	require_once('inc/db.inc.php');
+	/* Inclusion de l'en-tête. */
+	include_once('inc/header.inc.php');
 
-mysql_connect("localhost", "root", "");
-mysql_select_db("");
-$requete = "SELECT * FROM utilisateur ".
-                       " WHERE idUtilisateur='$idUtilisateur' AND motDePasse='$motDePasse'";
-                       
-    $result = mysql_query($requete);
+	/* Note : sécuriser cerre requête contre les injections SQL via une requête préparée... */
+	$requete = "SELECT * FROM Utilisateur " .
+           " WHERE id='$idUtilisateur' AND motDePasse='$motDePasse'";
+
+    $results = $db->query($requete);
     
-    if ($enreg = mysql_fetch_array($result)) {
+    if($enreg = $results->fetch()) {
    
         echo "NOM : " . $enreg["nom"] . "<br/>";
         echo "PRENOM : " . $enreg["prenom"] . "<br/>";
