@@ -54,7 +54,9 @@ $(function() {
 	/* ---------------------- */
 	/* Champs indiquant le nombre d'articles actuellement dans le panier. */
 	var $nbArticles = $(".nb-articles");
-	var classCoche = "fa-checked-square";
+	var nbArticles = parseInt($nbArticles.text());
+
+	var classCoche = "fa-check-square";
 	var classDecoche = "fa-square-o";
 
 	var $liensAjoutPanier = $tableResults.find(".ajout-panier a");
@@ -64,10 +66,14 @@ $(function() {
 	$liensAjoutPanier.click(function(evt) {
 		var $lien = $(this);
 
-		if($lien.data(coche)) {
-
+		if($lien.data("coche")) {
+			$lien.data("coche", false);
+			$lien.addClass(classCoche);
+			$lien.removeClass(classDecoche);
 		} else {
-			
+			$lien.data("coche", true);
+			$lien.removeClass(classCoche);
+			$lien.addClass(classDecoche);
 		}
 
 		evt.preventDefault();
