@@ -294,23 +294,54 @@ article#bienvenue {
   text-align: justify;
   margin-left: 517px;
   margin-right: 5px;
-  /*width: 400px;*/
+  padding-right: 32px;
+  padding-left: 32px;
+  min-height: 323px;
+  font-family: "Trebuchet MS";
   /*margin-right: 455px;*/
 }
 
 #bienvenue p:first-child {
   text-align: center;
   font-weight: bold;
+  padding-bottom: 15px;
 }
 
 aside#pub {
     position: relative;
-    width: 493px;
+    width: 492px;
     height: 323px;
     overflow: hidden;
-    border: solid 1px;
     float: left;
 }
+
+#nouveautes figure {
+  display: inline-block;
+  margin: 35px;
+
+}
+
+#nouveautes h2 {
+ 
+  background: linear-gradient(to right, rgba(255,25,25,1) 0%,rgba(254,144,144,1) 55%,rgba(252,252,252,1) 99%); /* W3C */
+  font-family: sans-serif;
+  border-radius: 10px;
+   padding-left: 20px;
+}
+
+#nouveautes h2 .title{
+  display: inline-block;
+  border-radius: 8px;
+  width: 100%;
+  color: white;
+  font-weight: normal;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,251,249,1) 100%); /* W3C */
+   
+}
+#nouveautes {
+  margin-top: 0;
+}
+
 /* ------------------------ */
 
 /*Pied de page */
