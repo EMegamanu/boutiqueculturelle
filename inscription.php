@@ -80,8 +80,6 @@
 				</div>
 			</fieldset>
 
-			<hr />
-
 			<div>
 				<input type="submit" value="Envoyer" />
 				<input type="reset" value="Annuler" />

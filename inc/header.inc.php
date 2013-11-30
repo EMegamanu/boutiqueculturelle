@@ -22,6 +22,8 @@
 		<link rel="stylesheet" href="css/jquery.tablesorter/theme.default.css" />
 		<link rel="stylesheet" href="css/jquery.tablesorter/jquery.tablesorter.pager.css" />
 
+		<link rel="stylesheet" href="css/font-awesome/font-awesome.min.css" />
+
 		<script src="js/init.js"></script>
 	</head>
 
@@ -38,10 +40,47 @@
 				</span>
 			</span>
 		</h1>
-		<nav id="espace_client">
+		<nav id="espace-client">
 			<ul>
-				<li><a href="inscription.php" tabindex="61">Inscription</a></li>
-				<li><a href="connexion.php" tabindex="71">Espace client</a></li>
+<?php
+	if($connecte) {
+?>
+				<li>
+					<a href="espace-client.php" tabindex="61">
+						<span class="fa fa-user"></span>
+						<span class="libelle-lien">Espace client</span>
+					</a>
+				</li>
+				<li>
+					<a href="deconnexion.php" tabindex="71">
+						<span class="fa fa-sign-out"></span>
+						<span class="libelle-lien">Déconnexion</span>
+					</a>
+				</li>
+<?php
+	} else {
+?>
+				<li>
+					<a href="inscription.php" tabindex="61">
+						<span class="fa fa-user"></span>
+						<span class="libelle-lien">Inscription</a>
+					</a>
+				</li>
+				<li>
+					<a href="connexion.php" tabindex="71">
+						<span class="fa fa-sign-in"></span>
+						<span class="libelle-lien">Connexion</span>
+					</a>
+				</li>
+<?php
+	}
+?>
+				<li>
+					<a href="panier.php" tabindex="81">
+						<span class="fa fa-shopping-cart"></span>
+						<span class="libelle-lien">Panier (<span class="nb-articles">0</span>)</span>
+					</a>
+				</li>
 			</ul>
 		</nav>
 	</header>
