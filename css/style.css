@@ -91,6 +91,8 @@ header h1 .subtitle {
   
   vertical-align: bottom;
   margin-top: 10px;
+
+
 }
 #espace_client a{
   color: #000000;
@@ -279,7 +281,7 @@ section#accueil div {
 article#bienvenue {
   text-align: justify;
   margin-left: 517px;
-  margin-right: 7px;
+  margin-right: 5px;
   /*width: 400px;*/
   /*margin-right: 455px;*/
 }
@@ -291,7 +293,7 @@ article#bienvenue {
 
 aside#pub {
     position: relative;
-    width: 493px;
+    width: 495px;
     height: 323px;
     overflow: hidden;
     border: solid 1px;
