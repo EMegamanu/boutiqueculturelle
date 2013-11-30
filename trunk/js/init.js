@@ -1,3 +1,18 @@
+
+/* Trouvé ici : http://michalbe.blogspot.fr/2010/04/removing-item-with-given-value-from.html */
+Array.prototype.remove = function(value) {
+    if (this.indexOf(value) !== -1) {
+       this.splice(this.indexOf(value), 1);
+       return true;
+   } else {
+      return false;
+   };
+} 
+
+Array.prototype.contains = function(value) {
+	return this.indexOf(value) !== -1;
+} 
+
 /* Au chargement de la page achevé... */
 $(function() {
 	/* Tableaux de résultats issus de la base. */
@@ -52,20 +67,26 @@ $(function() {
 	}
 
 	/* ---------------------- */
+	/* Facilite enregistrement/lecture des données des cookies. */
+	$.cookie.json = true;
+	$.cookie.default = {
+		path: '/',
+		domain: document.location.hostname,
+		secure: true
+	}
+
 	/* Champs indiquant le nombre d'articles actuellement dans le panier. */
 	var $nbArticles = $(".nb-articles");
 
 	/* Articles du panier. */
-	var articles = $.storage.getItem("articles", "localStorage");
+	var articles = $.cookie("articles");
 
-	if(articles) {
-		articles = JSON.parse(articles);
-	} else {
-		articles = {};
+	if(!articles) {
+		articles = [];
 	}
 
 	/* Nombre d'articles dans le panier. */
-	var nbArticles = Object.keys(articles).length;
+	var nbArticles = articles.length;
 
 	$nbArticles.text(nbArticles);
 
@@ -80,7 +101,8 @@ $(function() {
 
 		// console.log(articles);
 
-		var cocher = articles.hasOwnProperty(id);
+		// var cocher = articles.hasOwnProperty(id);
+		var cocher = articles.contains(id);
 
 		$lien.data("coche", cocher);
 		if(cocher) {
@@ -89,10 +111,11 @@ $(function() {
 			$lien.addClass(classCoche);
 			$lien.removeClass(classDecoche);
 
-
 			$action.text("-");
 		}
 	});
+
+ 
 
 	$liensAjoutPanier.click(function(evt) {
 		evt.preventDefault();
@@ -107,10 +130,10 @@ $(function() {
 			$lien.removeClass(classCoche);
 			$lien.addClass(classDecoche);
 
-			delete articles[id];
-			$.storage.setItem("articles", JSON.stringify(articles), "localStorage");
+			articles.remove(id);
+			$.cookie("articles", articles);
 
-			nbArticles = Object.keys(articles).length;
+			nbArticles = articles.length;
 			$nbArticles.text(nbArticles);
 
 			$action.text("+");
@@ -119,10 +142,10 @@ $(function() {
 			$lien.addClass(classCoche);
 			$lien.removeClass(classDecoche);
 
-			articles[id] = id;
-			$.storage.setItem("articles", JSON.stringify(articles), "localStorage");
+			articles.push(id);
+			$.cookie("articles", articles);
 			
-			nbArticles = Object.keys(articles).length;
+			nbArticles = articles.length;
 			$nbArticles.text(nbArticles);
 
 			$action.text("-");

@@ -22,9 +22,11 @@
 		<script src="js/jquery/jquery.tablesorter.pager.min.js"></script>
 		
 		<!-- Compatibilité de localStorage sur vieux navigateurs via les cookies. -->
+		<!-- 
 		<script src="js/jquery/jcookie-min.js"></script>
 		<script src="js/jquery/jstorage.min.js"></script>
-
+ 		-->
+		<script src="js/jquery/jquery.cookie.js"></script>
 		<link rel="stylesheet" href="css/jquery-ui/base/jquery-ui.css" />
 		<link rel="stylesheet" href="css/jquery.tablesorter/theme.default.css" />
 		<link rel="stylesheet" href="css/jquery.tablesorter/jquery.tablesorter.pager.css" />

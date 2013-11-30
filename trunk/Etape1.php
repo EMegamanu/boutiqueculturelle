@@ -15,7 +15,7 @@ include_once('inc/header.inc.php');
 include_once('disques.php');
 ?><center>
  <form method="get"action="Etape2.php">
-  <p> <input type="submit" value="Passez &#224 l'etape 2 -> " rows=6 COLS=26 style="font-family:arial" style="border style:solid" style="background:#9900ff" style="color:#ff66ff"> </form> </p>
+  <p> <input type="submit" value="Passez &#224 l'etape 2 -> " rows=6 COLS=26 style="font-family:arial" style="border style:solid" style="background:#9900ff" style="color:#ff66ff"> </p></form> 
 
   
   
