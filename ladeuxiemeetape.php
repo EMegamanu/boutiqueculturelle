@@ -24,3 +24,7 @@ include_once('inc/header.inc.php');
 <form method="get"action="latroisiemeetape.php">
   
   <p align ="center"><input type="submit" value="Passez &#224 l'etape 3 -> " rows=6 COLS=26 style="font-family:arial" style="border style:solid" style="background:#9900ff" style="color:#ff66ff"></form> </p>
+  <?php
+	/* Inclusion du pied de page */
+	include_once('inc/footer.inc.php');
+?>

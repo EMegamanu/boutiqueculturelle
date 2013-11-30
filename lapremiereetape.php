@@ -26,4 +26,8 @@ include_once('inc/header.inc.php');
 	</ul>
 <div/>
 
+<?php
+	/* Inclusion du pied de page */
+	include_once('inc/footer.inc.php');
+?>
 
