@@ -10,7 +10,7 @@ include_once('inc/header.inc.php');
 <p> Cet espace vous permettra de cr&#233er votre pack &#233tape par &#233tape en toute simplicit&#233
      </p>
 	 <p> Vous devrez dans un premier temps choisir un CD,puis un DVD et enfin un Livre </p>
-	 <p> L'avantage du pack est de vous faire beneficier d'une reduction importante </p>
+	 <p> Quel est l'avantage du Pack? Son prix imbattable de seulement <span class="gras">30</span> euros!! </p>
 	 </body>
   
   <form method="get"action="Etape1.php">
