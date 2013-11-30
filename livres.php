@@ -5,16 +5,6 @@
 	include_once('inc/header.inc.php');
 
 ?>
-<script>
-			/* Au chargement de la page achevé... */
-			$(function() {
-				/* Initialisation de jQuery.tablesorter pour tous les tableaux de résultat. */
-				$("table.results").each(function() {
-					var $table = $(this);
-					$table.tablesorter();
-				})			
-			});
-		</script>
 <nav id="menu2">
 	<ul>
 		<li><a href="#" class="reset">Tout</a></li>
@@ -44,7 +34,6 @@
 		$results = $db->query('SELECT * FROM Livre D JOIN Produit P ON D.id = P.id');
         // $results->setFetchMode(PDO::FETCH_OBJ);
             while($data = $results->fetch()) {
-        print_r($row);
 ?>
 			<td class="ajout-panier">
 <!--				<a href="panier.php?ajout=<?php echo $date['id']; ?>" class="fa fa-check-square"> -->
