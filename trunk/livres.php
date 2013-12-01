@@ -10,8 +10,8 @@
 		<li><a href="#" class="reset">Tout</a></li>
 		<li><hr /></li>
 		<li><a href="#manga">Manga</a></li>
-		<li><a href="#BD">BD</a></li>
-		<li><a href="#Roman Policier">Roman Policier</a></li>
+		<li><a href="#bd">BD</a></li>
+		<li><a href="#roman_policier">Roman Policier</a></li>
 	</ul>
 </nav>
 <div>
@@ -29,39 +29,40 @@
 			</tr>
 		</thead>
 		<tbody>
-		<tr>
 <?php
 		$results = $db->query('SELECT * FROM Livre D JOIN Produit P ON D.id = P.id');
         // $results->setFetchMode(PDO::FETCH_OBJ);
             while($data = $results->fetch()) {
 ?>
-			<td class="ajout-panier">
-<!--				<a href="panier.php?ajout=<?php echo $date['id']; ?>" class="fa fa-check-square"> -->
-				<a href="panier.php?ajout=<?php echo $data['id']; ?>" class="fa fa-square-o" data-id="<?php echo $data['id']; ?>">
-					<span class="hidden action">+</span>
-				</a>
-			</td>
-			<td class="image">
-                <img src="<?php echo $data['image'];?>" alt=""/>
-            </td>
-			<td><?php echo $data['nom'];?></td>
-			<td><?php echo $data['genre'];?></td>
-			<td><?php echo $data['auteur'];?></td>
-			<td><?php echo $data['dateParution'];?></td>
-			<td><?php echo $data['prixHT'];?></td>
-		</tr>
+			<tr>
+				<td class="ajout-panier">
+	<!--				<a href="panier.php?ajout=<?php echo $date['id']; ?>" class="fa fa-check-square"> -->
+					<a href="panier.php?ajout=<?php echo $data['id']; ?>" class="fa fa-square-o" data-id="<?php echo $data['id']; ?>">
+						<span class="hidden action">+</span>
+					</a>
+					<input type="number" min="0" name="nb-<?php echo $data['id']; ?>" class="hidden nb" value="0" />
+				</td>
+				<td class="image">
+	                <img src="<?php echo $data['image'];?>" alt=""/>
+	            </td>
+				<td><?php echo $data['nom'];?></td>
+				<td><?php echo $data['genre'];?></td>
+				<td><?php echo $data['auteur'];?></td>
+				<td><?php echo $data['dateParution'];?></td>
+				<td><?php echo $data['prixHT'];?></td>
+			</tr>
 <?php
 			}
 ?>
-	</tbody>
+		</tbody>
 	</table>
 	 <nav class="pager">
 		<form>
-			<img src="img/jquery.tablesorter/pager/icons/first.png" class="first" />
-			<img src="img/jquery.tablesorter/pager/icons/prev.png" class="prev" />
+			<img src="img/jquery.tablesorter/pager/icons/first.png" alt="<<" class="first" />
+			<img src="img/jquery.tablesorter/pager/icons/prev.png" alt="<" class="prev" />
 			<span class="pagedisplay"></span>
-			<img src="img/jquery.tablesorter/pager/icons/next.png" class="next" />
-			<img src="img/jquery.tablesorter/pager/icons/last.png" class="last" />
+			<img src="img/jquery.tablesorter/pager/icons/next.png" alt=">" class="next" />
+			<img src="img/jquery.tablesorter/pager/icons/last.png" alt=">>" class="last" />
 			<select class="pagesize">
 				<option selected="selected" value="5">5</option>
 				<option value="10">10</option>
@@ -76,5 +77,4 @@
 	/* Inclusion du pied de page */
 	include_once('inc/footer.inc.php');
 ?>
-</div>
 

@@ -120,11 +120,15 @@ $(function() {
 		$lien.data("coche", cocher);
 		if(cocher) {
 			var $action = $lien.find(".action");
+			var $nb = $lien.next(".nb");
 
 			$lien.addClass(classCoche);
 			$lien.removeClass(classDecoche);
 
 			$action.text("-");
+
+			$nb.removeClass("hidden");
+			$nb.val(1);
 		}
 	});
 	
@@ -136,6 +140,7 @@ $(function() {
 
 		var $lien = $(this);
 		var $action = $lien.find(".action");
+		var $nb = $lien.next(".nb");
 
 		var id = $lien.data("id");
 
@@ -151,6 +156,9 @@ $(function() {
 			$nbArticles.text(nbArticles);
 
 			$action.text("+");
+
+			$nb.addClass("hidden");
+			$nb.val(0);
 		} else {
 			$lien.data("coche", true);
 			$lien.addClass(classCoche);
@@ -163,6 +171,9 @@ $(function() {
 			$nbArticles.text(nbArticles);
 
 			$action.text("-");
+
+			$nb.removeClass("hidden");
+			$nb.val(1);
 		}
 
 		$tableResults.trigger("update");
