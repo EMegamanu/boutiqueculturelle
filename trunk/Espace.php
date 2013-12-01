@@ -1,12 +1,11 @@
-<?php		
+<?php
+    $title = 'Espace Personnel';
 	/* Inclusion de l'en-tÃªte. */
 	include_once('inc/header.inc.php');
 ?>
-  <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Espace Personnel</title>
-    </head>
+  
+      
+ 
 
 	<Body>
         <nav class = "menu-nav">
@@ -17,15 +16,16 @@
 				
             </ul>
         </nav>
-        
+		
         <section class ="commande">
-		<Article>
+		
          
                 <Center><a href="#"><h1>Mes commandes passées</h1></a></center>
                <Center><a href="#"><h1>Mes commandes en cours</h1></a></center>
-	    </article>
+	    
 
-        </section>
+        
+		</section>
 		</body>
 		
 	<?php
