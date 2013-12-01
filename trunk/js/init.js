@@ -212,4 +212,5 @@ $(function() {
 		$.cookie("articles", articles);
 	})
 
+	var $resetPanier = $("#section-panier :reset");
 });
