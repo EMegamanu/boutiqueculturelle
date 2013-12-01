@@ -327,7 +327,7 @@ aside#pub {
 
 #nouveautes h2 {
  
-  background: linear-gradient(to right, rgba(255,25,25,1) 0%,rgba(254,144,144,1) 55%,rgba(252,252,252,1) 99%); /* W3C */
+  background: linear-gradient(to bottom, rgba(243,197,189,1) 0%,rgba(232,108,87,1) 50%,rgba(234,40,3,1) 51%,rgba(255,102,0,1) 75%,rgba(199,34,0,1) 100%); /* W3C */
   font-family: sans-serif;
   border-radius: 10px;
    padding-left: 20px;
