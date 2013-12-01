@@ -1,9 +1,8 @@
 		<footer>
 			<div id="information">	
 				<ul>
-					<li><a href="contact.php">Contacts</a></li>
-					<li><a href="mentions.php">Mentions légales</a></li>
-					<li><a href="conditions.php">Conditions générales de ventes</a></li>
+					<li><a href="contact.php">Nous contacter</a></li>
+					<li><a href="Mentionslegales.php">Mentions légales</a></li>
 				</ul>
 			</div>
 		

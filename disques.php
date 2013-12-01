@@ -25,7 +25,7 @@
 		            <th>Nom</th>
 		            <th>Genre</th>
 		            <th>Compositeur</th>
-		            <th>Annee de Production</th>
+		            <th>Année de Production</th>
 		            <th>Prix</th>
 		        </tr>
 	    	</thead>

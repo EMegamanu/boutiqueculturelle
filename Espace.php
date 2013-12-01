@@ -9,7 +9,7 @@
     </head>
 
 	<Body>
-        <nav class = "Menu-nav">
+        <nav class = "menu-nav">
             <ul>
                 <li><a href="#">Mes informations</a></li>
                 <li><a href="#">Changer mon mot de passe</a></li>
@@ -18,10 +18,10 @@
             </ul>
         </nav>
         
-        <section class ="Commande">
+        <section class ="commande">
 		<Article>
          
-                <Center><a href="#"><h1>Mes commandes passees</h1></a></center>
+                <Center><a href="#"><h1>Mes commandes passées</h1></a></center>
                <Center><a href="#"><h1>Mes commandes en cours</h1></a></center>
 	    </article>
 
