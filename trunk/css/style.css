@@ -332,11 +332,16 @@ aside#pub {
     float: left;
 }
 
+
 #nouveautes figure {
   display: inline-block;
-  margin: 35px;
-
+  margin: 15px;
+  width: 150px;
+  text-align: center;
+  vertical-align: top;
+  font-style: italic;
 }
+
 
 #nouveautes h2 {
  
@@ -344,6 +349,7 @@ aside#pub {
   font-family: sans-serif;
   border-radius: 10px;
   padding-left: 20px;
+  text-align: left;
 }
 
 #nouveautes h2 .title{
@@ -360,6 +366,7 @@ aside#pub {
   border-bottom: 2px solid black;
   border-left: 2px solid black;
   border-right: 2px solid black;
+  text-align: center;
 }
 
 /* ------------------------ */
