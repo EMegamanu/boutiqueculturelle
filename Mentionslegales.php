@@ -7,7 +7,7 @@
  <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="css/style.css" />
-        <title>Espace Personnel</title>
+        <title>Mentions légales</title>
     </head>
 
 <Center><H1>Mention légales</H1></center>
