@@ -4,13 +4,18 @@
 	/* Inclusion script connexion base de données. */
 	require_once('inc/db.inc.php');
 
-	/* articles du panier. */
-	$articles =  json_decode($_COOKIE['articles']);
-
-	$nbArticles = count($articles);
+	if(!empty($_COOKIE) && !empty($_COOKIE['articles'])) {
+		/* Articles du panier sous forme de paires (id, quantité). */
+		$articles = get_object_vars(
+			json_decode(
+				str_replace('\\', '', $_COOKIE['articles'])
+			)
+		);
+		$nbArticles = count($articles);
+	}
 
 	if($nbArticles > 0) {
-		$requete = 'SELECT P.nom AS nom, P.prixHT AS prixHT, P.image AS image, C.nom AS categorie ' .
+		$requete = 'SELECT P.id AS id, P.nom AS nom, P.prixHT AS prixHT, P.image AS image, C.nom AS categorie ' .
 		            'FROM Produit P ' .
 		            'JOIN Categorie C ' .
 		            'ON P.idCategorie = C.id ' .
@@ -20,17 +25,16 @@
 			$requete .= ' OR P.id = :article_' . $i;
 		}
 
-
 		$results = $db->prepare($requete);
 
-		for($i = 0; $i < $nbArticles; $i++) {
-			$results->bindParam(':article_' . $i, $articles[$i]);
+		$i = 0;
+		foreach($articles as $id => $nb) {
+			$results->bindValue(':article_' . $i, $id);
+			$i++;
 		}
 		$results->execute();
         $results->setFetchMode(PDO::FETCH_OBJ);
-
 	}
-
 
 	/* Inclusion de l'en-tête. */
 	include_once('inc/header.inc.php');
@@ -52,9 +56,10 @@
 
 			$tva = 1.196;
 			$prixTHT = 0;
+
             while($produit = $results->fetch()) {
             	$prixUHT = $produit->prixHT;
-            	$qte = 1;
+            	$qte = $articles[$produit->id];
             	$prixHT = $prixUHT * $qte;
             	$prixTHT += $prixHT;
             	$prixTTC = $prixHT * $tva;
@@ -71,21 +76,9 @@
         		<td><input type="number" min="0" name="qte" value="<?php echo $qte; ?>" /></td>
         		<td><?php printf('%.2f', $prixHT); ?></td>
         		<td><?php printf('%.2f', $prixTTC); ?></td>
-
-<!--             	    // [id] => 16
-    // [0] => 16
-    // [nom] => Naruto
-    // [1] => Naruto
-    // [idCategorie] => 1
-    // [2] => 1
-    // [prixHT] => 29.99
-    // [3] => 29.99
-    // [image] => ./img/naruto.jpg
-    // [4] => ./img/naruto.jpg
- // ) -->
 			</tr>
 <?
-			$prixTTTC = $prixTHT * $tva;
+				$prixTTTC = $prixTHT * $tva;
             }
 		?>
 	</tbody>
