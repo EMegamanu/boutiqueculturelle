@@ -4,11 +4,11 @@
 	/* Inclusion de l'en-tête. */
 	include_once('inc/header.inc.php');
 ?>
-<section>
     <article id="formulaire">
-    <h2 >Nous contacter</h2>
+ 
     <form id="formulairecontact"action="traitementcontact.php" method="post">
-    	<div>
+         <h2 >Nous contacter</h2>    
+        <div>
             <label for="nom">Nom :</label>
             <input type="text" id="identifiant" name="nom" />
         </div>
@@ -38,7 +38,7 @@
         </div>
     </form>
     </article>
-</section>
+
 <?php
     /* Inclusion du pied de page. */
     include_once('inc/footer.inc.php');
