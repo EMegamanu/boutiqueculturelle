@@ -1,5 +1,6 @@
 <?php		
-/* Inclusion script connexion base de données. */
+	$title = 'Livres';
+	/* Inclusion script connexion base de données. */
 	require_once('inc/db.inc.php');
 	/* Inclusion de l'en-tête. */
 	include_once('inc/header.inc.php');
