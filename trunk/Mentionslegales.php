@@ -24,7 +24,7 @@
 <ol> 
 	<li>Ce cite étant créé dans le cadre d’un projet de cours, en aucun cas les produits proposés ne sont disponibles à la vente.</li>
 	<Li>Nous nous réservons le droits de modifier tout contenu jusqu’à la rendu du dît projet.</li>
-	<Li>3.	Nous ne serons pas tenus responsables par la mauvaise utilisation que vous pourrez faire du dît site</li>
+	<Li>Nous ne serons pas tenus responsables par la mauvaise utilisation que vous pourrez faire du dît site</li>
 </ol>
 </p>
 <H2>Données relatives aux clients</H2>
