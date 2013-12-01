@@ -226,43 +226,78 @@ textarea {
    padding-left: 120px; /* même dimension que les étiquettes */
 
 }
+#menu2 {
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+  margin: 0;
+  position: relative;
+  left: 10px;
+}
 
+#menu2 h2 {
+background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C */
+  color: white;
+  font-size: 1em;
+  margin-bottom: 0;
+
+  display: block;
+  padding: 4px 7px; /* vertical, horizontal */
+  border-left: 5px solid black;
+}
 
 #menu2 ul {
-margin-top: 1.8cm;
-float: left;
-padding-left:0;
-padding-right: 5px;
-list-style-type:none;
+  margin-top: 0;
+}
 
+section#produits {
+  background: transparent;
 }
-#menu2 ul li {
-display: inline; 
+section#produits article {
+  /*display: block;*/
+  margin-left: 250px;
+  position: relative;
+  left: 10px;
+  /*width: ;*/
+  /*width: 300px;*/
+  /*max-width: 900px;*/
 }
+
+
+
+#menu2 ul li:first-child {
+  border-bottom: solid 2px black;
+}
+
+#menu2 ul {
+  width: 225px;
+
+  border-top: solid 1px black;
+  border-right: solid 1px black;
+  border-bottom: solid 1px black;
+
+  /*margin-top: 1.8cm;*/
+  padding-left:0;
+  /*margin-right: 5px;*/
+  list-style-type:none;
+  /*display: inline-block;*/
+}
+
 
 #menu2 ul li a {
-display:block;
-background:#f2f4f5; /*gris*/
-width:200px;
-text-decoration:none;
-padding: 4px /*padding for top, bottom*/ 7px /*padding for left, right*/;
-border-left:5px solid black;
-color:#333333;
+  display: block;
+  background: #f2f4f5; /*gris*/
+  /*width:200px;*/
+  text-decoration: none;
+  padding: 4px 7px; /* vertical, horizontal */
+  border-left: 5px solid black;
+  color: #333333;
 }
-#menu2 ul li a:hover {
-border-left-color:#0099FF;/*bleu*/
-color:#0066FF;
-background:white;
-}
-#menu2 hr{
-color:black;
-background-color: black;
-height:2px;
-}
-#tableau-catalogue {
 
-/*border-collapse: collapse;*/
-width: 80%;
+#menu2 ul li a:hover {
+  border-left-color: #0099FF;/*bleu*/
+  color: #0066FF;
+  background: white;
 }
 
 /* Page d'accueil ---------- */
@@ -345,8 +380,9 @@ aside#pub {
 
 /* --------------- */
 table.results {
-
+  border-radius: 0;
   border: solid 1px #778899;
+  margin: 0;
 }
 
 table.results tr.tablesorter-filter-row {

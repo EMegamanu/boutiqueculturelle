@@ -6,30 +6,30 @@
 	include_once('inc/header.inc.php');
 
 ?>
-<nav id="menu2">
-	<ul>
-		<li><a href="#" class="reset">Tout</a></li>
-		<li><hr /></li>
-		<li><a href="#action">Action</a></li>
-		<li><a href="#comedie">Comédie</a></li>
-		<li><a href="#jeunesse">Jeunesse</a></li>
-	</ul>
-</nav>
-<div>
-	<h2><?php echo 'Films';?></h2>
-	<table id="tableau-catalogue" class="results tablesorter">
-		<thead>
-			<tr>
-				<th><span class="fa fa-shopping-cart"><span class="hidden">Panier</span></span></th>
-				<th>Pochette/Couverture</th>
-				<th>Nom</th>
-				<th>Genre</th>
-				<th>Réalisateur</th>
-				<th>Année Production</th>
-				<th>Prix</th>
-			</tr>
-		</thead>
-		<tbody>
+<section id="produits">
+	<nav id="menu2">
+		<h2>Filtrer</h2>
+		<ul>
+			<li><a href="#" class="reset">Tout</a></li>
+			<li><a href="#action">Action</a></li>
+			<li><a href="#comedie">Comédie</a></li>
+			<li><a href="#jeunesse">Jeunesse</a></li>
+		</ul>
+	</nav>
+	<article>
+		<table class="results">
+			<thead>
+				<tr>
+					<th><span class="fa fa-shopping-cart"><span class="hidden">Panier</span></span></th>
+					<th>Pochette/Couverture</th>
+					<th>Nom</th>
+					<th>Genre</th>
+					<th>Réalisateur</th>
+					<th>Année Production</th>
+					<th>Prix</th>
+				</tr>
+			</thead>
+			<tbody>
 <?php
 		$results = $db->query('SELECT * FROM Film D JOIN Produit P ON D.id = P.id');
         // $results->setFetchMode(PDO::FETCH_OBJ);
@@ -75,7 +75,9 @@
 			</select>
 		</form>
 	</nav>
-</div>
+	</article>
+</section>
+
 <?php
 	/* Inclusion du pied de page. */
 	include_once('inc/footer.inc.php');
