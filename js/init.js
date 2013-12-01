@@ -52,6 +52,7 @@ $(function() {
 		var $table = $(this);
 		$table.tablesorter({ /* Trie du tableau. */
 			theme: "jui",
+    		headerTemplate : '{content} {icon}',
 			widgets: ["uitheme", "zebra", "filter"],
 			 widgetOptions: {
 			 	filter_hideFilters : true, /* + 1 règle dans le CSS pour totalement masquer les champs. */
