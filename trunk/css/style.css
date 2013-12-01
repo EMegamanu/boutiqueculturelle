@@ -408,3 +408,13 @@ option[selected][disabled] {
 #ui-datepicker-div { 
   font-size: .8em; 
 }
+
+.nb {
+  visibility: hidden;
+}
+.nb input {
+  width: 3em;
+}
+.nb .ui-spinner {
+  font-size: 0.8em;
+}
