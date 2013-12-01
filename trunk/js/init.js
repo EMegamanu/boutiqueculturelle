@@ -60,10 +60,23 @@ $(function() {
 
 	/* ---------------------- */
 
-	/* Méthode de rabatage de la gestion des champs de type Date sur navigateurs ne les gérant pas encore. (Ex : Firefox) */
+	/* Méthode de rabatage de la gestion des champs de types Date et Number sur navigateurs ne les gérant pas encore. (Ex : Firefox) */
 	var $inputDate = $("input[type='date']");
 	if($inputDate.prop("type") == "text") {
 		$inputDate.datepicker($.datepicker.regional["fr"]);
+	}
+
+	var $inputNumber = $("input[type='number']");
+	if($inputNumber.prop("type") == "text") {
+		$inputNumber.each(function() {
+			var $this = $(this);
+
+			$this.spinner({
+				min: $this.attr("min"),
+				max: $this.attr("max"),
+				step: $this.attr("step")
+			});
+		});
 	}
 
 	/* ---------------------- */
@@ -114,8 +127,9 @@ $(function() {
 			$action.text("-");
 		}
 	});
+	
+	$tableResults.trigger("update");
 
- 
 
 	$liensAjoutPanier.click(function(evt) {
 		evt.preventDefault();
@@ -150,6 +164,8 @@ $(function() {
 
 			$action.text("-");
 		}
+
+		$tableResults.trigger("update");
 	});
 
 });
