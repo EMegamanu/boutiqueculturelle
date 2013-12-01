@@ -95,11 +95,12 @@ $(function() {
 	var articles = $.cookie("articles");
 
 	if(!articles) {
-		articles = [];
+		articles = {};
 	}
 
 	/* Nombre d'articles dans le panier. */
-	var nbArticles = articles.length;
+	// var nbArticles = articles.length;
+	var nbArticles = Object.keys(articles).length;
 
 	$nbArticles.text(nbArticles);
 
@@ -110,12 +111,11 @@ $(function() {
 
 	$liensAjoutPanier.each(function() {
 		var $lien = $(this);
-		var id = $lien.data("id");
+		var $tr = $lien.closest("tr");
+		var id = $tr.data("id");
 
-		// console.log(articles);
-
-		// var cocher = articles.hasOwnProperty(id);
-		var cocher = articles.contains(id);
+		var cocher = articles.hasOwnProperty(id);
+		// var cocher = articles.contains(id);
 
 		$lien.data("coche", cocher);
 		if(cocher) {
@@ -128,12 +128,11 @@ $(function() {
 			$action.text("-");
 
 			$nb.css("visibility", "visible");
-			$nb.find("input").val(1);
+			$nb.find("input").val(articles[id]);
 		}
 	});
 	
 	$tableResults.trigger("update");
-
 
 	$liensAjoutPanier.click(function(evt) {
 		evt.preventDefault();
@@ -142,17 +141,19 @@ $(function() {
 		var $action = $lien.find(".action");
 		var $nb = $lien.next(".nb");
 
-		var id = $lien.data("id");
+		var $tr = $lien.closest("tr");
+		var id = $tr.data("id");
 
 		if($lien.data("coche")) {
 			$lien.data("coche", false);
 			$lien.removeClass(classCoche);
 			$lien.addClass(classDecoche);
 
-			articles.remove(id);
+			// articles.remove(id);
+			delete articles[id];
 			$.cookie("articles", articles);
 
-			nbArticles = articles.length;
+			nbArticles = Object.keys(articles).length;
 			$nbArticles.text(nbArticles);
 
 			$action.text("+");
@@ -164,10 +165,11 @@ $(function() {
 			$lien.addClass(classCoche);
 			$lien.removeClass(classDecoche);
 
-			articles.push(id);
+			// articles.push(id);
+			articles[id] = 1;
 			$.cookie("articles", articles);
 			
-			nbArticles = articles.length;
+			nbArticles = Object.keys(articles).length;
 			$nbArticles.text(nbArticles);
 
 			$action.text("-");
@@ -178,5 +180,15 @@ $(function() {
 
 		$tableResults.trigger("update");
 	});
+
+	var $inputNb = $tableResults.find(".nb input");
+	$inputNb.change(function() {
+		var $input = $(this);
+		var $tr = $input.closest("tr");
+		var id = $tr.data("id");
+
+		articles[id] = parseInt($input.val());
+		$.cookie("articles", articles);
+	})
 
 });
