@@ -3,6 +3,7 @@
 	require_once('inc/db.inc.php');
 	/* Inclusion de l'en-tête. */
 	include_once('inc/header.inc.php');
+
 ?>
 <nav id="menu2">
 	<ul>
@@ -15,7 +16,7 @@
 </nav>
 <div>
 	<h2><?php echo 'Films';?></h2>
-	 <table id="tableau-catalogue" class="results tablesorter">
+	<table id="tableau-catalogue" class="results tablesorter">
 		<thead>
 			<tr>
 				<th><span class="fa fa-shopping-cart"><span class="hidden">Panier</span></span></th>
@@ -28,28 +29,31 @@
 			</tr>
 		</thead>
 		<tbody>
-		<tr>
 <?php
 		$results = $db->query('SELECT * FROM Film D JOIN Produit P ON D.id = P.id');
         // $results->setFetchMode(PDO::FETCH_OBJ);
             while($data = $results->fetch()) {
         print_r($row);
 ?>
-			<td class="ajout-panier">
+			<tr data-id="<?php echo $data['id']; ?>">
+				<td class="ajout-panier">
 <!--				<a href="panier.php?ajout=<?php echo $date['id']; ?>" class="fa fa-check-square"> -->
-				<a href="panier.php?ajout=<?php echo $data['id']; ?>" class="fa fa-square-o" data-id="<?php echo $data['id']; ?>">
-					<span class="hidden action">+</span>
-				</a>
-			</td>
-			<td class="image">
-                <img src="<?php echo $data['image'];?>" alt=""/>
-            </td>
-			<td><?php echo $data['nom'];?></td>
-			<td><?php echo $data['genre'];?></td>
-			<td><?php echo $data['realisateur'];?></td>
-			<td><?php echo $data['anneeProduction'];?></td>
-			<td><?php echo $data['prixHT'];?></td>
-		</tr>
+					<a href="panier.php?ajout=<?php echo $data['id']; ?>" class="fa fa-square-o" data-id="<?php echo $data['id']; ?>">
+						<span class="hidden action">+</span>
+					</a>
+					<span class="nb">
+						<input type="number" min="0" max="999" name="nb-<?php echo $data['id']; ?>" value="0" />
+					</span>
+				</td>
+				<td class="image">
+                	<img src="<?php echo $data['image'];?>" alt=""/>
+            	</td>
+				<td><?php echo $data['nom'];?></td>
+				<td><?php echo $data['genre'];?></td>
+				<td><?php echo $data['realisateur'];?></td>
+				<td><?php echo $data['anneeProduction'];?></td>
+				<td><?php echo $data['prixHT'];?></td>
+			</tr>
 <?php
 			}
 ?>
@@ -57,11 +61,11 @@
 	</table>
 	<nav class="pager">
 		<form>
-			<img src="img/jquery.tablesorter/pager/icons/first.png" class="first" />
-			<img src="img/jquery.tablesorter/pager/icons/prev.png" class="prev" />
+			<img src="img/jquery.tablesorter/pager/icons/first.png" alt="<<" class="first" />
+			<img src="img/jquery.tablesorter/pager/icons/prev.png" alt="<" class="prev" />
 			<span class="pagedisplay"></span>
-			<img src="img/jquery.tablesorter/pager/icons/next.png" class="next" />
-			<img src="img/jquery.tablesorter/pager/icons/last.png" class="last" />
+			<img src="img/jquery.tablesorter/pager/icons/next.png" alt=">" class="next" />
+			<img src="img/jquery.tablesorter/pager/icons/last.png" alt=">>" class="last" />
 			<select class="pagesize">
 				<option selected="selected" value="5">5</option>
 				<option value="10">10</option>
