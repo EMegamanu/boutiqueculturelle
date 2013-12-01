@@ -72,7 +72,7 @@
 				<li>
 					<a href="inscription.php" tabindex="61">
 						<span class="fa fa-user"></span>
-						<span class="libelle-lien">Inscription</a>
+						<span class="libelle-lien">Inscription</span>
 					</a>
 				</li>
 				<li>
