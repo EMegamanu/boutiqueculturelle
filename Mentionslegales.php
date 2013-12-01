@@ -16,7 +16,7 @@
 <p>
 <ol>
 	<li>Le présent site est édité par: Audrey Boggio, Nicolas Dos Santos, Nadia Elidrissi, Ruqiya Khalid et Charlotte Moreau étudiants au capital social de 0 euros </Li>
-	<li>Pour toute demande de contact vous pouvez nous contacter à l’adresse suivante boutique-culturelle@gmail.com.</Li>
+	<li>Pour toute demande de contact vous pouvez nous contacter à l’adresse suivante boutiqueculturellentic@gmail.com.</Li>
  </ol>
  </p>
 <H2>Condition d'utilisations</H2>
