@@ -129,7 +129,7 @@ $(function() {
 	var classCoche = "fa-check-square";
 	var classDecoche = "fa-square-o";
 
-	var $liensAjoutPanier = $tableResults.find(".ajout-panier a");
+	var $liensAjoutPanier = $tableResults.find(".ajout-panier a:first-child");
 
 	$liensAjoutPanier.each(function() {
 		var $lien = $(this);
@@ -237,10 +237,12 @@ $(function() {
 
 	var $prixTHT = $prix.filter(".prix-tht");
 	var $prixTTTC = $prix.filter(".prix-tttc");
-	var $tousPrixHT = $prix.filter(".prix-ht");
 
 	function actualisePrixTotaux() {
+		var $tousPrixHT = $(".prix-ht");
+
 		var prixTHT = 0;
+
 		$tousPrixHT.each(function(evt) {
 			var prixHT = parseFloat($(this).text());
 			prixTHT += prixHT;
