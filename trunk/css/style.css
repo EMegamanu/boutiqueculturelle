@@ -402,3 +402,13 @@ option[selected][disabled] {
 .nb .ui-spinner {
   font-size: 0.8em;
 }
+
+/* Mentions Legales ---------- */
+
+section.mentionslegales
+{
+Border:2px solid black;
+Background-color: transparent;
+Margin-lef :15%;
+
+}
