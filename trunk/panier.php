@@ -15,7 +15,7 @@
 	}
 
 	if($nbArticles > 0) {
-		$requete = 'SELECT P.id AS id, P.nom AS nom, P.prixHT AS prixHT, P.image AS image, C.nom AS categorie ' .
+		$requete = 'SELECT P.id AS id, P.nom AS nom, P.prixHT AS prixHT, P.miniature AS image, C.nom AS categorie ' .
 		            'FROM Produit P ' .
 		            'JOIN Categorie C ' .
 		            'ON P.idCategorie = C.id ' .
