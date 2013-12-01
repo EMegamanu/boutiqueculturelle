@@ -6,7 +6,6 @@
 		<meta charset="utf-8" />
 		<title>Boutique culturelle - <?php echo $title; ?></title>
 
-		<link rel="stylesheet" href="css/style.css" />
 		<link rel="icon" href="img/logo-16.png" />
 
 		<!-- Bibliothèques. -->
@@ -28,13 +27,15 @@
  		-->
 		<script src="js/jquery/jquery.cookie.js"></script>
 
-		<link rel="stylesheet" href="css/jquery-ui/themes/overcast/jquery-ui.min.css" />
-		<link rel="stylesheet" href="css/jquery-ui/themes/overcast/jquery-ui.theme.css" />
+		<link rel="stylesheet" href="css/jquery-ui/themes/blitzer/jquery-ui.min.css" />
 
 		<link rel="stylesheet" href="css/jquery.tablesorter/theme.jui.css" />
 		<link rel="stylesheet" href="css/jquery.tablesorter/jquery.tablesorter.pager.css" />
 
 		<link rel="stylesheet" href="css/font-awesome/font-awesome.min.css" />
+
+
+		<link rel="stylesheet" href="css/style.css" />
 
 		<script src="js/init.js"></script>
 	</head>
