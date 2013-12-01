@@ -6,9 +6,9 @@
 	include_once('inc/header.inc.php');
 
 ?>
-<section id="produits">
+<section id="section-produits">
 	<nav id="menu2">
-		<h2>Filtrer</h2>
+		<h3>Filtres</h3>
 		<ul>
 			<li><a href="#" class="reset">Tout afficher</a></li>
 			<li><a href="#manga">Manga</a></li>
@@ -18,10 +18,17 @@
 	</nav>
 	<article>
 	<table class="results">
+		<caption>
+			<h2>
+				<span class="title">
+					<span class="fa fa-book"></span> Livres
+				</span>
+			</h2>
+		</caption>
 		<thead>
 			<tr>
 				<th><span class="fa fa-shopping-cart"><span class="hidden">Panier</span></span></th>
-				<th>Pochette/Couverture</th>
+				<th>Couverture</th>
 				<th>Nom</th>
 				<th>Genre</th>
 				<th>Auteur</th>

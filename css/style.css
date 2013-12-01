@@ -231,11 +231,12 @@ textarea {
   left: 10px;
 }
 
-#menu2 h2 {
+#menu2 h3 {
 background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C */
   color: white;
   font-size: 1em;
   margin-bottom: 0;
+  margin-top: 0;
 
   display: block;
   padding: 4px 7px; /* vertical, horizontal */
@@ -246,10 +247,10 @@ background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 12%,#666666 25%,#4747
   margin-top: 0;
 }
 
-section#produits {
+section#section-produits {
   background: transparent;
 }
-section#produits article {
+section#section-produits article {
   /*display: block;*/
   margin-left: 250px;
   position: relative;
@@ -343,7 +344,9 @@ aside#pub {
 }
 
 
-#nouveautes h2 {
+#nouveautes h2,
+#section-panier h2,
+#section-produits h2 {
  
   background: linear-gradient(to bottom, rgba(243,197,189,1) 0%,rgba(232,108,87,1) 50%,rgba(234,40,3,1) 51%,rgba(255,102,0,1) 75%,rgba(199,34,0,1) 100%); /* W3C */
   font-family: sans-serif;
@@ -352,7 +355,17 @@ aside#pub {
   text-align: left;
 }
 
-#nouveautes h2 .title{
+#section-produits h2 {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.5em;
+}
+
+#nouveautes h2 .title,
+#section-panier h2 .title,
+#section-produits h2 .title {
   display: inline-block;
   border-radius: 8px;
   width: 100%;
@@ -394,6 +407,12 @@ table.results {
   border-radius: 0;
   border: solid 1px #778899;
   margin: 0;
+}
+
+table.results caption {
+  background: transparent;
+  color: inherit;
+  margin-bottom: 5px;
 }
 
 table.results tr.tablesorter-filter-row {
@@ -458,11 +477,14 @@ option[selected][disabled] {
 .nb {
   visibility: hidden;
 }
+
 .nb input {
   width: 3em;
 }
+
 .nb .ui-spinner {
   font-size: 0.8em;
+  width: 4em;
 }
 
 /* Mentions Legales ---------- */

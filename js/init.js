@@ -213,4 +213,13 @@ $(function() {
 	})
 
 	var $resetPanier = $("#section-panier :reset");
+
+	var $prix = $tableResults.find(".prix");
+
+	$resetPanier.click(function(evt) {
+		$.removeCookie("articles");
+		$tableResults.find("tbody").empty();
+		$nbArticles.text(0);
+		$prix.text(0);
+	});
 });
