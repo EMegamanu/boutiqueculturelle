@@ -60,7 +60,7 @@
 	if($connecte) {
 ?>
 				<li>
-					<a href="espace-client.php" tabindex="61">
+					<a href="Espace.php" tabindex="61">
 						<span class="fa fa-user"></span>
 						<span class="libelle-lien">Espace client</span>
 					</a>
