@@ -257,8 +257,8 @@ background-color: black;
 height:2px;
 }
 #tableau-catalogue {
-border: medium solid #000000;
-border-collapse: collapse;
+
+/*border-collapse: collapse;*/
 width: 80%;
 }
 
@@ -367,10 +367,20 @@ aside#pub {
 }
 
 /* --------------- */
+table.results {
+
+  border: solid 2px #778899;
+}
 
 table.results tr.tablesorter-filter-row {
   display: none;
 }
+
+table.results td,
+table.results th.tablesorter-header {
+  border: solid 1px #778899;
+}
+
 
 .pager {
   text-align: center;
