@@ -5,7 +5,7 @@
 
 ?>
 
-<Section class= "mentionslegales">
+<section class= "mentionslegales">
 	<h2>Informations légales</h2>
 		<ol>
 			<li>Le présent site est édité par: Audrey Boggio, Nicolas Dos Santos, Nadia Elidrissi, Ruqiya Khalid et Charlotte Moreau étudiants au capital social de 0 euro. </Li>
@@ -23,7 +23,7 @@
 			<Li>Tout message Client/Fournisseurs ne peut être divulgué sans l’accord des deux parties.</li>
 		</ol>
 
-	<h2>Lois Applicables</H2>
+	<h2>Lois Applicables</h2>
 		<ol>
 			<li>Loi communautaire et la Loi Française.</li>
 		</ol>
