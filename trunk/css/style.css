@@ -155,9 +155,9 @@ display:none;
 display:visible;
 }
 
-#formulaire h2{
+#formulairecontact h2{
   text-align: center;
-/*margin-top: 2cm;*/
+  margin-top: 0;
 }
 
 #formulairecontact {
@@ -165,17 +165,20 @@ display:visible;
 	background-color:#F3F3F3;
 /*    margin-top: 1cm;*/
     width: 500px;*/
-    margin: 2cm;
+    margin-left: 2cm;
+    margin-right: 2cm;
     /* Pour voir les limites du formulaire */
-    padding: 3em;
+    padding: 2em;
     border: 1px solid #C0C0C0;
     border-radius: 5px;
+
 
 }
 
 #formulaire {
   width:600px;
   margin-left: 25%;
+  margin-top: 10px;
 
 }
 #formulairecontact div + div {
@@ -243,16 +246,17 @@ textarea {
 }
 #inscription {
   background-color:#F3F3F3;
-    margin-top: 0;
     margin-right: 1cm;
-    padding: 3em;
+    padding: 2em;
     border: 1px solid #C0C0C0;
     border-radius: 5px;
     width:600px;
     margin-left: 20%;
+    margin-top: 10px;
 }
-#formulaire-inscription h2 {
+#inscription h2 {
   text-align: center;
+  margin-top: 0;
 
 }
   

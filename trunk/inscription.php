@@ -6,12 +6,10 @@
 	/* Inclusion de l'en-tête. */
 	include_once('inc/header.inc.php');
 ?>
+		<article >
 
-	<section id="formulaire-inscription">
-		<h2>Inscription</h2>
-			<article id="inscription">
-
-			<form action="nouveau_client.php" method="post">
+			<form id="inscription" action="nouveau_client.php" method="post">
+				<h2>Inscription</h2>
 				<fieldset>
 					<legend>Identité</legend>
 					<div>
@@ -89,7 +87,6 @@
 				</div>
 			</form>
 		</article>
-	</section>
 <?php
     /* Inclusion du pied de page. */
     include_once('inc/footer.inc.php');
