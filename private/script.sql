@@ -183,9 +183,9 @@ ALTER TABLE Commande_Produit
 -- -----------------------------------------------------
 -- Remplissage table Categorie
 -- -----------------------------------------------------
-INSERT INTO Categorie VALUES(1, 'Disque');
+INSERT INTO Categorie VALUES(1, 'Livre');
 INSERT INTO Categorie VALUES(2, 'Film');
-INSERT INTO Categorie VALUES(3, 'Livre');
+INSERT INTO Categorie VALUES(3, 'Disque');
 INSERT INTO Categorie VALUES(4, 'Pack');
 
 -- -----------------------------------------------------
