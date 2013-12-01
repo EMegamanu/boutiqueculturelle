@@ -52,6 +52,7 @@
 		<nav id="espace-client">
 			<ul>
 <?php
+	$connecte = false;
 	if($connecte) {
 ?>
 				<li>
