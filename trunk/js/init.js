@@ -13,6 +13,25 @@ Array.prototype.contains = function(value) {
 	return this.indexOf(value) !== -1;
 } 
 
+  $.extend($.tablesorter.themes.jui, {
+    // change default jQuery uitheme icons - find the full list of icons here: http://jqueryui.com/themeroller/ (hover over them for their name)
+    table      : 'ui-widget ui-widget-content ui-corner-all', // table classes
+    caption    : 'ui-widget-content ui-corner-all',
+    header     : 'ui-widget-header ui-corner-all ui-state-default', // header classes
+    footerRow  : '',
+    footerCells: '',
+    icons      : 'ui-icon', // icon class added to the <i> in the header
+    sortNone   : 'ui-icon-carat-2-n-s',
+    sortAsc    : 'ui-icon-carat-1-n',
+    sortDesc   : 'ui-icon-carat-1-s',
+    active     : 'ui-state-active', // applied when column is sorted
+    hover      : 'ui-state-hover',  // hover class
+    filterRow  : '',
+    even       : 'ui-widget-content', // odd row zebra striping
+    odd        : 'ui-state-default'   // even row zebra striping
+  });
+
+
 /* Au chargement de la page achevé... */
 $(function() {
 	/* Tableaux de résultats issus de la base. */
@@ -32,7 +51,8 @@ $(function() {
 	$tableResults.each(function() {
 		var $table = $(this);
 		$table.tablesorter({ /* Trie du tableau. */
-			widgets: ["zebra", "filter"],
+			theme: "jui",
+			widgets: ["uitheme", "zebra", "filter"],
 			 widgetOptions: {
 			 	filter_hideFilters : true, /* + 1 règle dans le CSS pour totalement masquer les champs. */
 			 	filter_reset: '#menu2 a.reset',

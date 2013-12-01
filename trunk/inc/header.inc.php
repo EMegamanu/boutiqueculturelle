@@ -27,8 +27,11 @@
 		<script src="js/jquery/jstorage.min.js"></script>
  		-->
 		<script src="js/jquery/jquery.cookie.js"></script>
-		<link rel="stylesheet" href="css/jquery-ui/base/jquery-ui.css" />
-		<link rel="stylesheet" href="css/jquery.tablesorter/theme.default.css" />
+
+		<link rel="stylesheet" href="css/jquery-ui/themes/overcast/jquery-ui.min.css" />
+		<link rel="stylesheet" href="css/jquery-ui/themes/overcast/jquery-ui.theme.css" />
+
+		<link rel="stylesheet" href="css/jquery.tablesorter/theme.jui.css" />
 		<link rel="stylesheet" href="css/jquery.tablesorter/jquery.tablesorter.pager.css" />
 
 		<link rel="stylesheet" href="css/font-awesome/font-awesome.min.css" />
@@ -95,13 +98,17 @@
 		</nav>
 	</header>
 		
-	<nav id="menu-principal">
-		<ul>
+	<nav id="menu-principal"><ul>
 			<li><a href="disques.php" tabindex="1">Disques</a></li>
 			<li><a href="films.php" tabindex="11">Films</a></li>
 			<li><a href="livres.php" tabindex="21">Livres</a></li>
 			<li><a href="packs.php" tabindex="31">Pack Culture</a></li>
 			<li><a href="admin.php" tabindex="41">Administration</a></li>
-			<li class="search-item"><input type="search" name="recherche" placeholder="Tapez votre recherche" tabindex="51"/></li>
+			<li class="search-item">
+
+				<form method='get' action = 'recherche.php'>
+					<input type="search" name="recherche" placeholder="Tapez votre recherche" tabindex="51"/>
+				</form>
+			</li>
 		</ul>
 	</nav>
