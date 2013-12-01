@@ -227,11 +227,14 @@ textarea {
 
 }
 
+
 #menu2 ul {
 margin-top: 1.8cm;
 float: left;
-padding:0;
+padding-left:0;
+padding-right: 5px;
 list-style-type:none;
+
 }
 #menu2 ul li {
 display: inline; 
@@ -242,7 +245,7 @@ display:block;
 background:#f2f4f5; /*gris*/
 width:200px;
 text-decoration:none;
-padding:4px/*padding for top, bottom*/ 7px /*padding for left, right*/;
+padding: 4px /*padding for top, bottom*/ 7px /*padding for left, right*/;
 border-left:5px solid black;
 color:#333333;
 }
@@ -304,7 +307,7 @@ aside#pub {
   background: linear-gradient(to bottom, rgba(243,197,189,1) 0%,rgba(232,108,87,1) 50%,rgba(234,40,3,1) 51%,rgba(255,102,0,1) 75%,rgba(199,34,0,1) 100%); /* W3C */
   font-family: sans-serif;
   border-radius: 10px;
-   padding-left: 20px;
+  padding-left: 20px;
 }
 
 #nouveautes h2 .title{
@@ -343,7 +346,7 @@ aside#pub {
 /* --------------- */
 table.results {
 
-  border: solid 2px #778899;
+  border: solid 1px #778899;
 }
 
 table.results tr.tablesorter-filter-row {
@@ -366,6 +369,15 @@ table.results a {
   text-decoration: none;
 }
 
+#affichage_results {
+  padding-top: 1px;
+  padding-bottom: 1px;
+
+}
+
+nav#menu-principal + section {
+  min-height: 200px;
+}
 /* Espace perso ---------- */
 
 nav.menu-nav
