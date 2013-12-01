@@ -40,7 +40,8 @@
 	include_once('inc/header.inc.php');
 ?>
 <section id="section-panier">
-	<form>
+	<h2>Votre panier</h2>
+	<form method="post" action="paiement.php">
 	<table class="results">
 		<thead>
 			<th>Catégorie</th>
@@ -72,10 +73,10 @@
 	        			<figcaption><?php echo $produit->nom; ?></figcaption>
 	        		</figure>
         		</td>
-        		<td><?php printf("%.2f", $prixUHT); ?></td>
+        		<td class="prix"><?php printf("%.2f", $prixUHT); ?></td>
         		<td><input type="number" min="0" name="qte" value="<?php echo $qte; ?>" /></td>
-        		<td><?php printf('%.2f', $prixHT); ?></td>
-        		<td><?php printf('%.2f', $prixTTC); ?></td>
+        		<td class="prix"><?php printf('%.2f', $prixHT); ?></td>
+        		<td class="prix"><?php printf('%.2f', $prixTTC); ?></td>
 			</tr>
 <?php
             }
@@ -84,8 +85,8 @@
 	</tbody>
 	<tfoot>
 		<th colspan="4">Total</th>
-		<td><?php printf('%.2f', $prixTHT); ?></td>
-		<td><?php printf('%.2f', $prixTTTC); ?></td>
+		<td class="prix"><?php printf('%.2f', $prixTHT); ?></td>
+		<td class="prix"><?php printf('%.2f', $prixTTTC); ?></td>
 	</tfoot>
 </table>
 <div class="groupe-boutons">

@@ -481,8 +481,9 @@ section#mentions-legales h3 {
 }
 
 /* Panier ------------------- */
-section#section-panier tfoot th {
-  font-weight: bold;
+section#section-panier tfoot th,
+section#section-panier tfoot td {
+  font-weight: bold !important; /* Règle !important utilisée par .tablesorter-jui ... */
 }
 section#section-panier .groupe-boutons {
   text-align: right;
@@ -490,7 +491,18 @@ section#section-panier .groupe-boutons {
 section#section-panier .groupe-boutons button {
   /*line-height: 50px;*/
   /*font-size: 1em;*/
+  font-weight: bold;
   line-height: 1.5em;
-  width: 100px;
+  /*width: 150px;*/
+  text-align: left;
   /*border-radius: 10px;*/
+  padding-left: 10px;
+}
+
+section#section-panier .groupe-boutons button .fa {
+  /*margin-left: 10px;*/
+}
+
+.prix:after {
+  content: " €";
 }
