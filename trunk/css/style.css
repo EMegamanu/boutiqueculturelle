@@ -155,24 +155,30 @@ display:none;
 display:visible;
 }
 
-h2.formulaire {
-text-align: center;
-margin-top: 2cm;
+#formulaire h2{
+  text-align: center;
+/*margin-top: 2cm;*/
 }
 
-form#formulairecontact {
+#formulairecontact {
     /* Pour le centrer dans la page */
-	background-color:#FAFAFA;
-    margin-top: 1cm;
+	background-color:#F3F3F3;
+/*    margin-top: 1cm;*/
     width: 500px;*/
     margin: 2cm;
     /* Pour voir les limites du formulaire */
     padding: 3em;
-    border: 3px solid #000000;
-    border-radius: 4em;
-}*/
+    border: 1px solid #C0C0C0;
+    border-radius: 5px;
 
-form#formulairecontact div + div {
+}
+
+#formulaire {
+  width:600px;
+  margin-left: 25%;
+
+}
+#formulairecontact div + div {
     margin-top: 1em;
 }
 
@@ -180,8 +186,9 @@ label {
     /* Afin de s'assurer que toutes les étiquettes aient la même dimension et soient alignées correctement */
     display: inline-block;
     min-width: 120px;
-    text-align: right;
+    text-align: left;
 }
+
 
 input#identifiant, textarea {
     /* Afin de s'assurer que tous les champs textuels utilisent la même police
@@ -190,11 +197,9 @@ input#identifiant, textarea {
 
     /* Pour donner la même dimension à tous les champs textuels */
     width: 300px;
-  
-
     /* Pour harmoniser l'apparence des bordures des champs textuels */
-    border: 2px solid black;
-    box-shadow:1px 1px 2px black inset;
+    border: 1px solid #C0C0C0;
+
 }
 input#identifiant:focus, textarea:focus {
   /* Afin de rehausser les éléments actifs */
@@ -217,11 +222,42 @@ textarea {
   resize: vertical;
 }
 
-.button {
-    /* Pour positionner les boutons de la même manière que les champs textuels */
-   padding-left: 120px; /* même dimension que les étiquettes */
+.groupe-boutons {
+  text-align: center;
+}
+#inscription fieldset{
+  border: 1px solid #C0C0C0;
+  background-color: #FAFAFA;
 
 }
+#inscription legend {
+  font-size: 0.9em;
+}
+#inscription div + div {
+    margin-top: 0.5em;
+}
+#inscription label {
+    display: inline-block;
+    min-width: 140px;
+    text-align: left;
+}
+#inscription {
+  background-color:#F3F3F3;
+    margin-top: 0;
+    margin-right: 1cm;
+    padding: 3em;
+    border: 1px solid #C0C0C0;
+    border-radius: 5px;
+    width:600px;
+    margin-left: 20%;
+}
+#formulaire-inscription h2 {
+  text-align: center;
+
+}
+  
+
+/* ---------------------------------- */
 #menu2 {
   display: inline-block;
   vertical-align: top;
