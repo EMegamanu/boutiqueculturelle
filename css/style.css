@@ -460,13 +460,16 @@ option[selected][disabled] {
 
 /* Mentions Legales ---------- */
 
-.mentionslegales
-{
-border:2px solid black;
-background-color: white;
-text-align: justify;
+section#mentions-legales {
+  border:2px solid black;
+  background-color: white;
+  text-align: justify;
 }
-.mentionslegales h2 {
+
+section#mentions-legales h2 {
+  text-align:center;
+}
+section#mentions-legales h3 {
   font-size: 1.1em;
 }
 
@@ -483,9 +486,4 @@ section#section-panier .groupe-boutons button {
   line-height: 1.5em;
   width: 100px;
   /*border-radius: 10px;*/
-}
-
-/* temporaire */
-#nouveautes img {
-  max-height: 150px;
 }

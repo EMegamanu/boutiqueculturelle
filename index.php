@@ -35,8 +35,8 @@
 		  while($data = $results->fetch()) {
 ?>
 		<figure>
-		<a href="fiche_produit.php?p=<?php echo $data['id']?>"><img src="<?php echo $data['image'];?>" alt="" /></a>
-		<figcaption><?php echo $data['nom'].'<br />';?></figcaption>
+			<a href="fiche_produit.php?p=<?php echo $data['id']?>"><img src="<?php echo $data['miniature'];?>" alt="" /></a>
+			<figcaption><?php echo $data['nom'].'<br />';?></figcaption>
 		</figure>
 	
 <?php

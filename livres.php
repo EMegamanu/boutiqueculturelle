@@ -46,7 +46,7 @@
 					</span>
 				</td>
 				<td class="image">
-	                <img src="<?php echo $data['image'];?>" alt=""/>
+	                <img src="<?php echo $data['miniature'];?>" alt=""/>
 	            </td>
 				<td><?php echo $data['nom'];?></td>
 				<td><?php echo $data['genre'];?></td>
