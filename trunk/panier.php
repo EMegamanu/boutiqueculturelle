@@ -33,6 +33,7 @@
 			$i++;
 		}
 		$results->execute();
+		$count = $results->rowCount();
         $results->setFetchMode(PDO::FETCH_OBJ);
 	}
 
@@ -40,7 +41,14 @@
 	include_once('inc/header.inc.php');
 ?>
 <section id="section-panier">
-	<h2>Votre panier</h2>
+	<h2>
+		<span class="title">
+			<span class="fa fa-shopping-cart"></span> Votre panier
+		</span>
+	</h2>
+<?php
+    if($count > 0) {
+?>
 	<form method="post" action="paiement.php">
 	<table class="results">
 		<thead>
@@ -74,7 +82,9 @@
 	        		</figure>
         		</td>
         		<td class="prix"><?php printf("%.2f", $prixUHT); ?></td>
-        		<td><input type="number" min="0" name="qte" value="<?php echo $qte; ?>" /></td>
+        		<td>
+        			<input type="number" min="0" name="produit[<?php echo $produit->id; ?>]" value="<?php echo $qte; ?>" />
+        		</td>
         		<td class="prix"><?php printf('%.2f', $prixHT); ?></td>
         		<td class="prix"><?php printf('%.2f', $prixTTC); ?></td>
 			</tr>
@@ -94,6 +104,13 @@
 	<button type="submit"><span class="fa fa-hand-o-right"></span> Commander</button>
 </div>
 </form>
+<?php
+	} else {
+?>
+	<p>Votre panier est actuellement vide.</p>
+<?php
+	}
+?>
 </section>
 
 <?php
