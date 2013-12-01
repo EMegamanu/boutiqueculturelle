@@ -56,6 +56,7 @@
 
 			$tva = 1.196;
 			$prixTHT = 0;
+			$prixTTTC = 0;
 
             while($produit = $results->fetch()) {
             	$prixUHT = $produit->prixHT;
@@ -77,16 +78,16 @@
         		<td><?php printf('%.2f', $prixHT); ?></td>
         		<td><?php printf('%.2f', $prixTTC); ?></td>
 			</tr>
-<?
-				$prixTTTC = $prixTHT * $tva;
+<?php
             }
-		?>
+			$prixTTTC = $prixTHT * $tva;
+?>
 	</tbody>
-	<tfooter>
+	<tfoot>
 		<th colspan="4">Total</th>
 		<td><?php printf('%.2f', $prixTHT); ?></td>
 		<td><?php printf('%.2f', $prixTTTC); ?></td>
-	</tfooter>
+	</tfoot>
 </table>
 <div>
 	<input type="submit" />
