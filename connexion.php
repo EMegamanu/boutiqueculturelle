@@ -15,6 +15,7 @@
         echo "NOM : " . $enreg["nom"] . "<br/>";
         echo "PRENOM : " . $enreg["prenom"] . "<br/>";
         echo "ADRESSE : " . $enreg["adresse"] . "<br/>";
+		echo "<a href="Espace.php">Mon espace personel</a>" "<br/>";
     } else {
         echo "Paramètres de connexion invalides<br/>";
     }
