@@ -197,27 +197,23 @@ input#identifiant, textarea {
     box-shadow:1px 1px 2px black inset;
 }
 input#identifiant:focus, textarea:focus {
-    /* Afin de rehausser les éléments actifs */
+  /* Afin de rehausser les éléments actifs */
   border-color: #000;
 }
+
 input[type=submit], input[type=reset] {
- /*width:100px;*/
- margin-left:5px;
- box-shadow:1px 1px 1px #87CEEB;
- cursor:pointer;
- }
- input[type=submit]:hover, input[type=reset]:hover {
- background-color:#87CEEB;
- }
+  cursor:pointer;
+}
+
 textarea {
-    /* Pour aligner correctement les champs multilignes et leurs étiquettes */
+  /* Pour aligner correctement les champs multilignes et leurs étiquettes */
   vertical-align: top;
 
-    /* Pour donner assez d'espace pour entrer du texte */
-   height: 6em;
+  /* Pour donner assez d'espace pour entrer du texte */
+  height: 6em;
 
-      /* Pour permettre aux utilisateurs de redimensionner un champ textuel horizontalement
-       Cela ne marche pas avec tous les navigateurs  */
+  /* Pour permettre aux utilisateurs de redimensionner un champ textuel horizontalement
+     Cela ne marche pas avec tous les navigateurs  */
   resize: vertical;
 }
 
@@ -474,3 +470,17 @@ text-align: justify;
   font-size: 1.1em;
 }
 
+/* Panier ------------------- */
+section#section-panier tfoot {
+  font-weight: bold;
+}
+section#section-panier .groupe-boutons {
+  text-align: right;
+}
+section#section-panier .groupe-boutons button {
+  /*line-height: 50px;*/
+  /*font-size: 1em;*/
+  line-height: 1.5em;
+  width: 100px;
+  /*border-radius: 10px;*/
+}

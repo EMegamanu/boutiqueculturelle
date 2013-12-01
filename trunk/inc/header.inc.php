@@ -47,7 +47,7 @@
 		<h1>
 			<a href="."><img src="img/logo-64.png" alt="Boutique culturelle" id="logo"/></a>
 			<span class="title-group">
-				<span class="title">Boutique culturelle - <?php echo $title; ?></span>
+				<span class="title">Boutique culturelle</span>
 				<span class="subtitle">
 					Bienvenue sur votre site de référence pour 
 					l'achat de vos biens culturels en ligne.

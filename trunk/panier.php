@@ -39,8 +39,7 @@
 	/* Inclusion de l'en-tête. */
 	include_once('inc/header.inc.php');
 ?>
-
-<section>
+<section id="section-panier">
 	<form>
 	<table class="results">
 		<thead>
@@ -89,9 +88,9 @@
 		<td><?php printf('%.2f', $prixTTTC); ?></td>
 	</tfoot>
 </table>
-<div>
-	<input type="submit" />
-	<input type="reset" />
+<div class="groupe-boutons">
+	<button type="reset"><span class="fa fa-trash-o"></span> Vider</button>
+	<button type="submit"><span class="fa fa-hand-o-right"></span> Commander</button>
 </div>
 </form>
 </section>
