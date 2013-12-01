@@ -471,7 +471,7 @@ text-align: justify;
 }
 
 /* Panier ------------------- */
-section#section-panier tfoot {
+section#section-panier tfoot th {
   font-weight: bold;
 }
 section#section-panier .groupe-boutons {
@@ -483,4 +483,9 @@ section#section-panier .groupe-boutons button {
   line-height: 1.5em;
   width: 100px;
   /*border-radius: 10px;*/
+}
+
+/* temporaire */
+#nouveautes img {
+  max-height: 150px;
 }
