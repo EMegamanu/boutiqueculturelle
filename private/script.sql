@@ -59,8 +59,8 @@ CREATE TABLE Produit (
   nom VARCHAR(45) NOT NULL,
   idCategorie INT NOT NULL,
   prixHT DOUBLE NOT NULL,
-  image VARCHAR(45) NULL,
-  miniature VARCHAR(45) NULL,
+  image TEXT NULL,
+  miniature TEXT NULL,
   PRIMARY KEY(id)
 ) ENGINE = InnoDB;
 
