@@ -47,6 +47,13 @@ $results = $db->prepare($requete);
 
 $results->bindValue(':recherche', $_GET['recherche']);
 $results->execute();
+$count = $results->rowCount();
+?>
+<section>
+<?php
+if ($count>0) {
+	
+
 // $results->setFetchMode(PDO::FETCH_OBJ);
 	// print_r($results);
 ?>
@@ -80,6 +87,14 @@ while($produit = $results->fetch()) {
 ?>
 </tbody>
 </table>
-<!-- categorie, id, nom, prixHT,  genre,  artiste,  annee ' . -->
+<?php
+}
+else
+{
+	?>
+	<p>Aucun résultat ne correspond à votre recherche.</p>
+	<?php
 
-
+}
+?>
+</section>
