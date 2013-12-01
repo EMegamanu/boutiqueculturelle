@@ -537,8 +537,8 @@ option[selected][disabled] {
 
 section#mentions-legales {
   border:2px solid black;
-  background-color: transparent;
   text-align: justify;
+  background-color: #FAFAFA;
 }
 
 section#mentions-legales h2 {
