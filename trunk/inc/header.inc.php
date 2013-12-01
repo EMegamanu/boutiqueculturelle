@@ -29,6 +29,7 @@
 
 		<link rel="stylesheet" href="css/jquery-ui/themes/blitzer/jquery-ui.min.css" />
 
+		<link rel="stylesheet" href="css/jquery.tablesorter/theme.default.css" />
 		<link rel="stylesheet" href="css/jquery.tablesorter/theme.jui.css" />
 		<link rel="stylesheet" href="css/jquery.tablesorter/jquery.tablesorter.pager.css" />
 
