@@ -49,7 +49,7 @@ $results->bindValue(':recherche', $_GET['recherche']);
 $results->execute();
 $count = $results->rowCount();
 ?>
-<section>
+<section id = 'affichage_results'>
 <?php
 if ($count>0) {
 	
@@ -98,3 +98,8 @@ else
 }
 ?>
 </section>
+<?php
+	/* Inclusion du pied de page */
+	include_once('inc/footer.inc.php');
+?>
+
