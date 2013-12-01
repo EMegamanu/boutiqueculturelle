@@ -203,15 +203,24 @@ $(function() {
 		$tableResults.trigger("update");
 	});
 
-	var $inputNb = $tableResults.find(".nb input");
-	$inputNb.change(function() {
-		var $input = $(this);
+	function actualiseProduit($input) {
 		var $tr = $input.closest("tr");
 		var id = $tr.data("id");
 
 		articles[id] = parseInt($input.val());
 		$.cookie("articles", articles);
-	})
+	}
+
+	var $inputNb = $tableResults.find(".nb input");
+	$inputNb.change(function() {
+		var $input = $(this);
+		actualiseProduit($input);
+	});
+
+	$('.ajout-panier .ui-spinner-button').click(function() {
+		var $input = $(this).parent().find("input[type='number']");
+		actualiseProduit($input);
+	});
 
 	var $resetPanier = $("#section-panier :reset");
 
@@ -252,7 +261,7 @@ $(function() {
 			$tr.remove();
 			delete articles[id];
 
-			nbArticles = nbArticles - 1;
+			nbArticles = Object.keys(articles).length;
 			$nbArticles.text(nbArticles);
 		} else {
 			var $prixUHT = $tr.find(".prix-uht");
