@@ -1,34 +1,35 @@
 
-<?php		
+<?php	
+	$title = 'Disques';
 /* Inclusion script connexion base de données. */
 	require_once('inc/db.inc.php');
 	/* Inclusion de l'en-tête. */
 	include_once('inc/header.inc.php');
 ?>
-<nav id="menu2">
-	<ul>
-		<li><a href="#" class="reset">Tout</a></li>
-		<li><hr /></li>
-		<li><a href="#pop-rock">Pop-Rock</a></li>
-		<li><a href="#rnb">RnB</a></li>
-		<li><a href="#classique">Classique</a></li>
-	</ul>
-</nav>
-<div>
-	<h2><?php echo 'Disques';?></h2>
-	 <table id="tableau-catalogue" class="results tablesorter">
-	 	<thead>
-	        <tr>
-				<th><span class="fa fa-shopping-cart"><span class="hidden">Panier</span></span></th>
-	            <th>Pochette/Couverture</th>
-	            <th>Nom</th>
-	            <th>Genre</th>
-	            <th>Compositeur</th>
-	            <th>Annee de Production</th>
-	            <th>Prix</th>
-	        </tr>
-    	</thead>
-    	<tbody>
+<section id ="produits">
+	<nav id="menu2">
+		<h2>Filtrer</h2>
+		<ul>
+			<li><a href="#" class="reset">Tout</a></li>
+			<li><a href="#pop-rock">Pop-Rock</a></li>
+			<li><a href="#rnb">RnB</a></li>
+			<li><a href="#classique">Classique</a></li>
+		</ul>
+	</nav>
+	<article>
+		 <table class="results">
+		 	<thead>
+		        <tr>
+					<th><span class="fa fa-shopping-cart"><span class="hidden">Panier</span></span></th>
+		            <th>Pochette/Couverture</th>
+		            <th>Nom</th>
+		            <th>Genre</th>
+		            <th>Compositeur</th>
+		            <th>Annee de Production</th>
+		            <th>Prix</th>
+		        </tr>
+	    	</thead>
+	    	<tbody>
 <?php
         $results = $db->query('SELECT * FROM Disque D JOIN Produit P ON D.id = P.id');
         // $results->setFetchMode(PDO::FETCH_OBJ);
@@ -74,7 +75,8 @@
 			</select>
 		</form>
 	</nav>
-</div>
+	</article>
+</section>
 <?php
 	/* Inclusion du pied de page */
 	include_once('inc/footer.inc.php');
