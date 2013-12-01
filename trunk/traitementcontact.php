@@ -40,11 +40,7 @@
     $ok = false;
     /* On vérifie que le formulaire a bien été rempli... */
     if(!empty($_POST)) {
-        /* 
-           Note : si le client est identifié, ce serait bien de récupérer la plupart de ces informations dans la base de données 
-           au lieu de les lui faire saisir.
-         */
-
+       
         if(
             !empty($_POST['nom']) && 
             !empty($_POST['prenom']) && 
@@ -63,7 +59,8 @@
             $ok = true;
         } else {
             // TODO: Traitement à faire si formulaire incomplet
-            // Peut-être une redirection du formulaire ?
+            //Une redirection du formulaire
+            header("location:contact.php");
 
         }
     } else {
