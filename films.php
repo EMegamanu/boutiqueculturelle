@@ -1,5 +1,6 @@
-<?php		
-/* Inclusion script connexion base de données. */
+<?php
+	$title = 'Films'; 
+	/* Inclusion script connexion base de données. */
 	require_once('inc/db.inc.php');
 	/* Inclusion de l'en-tête. */
 	include_once('inc/header.inc.php');
@@ -33,7 +34,6 @@
 		$results = $db->query('SELECT * FROM Film D JOIN Produit P ON D.id = P.id');
         // $results->setFetchMode(PDO::FETCH_OBJ);
             while($data = $results->fetch()) {
-        print_r($row);
 ?>
 			<tr data-id="<?php echo $data['id']; ?>">
 				<td class="ajout-panier">
