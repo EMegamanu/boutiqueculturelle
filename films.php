@@ -37,10 +37,10 @@
 ?>
 			<tr data-id="<?php echo $data['id']; ?>">
 				<td class="ajout-panier">
-<!--				<a href="panier.php?ajout=<?php echo $date['id']; ?>" class="fa fa-check-square"> -->
-					<a href="panier.php?ajout=<?php echo $data['id']; ?>" class="fa fa-square-o" data-id="<?php echo $data['id']; ?>">
+					<a href="panier.php?ajout=<?php echo $data['id']; ?>" class="fa fa-square-o">
 						<span class="hidden action">+</span>
 					</a>
+					<!-- Affichage / Masquage au niveau d'un parent du input pour compatibilité avec méthode de rabatage via JQuery. -->
 					<span class="nb">
 						<input type="number" min="0" max="999" name="nb-<?php echo $data['id']; ?>" value="0" />
 					</span>

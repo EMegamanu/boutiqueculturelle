@@ -6,7 +6,7 @@
 ?>
 
 <h2 class="formulaire"> Formulaire de contact</h2>
-<form action="traitementcontact.php" method="post">
+<form id="formulairecontact"action="traitementcontact.php" method="post">
 	<div>
         <label for="nom">Nom :</label>
         <input type="text" id="identifiant" name="nom" />
