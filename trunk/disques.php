@@ -6,15 +6,14 @@
 	include_once('inc/header.inc.php');
 ?>
 <nav id="menu2">
-			<ul>
-				<li><a href="#" class="reset">Tout</a></li>
-				<li><hr /></li>
-				<li><a href="#pop-rock">Pop-Rock</a></li>
-				<li><a href="#rnb">RnB</a></li>
-				<li><a href="#classique">Classique</a></li>
-			</ul>
+	<ul>
+		<li><a href="#" class="reset">Tout</a></li>
+		<li><hr /></li>
+		<li><a href="#pop-rock">Pop-Rock</a></li>
+		<li><a href="#rnb">RnB</a></li>
+		<li><a href="#classique">Classique</a></li>
+	</ul>
 </nav>
-
 <div>
 	<h2><?php echo 'Disques';?></h2>
 	 <table id="tableau-catalogue" class="results tablesorter">
@@ -30,39 +29,42 @@
 	        </tr>
     	</thead>
     	<tbody>
-        <tr>
 <?php
         $results = $db->query('SELECT * FROM Disque D JOIN Produit P ON D.id = P.id');
         // $results->setFetchMode(PDO::FETCH_OBJ);
             while($data = $results->fetch()) {
 ?>
-			<td class="ajout-panier">
-<!--				<a href="panier.php?ajout=<?php echo $date['id']; ?>" class="fa fa-check-square"> -->
-				<a href="panier.php?ajout=<?php echo $data['id']; ?>" class="fa fa-square-o" data-id="<?php echo $data['id']; ?>">
-					<span class="hidden action">+</span>
-				</a>
-			</td>
-            <td class="image">
-                <img src="<?php echo $data['image'];?>" alt=""/>
-            </td>
-            <td><?php echo $data['nom'];?></td>
-            <td><?php echo $data['genre'];?></td>
-            <td><?php echo $data['compositeur'];?></td>
-            <td><?php echo $data['anneeProduction'];?></td>
-            <td><?php echo $data['prixHT'];?></td>
-        </tr>
+			<tr data-id="<?php echo $data['id']; ?>">
+				<td class="ajout-panier">
+					<a href="panier.php?ajout=<?php echo $data['id']; ?>" class="fa fa-square-o">
+						<span class="hidden action">+</span>
+					</a>
+					<!-- Affichage / Masquage au niveau d'un parent du input pour compatibilité avec méthode de rabatage via JQuery. -->
+					<span class="nb">
+						<input type="number" min="0" max="999" name="nb-<?php echo $data['id']; ?>" value="0" />
+					</span>
+				</td>
+            	<td class="image">
+                	<img src="<?php echo $data['image'];?>" alt=""/>
+           		</td>
+            	<td><?php echo $data['nom'];?></td>
+            	<td><?php echo $data['genre'];?></td>
+            	<td><?php echo $data['compositeur'];?></td>
+            	<td><?php echo $data['anneeProduction'];?></td>
+            	<td><?php echo $data['prixHT'];?></td>
+        	</tr>
 <?php
             }
 ?> 
-	</tbody>
+		</tbody>
     </table>
     <nav class="pager">
 		<form>
-			<img src="img/jquery.tablesorter/pager/icons/first.png" class="first" />
-			<img src="img/jquery.tablesorter/pager/icons/prev.png" class="prev" />
+			<img src="img/jquery.tablesorter/pager/icons/first.png" alt="<<" class="first" />
+			<img src="img/jquery.tablesorter/pager/icons/prev.png" alt="<" class="prev" />
 			<span class="pagedisplay"></span>
-			<img src="img/jquery.tablesorter/pager/icons/next.png" class="next" />
-			<img src="img/jquery.tablesorter/pager/icons/last.png" class="last" />
+			<img src="img/jquery.tablesorter/pager/icons/next.png" alt=">" class="next" />
+			<img src="img/jquery.tablesorter/pager/icons/last.png" alt=">>" class="last" />
 			<select class="pagesize">
 				<option selected="selected" value="5">5</option>
 				<option value="10">10</option>
