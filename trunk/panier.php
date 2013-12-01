@@ -90,7 +90,7 @@
 		?>
 	</tbody>
 	<tfooter>
-		<td colspan="5">Total</td>
+		<th colspan="4">Total</th>
 		<td><?php printf('%.2f', $prixTHT); ?></td>
 		<td><?php printf('%.2f', $prixTTTC); ?></td>
 	</tfooter>

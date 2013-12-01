@@ -160,25 +160,29 @@ text-align: center;
 margin-top: 2cm;
 }
 
-form {
+/* Non aux styles généralistes ! */
+/*form {*/
     /* Pour le centrer dans la page */
-	background-color:#FAFAFA;
+	/*background-color:#FAFAFA;
     margin-top: 1cm;
-    width: 500px;
+    width: 500px;*/
     /* Pour voir les limites du formulaire */
-    padding: 3em;
+/*    padding: 3em;
     border: 3px solid #000000;
     border-radius: 4em;
-}
-form div + div {
+}*/
+
+/*form div + div {
     margin-top: 1em;
-}
+}*/
+
 label {
     /* Afin de s'assurer que toutes les étiquettes aient la même dimension et soient alignées correctement */
     display: inline-block;
-    width: 120px;
+    min-width: 150px;
     text-align: right;
 }
+
 input#identifiant, textarea {
     /* Afin de s'assurer que tous les champs textuels utilisent la même police
        Par défaut, textarea utilise une police à espacement constant */
@@ -383,7 +387,7 @@ table.results a {
 nav.menu-nav
 {
 	border :2px solid black;
-	Float: Left;
+	float: left;
 	
 	width: 24%;
 	
