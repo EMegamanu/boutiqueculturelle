@@ -402,6 +402,9 @@ table.results th.tablesorter-header {
   border: solid 1px #778899;
 }
 
+table.results img{
+  max-height: 150px;
+}
 
 .pager {
   text-align: center;
