@@ -87,6 +87,22 @@ while($produit = $results->fetch()) {
 ?>
 </tbody>
 </table>
+<nav class="pager">
+	<form>
+		<img src="img/jquery.tablesorter/pager/icons/first.png" alt="<<" class="first" />
+		<img src="img/jquery.tablesorter/pager/icons/prev.png" alt="<" class="prev" />
+		<span class="pagedisplay"></span>
+		<img src="img/jquery.tablesorter/pager/icons/next.png" alt=">" class="next" />
+		<img src="img/jquery.tablesorter/pager/icons/last.png" alt=">>" class="last" />
+		<select class="pagesize">
+			<option selected="selected" value="5">5</option>
+			<option value="10">10</option>
+			<option value="20">20</option>
+			<option value="30">30</option>
+			<option value="40">40</option>
+		</select>
+	</form>
+</nav>
 <?php
 }
 else
