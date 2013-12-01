@@ -390,7 +390,7 @@ nav.menu-nav
 	float: left;
 	
 	width: 24%;
-	
+	background-color: transparent;
 }
 
 section.Commande
@@ -398,6 +398,7 @@ section.Commande
 	border:2px solid black;
 	Margin : 10%;
 	Margin-left : 30%;
+	background-color: transparent;
 	
 }
 
