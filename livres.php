@@ -40,7 +40,9 @@
 					<a href="panier.php?ajout=<?php echo $data['id']; ?>" class="fa fa-square-o" data-id="<?php echo $data['id']; ?>">
 						<span class="hidden action">+</span>
 					</a>
-					<input type="number" min="0" name="nb-<?php echo $data['id']; ?>" class="hidden nb" value="0" />
+					<span class="nb">
+						<input type="number" min="0" max="999" name="nb-<?php echo $data['id']; ?>" value="0" />
+					</span>
 				</td>
 				<td class="image">
 	                <img src="<?php echo $data['image'];?>" alt=""/>

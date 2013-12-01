@@ -127,8 +127,8 @@ $(function() {
 
 			$action.text("-");
 
-			$nb.removeClass("hidden");
-			$nb.val(1);
+			$nb.css("visibility", "visible");
+			$nb.find("input").val(1);
 		}
 	});
 	
@@ -157,8 +157,8 @@ $(function() {
 
 			$action.text("+");
 
-			$nb.addClass("hidden");
-			$nb.val(0);
+			$nb.css("visibility", "hidden");
+			$nb.find("input").val(0);
 		} else {
 			$lien.data("coche", true);
 			$lien.addClass(classCoche);
@@ -172,8 +172,8 @@ $(function() {
 
 			$action.text("-");
 
-			$nb.removeClass("hidden");
-			$nb.val(1);
+			$nb.css("visibility", "visible");
+			$nb.find("input").val(1);
 		}
 
 		$tableResults.trigger("update");
