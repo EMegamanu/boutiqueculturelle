@@ -60,6 +60,7 @@ CREATE TABLE Produit (
   idCategorie INT NOT NULL,
   prixHT DOUBLE NOT NULL,
   image VARCHAR(45) NULL,
+  miniature VARCHAR(45) NULL,
   PRIMARY KEY(id)
 ) ENGINE = InnoDB;
 
@@ -191,140 +192,140 @@ INSERT INTO Categorie VALUES(4, 'Pack');
 -- -----------------------------------------------------
 -- Remplissage table Produit
 -- -----------------------------------------------------
-Insert into produit values (1, 'Very bad Trip', 2, 26.99, './img/verybadtrip.png');
-insert into film values (1, 'Comédie', 'tod phillips',2013);
+Insert into produit values (1, 'Very bad Trip', 2, 26.99, './img/produits/very-bad-trip.jpg', './img/produits-min/very-bad-trip.jpg');
+insert into film values (1, 'Comédie', 'Tod Phillips', 2009);
 
-Insert into produit values (2, 'Ted', 2, 10.00, './img/ted.png');
-insert into film values (2, 'Comédie', 'Set MacFarlane',2013);
+Insert into produit values (2, 'Ted', 2, 10.00, './img/produits/ted.jpg', './img/produits-min/ted.jpg');
+insert into film values (2, 'Comédie', 'Seth MacFarlane', 2013);
 
-Insert into produit values (3, 'Bienvenue à bord', 2, 10.00, './img/bab.png');
-insert into film values (3, 'Comédie', 'Eric Lavaine', 2012);
+Insert into produit values (3, 'Bienvenue à bord', 2, 10.00, './img/produits/bienvenue-a-bord.jpg', './img/produits-min/bienvenue-a-bord.jpg');
+insert into film values (3, 'Comédie', 'Eric Lavaine', 2011);
 
-Insert into produit values (4, 'Les seigneurs', 2, 10.00, './img/les.png');
-insert into film values (4, 'Comédie', 'Olivier Dahan', 2013);
+Insert into produit values (4, 'Les Seigneurs', 2, 10.00, './img/produits/les-seigneurs.jpg', './img/produits-min/les-seigneurs.jpg');
+insert into film values (4, 'Comédie', 'Olivier Dahan', 2012);
 
-Insert into produit values (5, 'Sexe entre amis', 2, 10.00, './img/sexeentreamis.png');
+Insert into produit values (5, 'Sexe entre amis', 2, 10.00, './img/produits/sexe-entre-amis.jpg', './img/produits-min/sexe-entre-amis.jpg');
 insert into film values (5, 'Comédie', 'Will Gluck',2012);
 
-Insert into produit values (6, 'Taken2', 2, 12.99, './img/taken2.png');
+Insert into produit values (6, 'Taken 2', 2, 12.99, './img/produits/taken-2.jpg', './img/produits-min/taken-2.jpg');
 Insert into film values (6, 'Action', 'Olivier Megaton', 2013);
 
-Insert into produit values (7, 'Héritage', 2, 15.00, './img/heritage.png');
-Insert into film values (7, 'Action', 'Oliver Speri', 2013);
+Insert into produit values (7, 'Jason Bourne L''Héritage', 2, 15.00, './img/produits/jason-bourne-heritage.jpg', './img/produits-min/jason-bourne-heritage.jpg');
+Insert into film values (7, 'Action', 'Tony Gilroy', 2013);
 
-Insert into produit values (8, 'Fast And Furious 6', 2, 15.99, './img/faf.png');
+Insert into produit values (8, 'Fast & Furious 6', 2, 15.99, './img/produits/fast-n-furious-6.jpg', './img/produits-min/fast-n-furious-6.jpg');
 Insert into film values (8, 'Action' ,'Justin Lin', 2013);
 
-Insert into produit values (9, 'James Bond', 2, 11.99, './img/jb.png');
+Insert into produit values (9, 'Skyfall', 2, 11.99, './img/produits/skyfall.jpg', './img/produits-min/skyfall.jpg');
 Insert into film values (9, 'Action', 'Sam Mendes', 2013);
 
-Insert into produit values (10, 'Etalon Noir', 2, 9.99, './img/etalon_noir.png');
-Insert into film values (10, 'Action', 'Carole Ballard', 2003);
+Insert into produit values (10, 'L''Étalon Noir', 2, 9.99, './img/produits/etalon_noir.jpg', './img/produits-min/etalon_noir.jpg');
+Insert into film values (10, 'Action', 'Carole Ballard', 1979);
 
-Insert into produit values (11, 'Mission G', 2, 6.99, './img/missiong.png');
+Insert into produit values (11, 'Mission G', 2, 6.99, './img/produits/mission-g.jpg', './img/produits-min/mission-g.jpg');
 Insert into film values (11, 'Jeunesse', 'Hoyt Yeatman', 2010);
 
-Insert into produit values (12, 'Noël', 2, 9.99, './img/noel.png');
+Insert into produit values (12, 'Super Noël', 2, 9.99, './img/produits/super-noel.jpg', './img/produits-min/super-noel.jpg');
 Insert into film values (12, 'Jeunesse', 'John Pasquin', 2011);
 
-Insert into produit values (13, 'Le Monde de Narnia', 2, 7.99, './img/narnia.png');
-Insert into film values (13, 'Jeunesse', 'Michel Apted', 2010);
+Insert into produit values (13, 'Le Monde de Narnia', 2, 7.99, './img/produits/le-monde-de-narnia.jpg', './img/produits-min/le-monde-de-narnia.jpg');
+Insert into film values (13, 'Jeunesse', 'Andrew Adamson', 2005);
 
-Insert into produit values (14, 'Pirate des caraïbes', 2, 3.99, './img/pirate.png');
+Insert into produit values (14, 'Pirate des Caraïbes', 2, 3.99, './img/produits/pirate-des-caraibes.jpg', './img/produits-min/pirate-des-caraibes.jpg');
 Insert into film values (14, 'Jeunesse', 'Gore Verbinski', 2004);
 
-Insert into produit values (15, 'Lizzy McGuire', 2, 8.99, './img/lizzy.png');
-Insert into film values (15, 'Jeunesse', 'Jim Fall', 2004);
+Insert into produit values (15, 'Lizzy McGuire', 2, 8.99, './img/produits/lizzy-mc-guire-le-film.jpg', './img/produits-min/lizzy-mc-guire-le-film.jpg');
+Insert into film values (15, 'Jeunesse', 'Jim Fall', 2003);
 
-Insert into produit values (16, 'Naruto', 1, 29.99, './img/naruto.png');
-Insert into livre values(16, 'manga', 'Masashi Kasimoto', 2010);
+Insert into produit values (43, 'Kirov Classics', 3, 41.99, './img/produits/kirov-classics.jpg', './img/produits-min/kirov-classics.jpg');
+Insert into Film values (43, 'Ballet', 'Ileg Vinogradov' , 1998);
 
-Insert into produit values (17, 'Fairy Tail', 1, 6.99, './img/f.png');
-Insert into livre values(17, 'manga', 'Hiro Mashima', 2003);
+Insert into produit values (16, 'Naruto - Tome 1', 1, 29.99, './img/produits/naruto-t1.jpg', './img/produits-min/naruto-t1.jpg');
+Insert into livre values(16, 'manga', 'Masashi Kishimoto', 2002);
 
-Insert into produit values (18, 'Death Note', 1, 7.99, './img/dn.png');
-Insert into livre values(18, 'manga', 'Tsugumi Obas', 2006);
+Insert into produit values (17, 'Fairy Tail - Tome 14', 1, 6.99, './img/produits/fairy-tail-t14.jpg', './img/produits-min/fairy-tail-t14.jpg');
+Insert into livre values(17, 'manga', 'Hiro Mashima', 2010);
 
-Insert into produit values (19, 'Nanami', 1, 8.99, './img/nanami.png');
-Insert into livre values(19, 'manga', 'SUZUKI Julietta ', 2004);
+Insert into produit values (18, 'Death Note - Tome 1', 1, 7.99, './img/produits/death-note-t1.jpg', './img/produits-min/death-note-t1.jpg');
+Insert into livre values(18, 'manga', 'Takeshi Obata, Tsugumi Ohba', 2007);
 
-Insert into produit values (20, 'King', 1, 7.99, './img/king.png');
-Insert into livre values(20, 'manga', 'Masashi pero', 2004);
+Insert into produit values (19, 'Divine Nanami - Tome 2', 1, 8.99, './img/produits/divine-nanami-t2.jpg', './img/produits-min/divine-nanami-t2.jpg');
+Insert into livre values(19, 'manga', 'Suzuki Julietta ', 2004);
 
-Insert into produit values (21, 'Tintin', 1, 6.99, './img/tintin1.png');
-Insert into livre values(21, 'BD', 'Hergé',2008);
+Insert into produit values (20, 'King''s Game - Tome 2', 1, 7.99, './img/produits/kings-game-t2.jpg', './img/produits-min/kings-game-t2.jpg');
+Insert into livre values(20, 'manga', 'Hitori Renda, Nobuaki Kanazawa', 2013);
 
-Insert into produit values (22, 'Titeuf', 1, 9.99, './img/titeuf.png');
-Insert into livre values(22, 'BD', 'ZEP',2007);
+Insert into produit values (21, 'Tintin - Les 7 Boules de Cristal', 1, 6.99, './img/produits/tintin-les-7-boules-de-cristal.jpg', './img/produits-min/tintin-les-7-boules-de-cristal.jpg');
+Insert into livre values(21, 'BD', 'Hergé', 1948);
 
-Insert into produit values (23,  'Légendaire', 1, 10.99, './img/legendaires.png');
+Insert into produit values (22, 'Titeuf - Tome 13 : À la folie', 1, 9.99, './img/produits/titeuf-t13.jpg', './img/produits-min/titeuf-t13.jpg');
+Insert into livre values(22, 'BD', 'Zep', 2012);
+
+Insert into produit values (23,  'Les Légendaires - Tome 10', 1, 10.99, './img/produits/les-legendaires-t10.jpg', './img/produits-min/les-legendaires-t10.jpg');
 Insert into livre values(23, 'BD', 'Patrick Sobral', 2010);
 
-Insert into produit values (24, 'Triple Galop', 1, 10.99, './img/triple.png');
-Insert into livre values(24, 'BD', 'Benoit Du Peloux',2012);
+Insert into produit values (24, 'Triple Galop - Tome 4', 1, 10.99, './img/produits/triple-galop-t4.jpg', './img/produits-min/triple-galop-t4.jpg');
+Insert into livre values(24, 'BD', 'Benoit Du Peloux', 2009);
 
-Insert into produit values (25, 'Game Over', 1, 9.99, './img/game.png');
-Insert into livre values(25, 'BD', 'Midam Adam',2011);
+Insert into produit values (25, 'Game Over - Tome 1', 1, 9.99, './img/produits/game-over-t1.jpg', './img/produits-min/game-over-t1.jpg');
+Insert into livre values(25, 'BD', 'Midam, Adam', 2004);
 
-Insert into produit values (26, 'Abscence', 1, 19.99, './img/absence.png');
+Insert into produit values (26, 'Absences', 1, 19.99, 'img/produits/absences.jpg', 'img/produits-min/absences.jpg');
 Insert into livre values(26, 'Roman Policier', 'Alice Laplante', 2013);
 
-Insert into produit values (27, 'Autre monde', 1, 19.99, './img/alliance.png');
+Insert into produit values (27, 'Autre monde', 1, 19.99, './img/produits/autre-monde.jpg', './img/produits-min/autre-monde.jpg');
 Insert into livre values(27, 'Roman Policier', 'Maxime Chattam', 2008);
 
-Insert into produit values (28, 'L''oeil de la lune', 1, 7.99, './img/oeil.png');
-Insert into livre values(28, 'Roman Policier', 'Anonyme', 2012);
+Insert into produit values (28, 'L''oeil de la lune', 1, 7.99, './img/produits/l-oeil-de-la-lune.jpg', './img/produits-min/l-oeil-de-la-lune.jpg');
+Insert into livre values(28, 'Roman Policier', 'Anonyme', 2008);
 
-Insert into produit values (29, 'La malédiction', 1, 8.99, './img/mal.png');
+Insert into produit values (29, 'La Malédiction de Marco Polo', 1, 8.99, './img/produits/la-malediction-de-marco-polo.jpg', './img/produits-min/la-malediction-de-marco-polo.jpg');
 Insert into livre values(29, 'Roman Policier', 'James Rollins', 2011);
 
-Insert into produit values (30, 'Harlan promet moi Coben',  1, 7.99, './img/coben.png');
-Insert into livre values(30, 'Roman Policier', 'Prost', 2009);
+Insert into produit values (30, 'Promets moi',  1, 7.99, './img/produits/promets-moi.jpg', './img/produits-min/promets-moi.jpg');
+Insert into livre values(30, 'Roman Policier', 'Harlan Coven', 2009);
 
-Insert into produit values (31, 'Carrington Street', 3, 16.99, './img/carrington.png');
-Insert into Disque values (31, 'Pop-Rock', 'Adèle et Glen', 2008);
+Insert into produit values (31, 'Carrington Street', 3, 16.99, './img/produits/carrington-street.jpg', './img/produits-min/carrington-street.jpg');
+Insert into Disque values (31, 'Pop-Rock', 'Adèle & Glen', 2012);
 
-Insert into produit values (32, 'Leaving records', 3, 20.99, './img/leaving.png');
-Insert into Disque values (32, 'Pop-Rock', 'Dual Form', 2009);
+Insert into produit values (32, 'Dual Form', 3, 20.99, './img/produits/dual-form.jpg', './img/produits-min/dual-form.jpg');
+Insert into Disque values (32, 'Pop-Rock', 'Leaving Records', 2013);
 
-Insert into produit values (33, 'Melvins', 3, 18.99, './img/melvins.png');
-Insert into Disque values (33, 'Pop-Rock', 'The Bootlicker', 2008);
+Insert into produit values (33, 'The Bootlicker', 3, 18.99, './img/produits/the-bootlicker.jpg', './img/produits-min/the-bootlicker.jpg');
+Insert into Disque values (33, 'Pop-Rock', 'Melvins', 2004);
 
-Insert into produit values (34, 'Robert Soul', 3, 19.99, './img/robert.png');
-Insert into Disque values (34, 'Pop-Rock', 'Robert', 2010);
+Insert into produit values (34, 'Rebel Soul', 3, 19.99, './img/produits/rebel-soul.jpg', './img/produits-min/rebel-soul.jpg');
+Insert into Disque values (34, 'Pop-Rock', 'Kid Rock', 2012);
 
-Insert into produit values (35, 'Too wet to plow', 3, 20.99, './img/too.png');
-Insert into Disque values (35, 'Pop-Rock', 'Johnny Shines', 2007);
+Insert into produit values (35, 'Too Wet to Plow', 3, 20.99, './img/produits/too-wet-to-plow.jpg', './img/produits-min/too-wet-to-plow.jpg');
+Insert into Disque values (35, 'Pop-Rock', 'Johnny Shines', 2013);
 
-Insert into produit values (36,'Stuff Like That', 3, 59.99, './img/stuff.png');
+Insert into produit values (36,'Stuff Like That', 3, 59.99, './img/produits/stuff-like-that.jpg', './img/produits-min/stuff-like-that.jpg');
 Insert into Disque values (36, 'RnB', 'Joe Hugues' , 2003);
 
-Insert into produit values (37,'Shame Shame Shame', 3, 41.99, './img/lewis.png');
-Insert into Disque values (37, 'RnB', 'Smiley Lewis' , 1993);
+Insert into produit values (37,'Shame Shame Shame', 3, 41.99, './img/produits/shame-shame-shame.jpg', './img/produits-min/shame-shame-shame.jpg');
+Insert into Disque values (37, 'RnB', 'Smiley Lewis' , 2000);
 
-Insert into produit values (38, 'Vanguard Visionnaries', 3, 29.99, './img/big.png');
-Insert into Disque values (38, 'RnB', 'Big mamma Thorton' , 2007);
+Insert into produit values (38, 'Big Mama Thornton', 3, 29.99, './img/big.jpg');
+Insert into Disque values (38, 'RnB', 'Vanguard Visionnaries', 2007);
 
-Insert into produit values (39, 'Shake Rattle & Roll in Concert', 3, 29.99, './img/joe.png');
-Insert into Disque values (39, 'RnB', 'Big Joe Turner' , 1998);
+Insert into produit values (39, 'Shake,Rattle & Roll (concert)', 3, 29.99, './img/produits/shake-rattle-n-roll-concert.jpg', './img/produits-min/shake-rattle-n-roll-concert.jpg');
+Insert into Disque values (39, 'RnB', 'Joe Turner', 1998);
 
-Insert into produit values (40, 'The Valentines', 3, 28.99, './img/the.png');
-Insert into Disque values (40, 'RnB', 'Lily Maebelle' , 2005);
+Insert into produit values (40, 'Lily Maebelle', 3, 28.99, './img/produits/lily-maebelle.jpg', './img/produits-min/lily-maebelle.jpg');
+Insert into Disque values (40, 'RnB', 'The Valentines' , 2013);
 
-Insert into produit values (41, 'Sonates pour piano', 3, 11.99, './img/mozart.png');
-Insert into Disque values (41, 'Classique', 'Mozart' , 1821);
+Insert into produit values (41, 'Mozart : Intégrale des sonates pour piano', 3, 11.99, './img/produits/mozart-integrale-des-sonates-pour-piano.jpg', './img/produits-min/mozart-integrale-des-sonates-pour-piano.jpg');
+Insert into Disque values (41, 'Classique', 'Friedrich Gulda' , 1821);
 
-Insert into produit values (42, 'Beethoven for all', 3, 41.99, './img/b.png');
+Insert into produit values (42, 'Beethoven for all', 3, 41.99, './img/produits/beethoven-for-all.jpg', './img/produits-min/beethoven-for-all.jpg');
 Insert into Disque values (42, 'Classique', 'Daniel Barenboim' , 2012);
 
-Insert into produit values (43, 'Kirov classics', 3, 41.99, './img/kirov.png');
-Insert into Disque values (43, 'Classique', 'Kirov' , 1998);
-
-Insert into produit values (44,'Partie 4', 3, 29.99, './img/david.png');
+Insert into produit values (44,'David Fray plays Bach & Boulez', 3, 29.99, './img/produits/david-fray-play-bach-and-boulez.jpg', './img/produits-min/david-fray-play-bach-and-boulez.jpg');
 Insert into Disque values (44, 'Classique', 'David Fray' , 1998);
 
-Insert into produit values (45, 'Concerto pour violon', 3, 24.99, './img/concerto.png');
-Insert into Disque values (45, 'Classique', 'Izthak Perlman' , 1990);
+Insert into produit values (45, 'Concertos pour violon #1', 3, 24.99, './img/produits/concertos-pour-violon-1.jpg', './img/produits-min/concertos-pour-violon-1.jpg');
+Insert into Disque values (45, 'Classique', 'Itzhak Perlman' , 1990);
 
 -- -----------------------------------------------------
 -- Remplissage table Utilisateur

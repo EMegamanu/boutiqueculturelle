@@ -73,7 +73,7 @@
 	        			<figcaption><?php echo $produit->nom; ?></figcaption>
 	        		</figure>
         		</td>
-        		<td><?php echo $prixUHT; ?></td>
+        		<td><?php printf("%.2f", $prixUHT); ?></td>
         		<td><input type="number" min="0" name="qte" value="<?php echo $qte; ?>" /></td>
         		<td><?php printf('%.2f', $prixHT); ?></td>
         		<td><?php printf('%.2f', $prixTTC); ?></td>
