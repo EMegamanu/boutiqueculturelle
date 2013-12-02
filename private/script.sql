@@ -283,7 +283,7 @@ Insert into produit values (29, 'La Malédiction de Marco Polo', 1, 8.99, './img
 Insert into livre values(29, 'Roman Policier', 'James Rollins', 2011);
 
 Insert into produit values (30, 'Promets moi',  1, 7.99, './img/produits/promets-moi.jpg', './img/produits-min/promets-moi.jpg');
-Insert into livre values(30, 'Roman Policier', 'Harlan Coven', 2009);
+Insert into livre values(30, 'Roman Policier', 'Harlan Coben', 2009);
 
 Insert into produit values (31, 'Carrington Street', 3, 16.99, './img/produits/carrington-street.jpg', './img/produits-min/carrington-street.jpg');
 Insert into Disque values (31, 'Pop-Rock', 'Adèle & Glen', 2012);
