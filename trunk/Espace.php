@@ -19,9 +19,30 @@
 		
         <section class ="commande">
 		
-         
-                <Center><a href="#"><h1>Mes commandes passées</h1></a></center>
-               <Center><a href="#"><h1>Mes commandes en cours</h1></a></center>
+         <caption>
+		
+				<h2>
+					<span class="title">
+						<span class="fa fa-caret-square-o-right"></span> Commande passée
+					</span>
+				</h2>
+				
+			</caption>
+		
+					<Table> 
+						 <tr>
+							<th>date commande</th>
+							<th>Montant</th>
+<?php
+		$results = $db->query('SELECT * FROM Facture');
+        // $results->setFetchMode(PDO::FETCH_OBJ);
+            while($data = $results->fetch()) {
+?>
+				<td><?php echo $data['Date'];?></td>
+				<td><?php echo $data['Montant'];?></td>
+						</tr>
+					</table>
+          
 	    
 
         
