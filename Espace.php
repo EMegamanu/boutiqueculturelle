@@ -37,7 +37,7 @@ $title = 'Espace Personnel';
 			</thead>
 			<tbody>
 <?php
-		$results = $db->query('SELECT * FROM Facture,Commande,Utilisateur'. 'Where F.idCommande = C.id and idUtilisateur= U.id');
+		$results = $db->query('SELECT * FROM Facture F,Commande C,Utilisateur U Where F.idCommande = C.id and C.idUtilisateur= U.id');
         // $results->setFetchMode(PDO::FETCH_OBJ);
             while($data = $results->fetch()) {
 ?>
