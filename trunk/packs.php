@@ -4,7 +4,7 @@ include_once('inc/header.inc.php');
 <link rel="stylesheet" href="stylepack.css" />
 <body>
   <br> <br>
-       <h1> Pack culture</h1>
+       <h1 id= "titre-pack"> Pack culture</h1>
 	   <p> Bienvenue dans votre pack.</p>
 <p> Cet espace vous permettra de créer votre pack étape par étape en toute simplicité
      </p>
