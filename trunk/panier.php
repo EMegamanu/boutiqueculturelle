@@ -6,9 +6,9 @@
 
 	if(!empty($_COOKIE) && !empty($_COOKIE['articles'])) {
 		/* Articles du panier sous forme de paires (id, quantité). */
-		$articles = get_object_vars(
-			json_decode(
-				str_replace('\\', '', $_COOKIE['articles'])
+		$articles = get_object_vars( // Transforme en tableau
+			json_decode( // Transforme un objet JavaScript en objet PHP
+				str_replace('\\', '', $_COOKIE['articles']) // Enlève échappement des chaînes
 			)
 		);
 		$nbArticles = count($articles);
@@ -28,7 +28,7 @@
 		$results = $db->prepare($requete);
 
 		$i = 0;
-		foreach($articles as $id => $nb) {
+		foreach($articles as $id => $nb) { /* Parcours ensemble clefs-valeurs. */
 			$results->bindValue(':article_' . $i, $id);
 			$i++;
 		}
@@ -81,7 +81,7 @@
 	        			<img src="<?php echo $produit->image; ?>" alt=""/>
 	        		</figure>
         		</td>
-        		<td class="prix prix-uht"><?php printf("%.2f", $prixUHT); ?></td>
+        		<td class="prix prix-uht"><?php printf("%.2f", $prixUHT); ?></td><?php // Formatte affichage du prix à 2 chiffres après virgule. ?>
         		<td class="qte">
         			<input type="number" min="0" name="articles[<?php echo $produit->id; ?>]" value="<?php echo $qte; ?>" />
         		</td>
