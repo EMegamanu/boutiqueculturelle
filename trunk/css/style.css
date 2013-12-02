@@ -528,7 +528,7 @@ nav.menu-nav
 {
 	float: left;
 	border :2px solid black;
-	width: 13%;
+	width: 19%;
 	background-color: transparent;
 	margin-top: 8%;
 }
@@ -539,6 +539,7 @@ section.commande
 	background-color: transparent;
 	border: 2px solid black;
 	margin-top: 7%;
+	width:43%;
 }
 
 option[selected][disabled] {
