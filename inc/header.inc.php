@@ -114,7 +114,7 @@
 			<li><a href="disques.php" tabindex="1">Disques</a></li>
 			<li><a href="films.php" tabindex="11">Films</a></li>
 			<li><a href="livres.php" tabindex="21">Livres</a></li>
-			<li><a href="packs.php" tabindex="31">Pack Culture</a></li>
+			<li><a href="packb.php" tabindex="31">Pack Culture</a></li>
 <?php
 	if($utilisateur['admin']) {
 ?>
