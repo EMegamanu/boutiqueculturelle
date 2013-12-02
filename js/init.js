@@ -312,4 +312,20 @@ $(function() {
 	$paiementReset.click(function(evt) {
 		history.back();
 	});
+
+	/* Inscription --------- */
+	var $inscriptionReset = $("#section-inscription :reset");
+
+	/* Retour page panier. */
+	$inscriptionReset.click(function(evt) {
+		history.back();
+	});
+
+	/* Connextion --------- */
+	var $connexionReset = $("#section-connexion :reset");
+
+	/* Retour page panier. */
+	$connexionReset.click(function(evt) {
+		history.back();
+	});
 });

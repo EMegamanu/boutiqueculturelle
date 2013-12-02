@@ -10,7 +10,7 @@
 	<nav id="menu2">
 		<h3>Filtres</h3>
 		<ul>
-			<li><a href="#" class="reset">Tout</a></li>
+			<li><a href="#" class="reset">Tout afficher</a></li>
 			<li><a href="#action">Action</a></li>
 			<li><a href="#comedie">Comédie</a></li>
 			<li><a href="#jeunesse">Jeunesse</a></li>

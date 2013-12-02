@@ -1,4 +1,3 @@
-
 <?php	
 	$title = 'Disques';
 /* Inclusion script connexion base de données. */
@@ -10,7 +9,7 @@
 	<nav id="menu2">
 		<h3>Filtres</h3>
 		<ul>
-			<li><a href="#" class="reset">Tout</a></li>
+			<li><a href="#" class="reset">Tout afficher</a></li>
 			<li><a href="#pop-rock">Pop-Rock</a></li>
 			<li><a href="#rnb">RnB</a></li>
 			<li><a href="#classique">Classique</a></li>
