@@ -1,3 +1,5 @@
+// Documentation de jQuery : http://api.jquery.com/
+
 
 /* Trouvé ici : http://michalbe.blogspot.fr/2010/04/removing-item-with-given-value-from.html */
 Array.prototype.remove = function(value) {
@@ -102,7 +104,7 @@ $(function() {
 	}
 
 	/* ---------------------- */
-	/* Facilite enregistrement/lecture des données des cookies. */
+	/* Facilite enregistrement/lecture des données des cookies (documentation de jquery.cookie). */
 	$.cookie.json = true;
 	$.cookie.default = {
 		path: '/',
@@ -131,11 +133,13 @@ $(function() {
 
 	var $liensAjoutPanier = $tableResults.find(".ajout-panier a:first-child");
 
+	// initialisation des liens d'ajout au panier
 	$liensAjoutPanier.each(function() {
 		var $lien = $(this);
 		var $tr = $lien.closest("tr");
 		var id = $tr.data("id");
 
+		/* Est-ce que l'article est sélectionné ? */
 		var cocher = articles.hasOwnProperty(id);
 		// var cocher = articles.contains(id);
 
@@ -154,8 +158,10 @@ $(function() {
 		}
 	});
 	
+	/* On met à jour le tableau. */
 	$tableResults.trigger("update");
 
+	// Clic sur un lien d'ajout
 	$liensAjoutPanier.click(function(evt) {
 		evt.preventDefault();
 
@@ -172,10 +178,10 @@ $(function() {
 			$lien.addClass(classDecoche);
 
 			// articles.remove(id);
-			delete articles[id];
-			$.cookie("articles", articles);
+			delete articles[id];   // On enleve du panier
+			$.cookie("articles", articles); // ... du cookie...
 
-			nbArticles = Object.keys(articles).length;
+			nbArticles = Object.keys(articles).length; // Et on actualise
 			$nbArticles.text(nbArticles);
 
 			$action.text("+");
@@ -203,6 +209,7 @@ $(function() {
 		$tableResults.trigger("update");
 	});
 
+	/* Actualise qté dans le panier. */
 	function actualiseProduit($input) {
 		var $tr = $input.closest("tr");
 		var id = $tr.data("id");
@@ -217,10 +224,13 @@ $(function() {
 		actualiseProduit($input);
 	});
 
+	// Methode de rabatage
 	$('.ajout-panier .ui-spinner-button').click(function() {
 		var $input = $(this).parent().find("input[type='number']");
 		actualiseProduit($input);
 	});
+
+	// Page du panier ------------------------
 
 	var $resetPanier = $("#section-panier :reset");
 
