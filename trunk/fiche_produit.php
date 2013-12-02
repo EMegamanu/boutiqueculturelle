@@ -20,15 +20,18 @@
 ?>
 
 <section id="section-detail">
-	<h2>Fiche produit</h2>
 	<article>
+	<h2>
+		<span class="title">
+			<span class="fa fa-bookmark-o"></span> Fiche produit
+		</span>
+	</h2>
+	<img src="<?php echo $produit['image'];?>" alt="" />
 	<dl>
 		<dt>Support</dt>
 			<dd><?php echo $categorie;?></dd>
 		<dt>Nom</dt>
 			<dd><?php echo $produit['nom'];?></dd>
-		<dt>Image</dt>
-			<dd><img src="<?php echo $produit['image'];?>" alt="" /></dd>
 		<dt>Prix H.T.</dt>
 			<dd class="prix"><?php echo $produit['prixHT'];?></dd>
 <?php
