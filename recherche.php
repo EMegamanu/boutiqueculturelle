@@ -71,8 +71,10 @@ if ($count>0) {
 	</thead>
 	<tbody>
 <?php		
-while($produit = $results->fetch()) {
-?>
+while($produit = $results->fetch()) { 
+	// possibilité de rajouter dans le panier //
+?> 
+
 <tr data-id="<?php echo $produit['id']; ?>">
 	<td class="ajout-panier">
 		<a href="panier.php?ajout=<?php echo $produit['id']; ?>" class="fa fa-square-o">
