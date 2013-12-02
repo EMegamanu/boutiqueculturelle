@@ -216,6 +216,8 @@ $(function() {
 
 		articles[id] = parseInt($input.val());
 		$.cookie("articles", articles);
+
+		$tableResults.trigger("update");
 	}
 
 	var $inputNb = $tableResults.find(".nb input");
@@ -292,6 +294,7 @@ $(function() {
 		$.cookie("articles", articles);
 
 		actualisePrixTotaux();
+		$tableResults.trigger("update");
 	}
 
 	$qteInputs.change(function(evt) {

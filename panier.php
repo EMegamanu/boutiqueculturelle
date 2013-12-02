@@ -94,14 +94,31 @@
 ?>
 	</tbody>
 	<tfoot>
-		<th colspan="4">Total</th>
-		<td class="prix prix-tht"><?php printf('%.2f', $prixTHT); ?></td>
-		<td class="prix prix-tttc"><?php printf('%.2f', $prixTTTC); ?></td>
+		<tr>
+			<th colspan="4">Total</th>
+			<td class="prix prix-tht"><?php printf('%.2f', $prixTHT); ?></td>
+			<td class="prix prix-tttc"><?php printf('%.2f', $prixTTTC); ?></td>
+		</tr>
 	</tfoot>
 </table>
 <div class="groupe-boutons">
+<?php
+	if(isset($utilisateur)) {
+?>
 	<button type="reset"><span class="fa fa-trash-o"></span> Vider</button>
 	<button type="submit"><span class="fa fa-hand-o-right"></span> Commander</button>
+<?php
+	} else {
+?>
+	<p class="fail">
+		<strong>Vous n'êtes pas connecté.</strong>
+	</p>
+	<p>
+		Veuillez vous <a href="connexion.php">identifier</a> ou vous <a href="inscription.php">inscrire</a> pour finaliser votre commande. Merci.
+	</p>
+<?php
+	}
+?>
 </div>
 </form>
 <?php

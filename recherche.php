@@ -1,4 +1,3 @@
-
 <?php 
 	/* Inclusion script connexion base de données. */
 	require_once('inc/db.inc.php');
