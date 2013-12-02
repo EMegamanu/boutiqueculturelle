@@ -34,7 +34,7 @@
 			</thead>
 			<tbody>
 <?php
-		$results = $db->query('SELECT * FROM Facture D JOIN Commande P ON F.id = C.id');
+		$results = $db->query('SELECT * FROM Facture D JOIN Commande P ON F.idCommande = C.id');
         // $results->setFetchMode(PDO::FETCH_OBJ);
             while($data = $results->fetch()) {
 ?>
