@@ -578,6 +578,36 @@ section#section-mentions-legales h3 {
 }
 
 /* Panier ------------------- */
+section#section-panier figure {
+  text-align: center;
+  margin: 0;
+}
+
+section#section-panier figure img {
+  /*display: inline-block;*/
+  /*vertical-align: middle;*/
+  /*float: left;*/
+}
+
+section#section-panier figcaption {
+  /*display: inline-block;*/
+  /*vertical-align: middle;*/
+  /*margin-left: 160px;*/
+
+  font-style: italic;
+  /*font-size: 1.2em;*/
+  font-weight: bold;
+}
+
+section#section-panier .prix{
+  text-align: right;
+}
+
+section#section-panier .qte > * {
+  display: block;
+  width: 99%;
+}
+
 section#section-panier tfoot th,
 section#section-panier tfoot td,
 section#section-paiement tfoot th,
