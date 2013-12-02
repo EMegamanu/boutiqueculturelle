@@ -59,6 +59,7 @@ if ($count>0) {
 <table class='results'>
 	<thead>
 		<tr>
+			<th><span class="fa fa-shopping-cart"><span class="hidden">Panier</span></span></th>
 			<th>Pochette</th>
 			<th>Nom</th>
 			<th>Genre</th>
@@ -72,7 +73,16 @@ if ($count>0) {
 <?php		
 while($produit = $results->fetch()) {
 ?>
-<tr>
+<tr data-id="<?php echo $produit['id']; ?>">
+	<td class="ajout-panier">
+		<a href="panier.php?ajout=<?php echo $produit['id']; ?>" class="fa fa-square-o">
+			<span class="hidden action">+</span>
+		</a>
+		<!-- Affichage / Masquage au niveau d'un parent du input pour compatibilité avec méthode de rabatage via JQuery. -->
+		<span class="nb">
+			<input type="number" min="1" max="999" name="nb-<?php echo $produit['id']; ?>" value="0" />
+		</span>
+	</td>
 	<td><img src ="<?php echo $produit['image'];?>" alt="" </></td>
 	<td><?php echo $produit['nom'];?></td>
 	<td><?php echo $produit['genre'];?></td>
