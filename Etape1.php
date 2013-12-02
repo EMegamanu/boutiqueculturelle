@@ -6,10 +6,10 @@ include_once('inc/header.inc.php');
 <link rel="stylesheet" href="stylepack.css" />
 
  <body>
-       <p id= "pack"> Etape 1: Choisir un DVD </p>
+       <p id= "pack"> Etape 1: Choisir un Livre </p>
 	   
 	   <p> Vous voila dans la premi&#232re etape de votre PACK.</p>
-<p>	   Nous vous demanderons de choisir dans la liste ci apr&#232s le DVD que vous souhaitez mettre dans votre pack
+<p>	   Nous vous demanderons de choisir dans la liste ci apr&#232s le livre que vous souhaitez mettre dans votre pack
      </p>
 	 </body>
 <center><form action="Etape2.php" method="post">		
