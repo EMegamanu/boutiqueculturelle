@@ -1,5 +1,8 @@
 <?php
-    $title = 'Espace Personnel';
+$title = 'Espace Personnel'; 
+	/* Inclusion script connexion base de données. */
+	require_once('inc/db.inc.php');
+ 
 	/* Inclusion de l'en-tÃªte. */
 	include_once('inc/header.inc.php');
 ?>
