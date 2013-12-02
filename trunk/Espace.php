@@ -13,7 +13,7 @@ $title = 'Espace Personnel';
 	<Body>
         <nav class = "menu-nav">
             <ul>
-                <li><a href="#">Mes informations</a></li>
+                <li><a href="Informations.php">Mes informations</a></li>
                 <li><a href="#">Changer mon mot de passe</a></li>
                 <li><a href="#">Changer mon courriel</a></li>
 				
