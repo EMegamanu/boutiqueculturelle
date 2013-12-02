@@ -1,11 +1,12 @@
 <?php		
 	$title = 'Mentions légales';
+
 	/* Inclusion de l'en-tête. */
 	include_once('inc/header.inc.php');
 
 ?>
 
-<section id="mentions-legales">
+<section id="section-mentions-legales">
 	<h2>Mentions légales</h2>
 	<h3>Informations légales</h3>
 		<ol>

@@ -1,5 +1,9 @@
 <?php
 	date_default_timezone_set('Europe/Paris');
+
+	/* Démarrage de la session utilisateur. */
+	session_start();
+
 ?><!DOCTYPE html>
 <html lang="fr">
 	<head>

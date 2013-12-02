@@ -1,5 +1,4 @@
 <?php
-
     require_once('inc/db.inc.php');
     
     // On va chercher la définition de la classe
@@ -105,4 +104,3 @@
     }
 
     include_once('inc/footer.inc.php');
-
