@@ -73,9 +73,6 @@
             	$prixTHT += $prixHT;
             	$prixTTC = $prixHT * $tva;
 ?>
-<script>
-	console.log(<?php echo $qte * $prixUHT;?>);
-</script>
         	<tr data-id="<?php echo $produit->id; ?>">
         		<td><?php echo $produit->categorie; ?></td>
         		<td>
@@ -86,7 +83,7 @@
         		</td>
         		<td class="prix prix-uht"><?php printf("%.2f", $prixUHT); ?></td>
         		<td class="qte">
-        			<input type="number" min="0" name="produit[<?php echo $produit->id; ?>]" value="<?php echo $qte; ?>" />
+        			<input type="number" min="0" name="articles[<?php echo $produit->id; ?>]" value="<?php echo $qte; ?>" />
         		</td>
         		<td class="prix prix-ht"><?php printf('%.2f', $prixHT); ?></td>
         		<td class="prix prix-ttc"><?php printf('%.2f', $prixTTC); ?></td>
