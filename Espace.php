@@ -14,8 +14,7 @@ $title = 'Espace Personnel';
         <nav class = "menu-nav">
             <ul>
                 <li><a href="Informations.php">Mes informations</a></li>
-                <li><a href="#">Changer mon mot de passe</a></li>
-                <li><a href="#">Changer mon courriel</a></li>
+                <li><a href="contact.php">SAV</a></li>
 				
             </ul>
         </nav>
