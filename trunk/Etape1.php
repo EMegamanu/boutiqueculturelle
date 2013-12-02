@@ -6,7 +6,7 @@ include_once('inc/header.inc.php');
 <link rel="stylesheet" href="stylepack.css" />
 
  <body>
-       <h1> Etape 1: Choisir un DVD </h1>
+       <p id= "pack"> Etape 1: Choisir un DVD </p>
 	   
 	   <p> Vous voila dans la premi&#232re etape de votre PACK.</p>
 <p>	   Nous vous demanderons de choisir dans la liste ci apr&#232s le DVD que vous souhaitez mettre dans votre pack
