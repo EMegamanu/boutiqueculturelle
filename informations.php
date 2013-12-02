@@ -32,8 +32,7 @@
   	'SELECT * FROM Utilisateur '.
   	'WHERE id = ' . $_SESSION['utilisateur']['id']
 );
-
-            while($data = $results->fetch()) {
+    	while($data = $results->fetch()) {
 ?>
 			<tr data-id="<?php echo $data['id']; ?>">
 				<td><?php echo $data['id'];?></td>
