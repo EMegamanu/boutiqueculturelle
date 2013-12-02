@@ -25,8 +25,7 @@
 					<td>Ville</td>
 					<td>Email</td>
 				</tr>
-			</thead>
-			<tbody>
+			</thead>	
 <?php		
 		$results = $db->query(
   	'SELECT * FROM Utilisateur '.
@@ -34,6 +33,7 @@
 );
     	while($data = $results->fetch()) {
 ?>
+		<tbody>
 			<tr data-id="<?php echo $data['id']; ?>">
 				<td><?php echo $data['id'];?></td>
 				<td><?php echo $data['nom'];?></td>
