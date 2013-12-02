@@ -1,8 +1,17 @@
 <?php
     $title = 'Réinitialisation de la base de données';
+
+    // Si l'utilisateur n'est pas admin on le dégage
+    session_start();
+    if(!$_SESSION['utilisateur']['admin']) {
+        header("location: ./");
+    }
+
     /* Inclusion de l'en-tête. */
     include_once('inc/header.inc.php'); 
+
 ?>
+<section>
 <h2>Résultat</h2>
 <?php
 
@@ -43,6 +52,7 @@ try {
 
 <h2>Trace</h2>
 <pre class="log"><?php echo $log; ?></pre>
+</section>
 <?php
     include('inc/footer.inc.php');
 ?>

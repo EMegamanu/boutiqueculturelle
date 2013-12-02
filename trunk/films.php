@@ -5,15 +5,21 @@
 	/* Inclusion de l'en-tête. */
 	include_once('inc/header.inc.php');
 
+	$genres = $db->query('SELECT DISTINCT genre FROM Film ORDER BY genre');
+
 ?>
 <section id="section-produits">
 	<nav id="menu2">
 		<h3>Filtres</h3>
 		<ul>
 			<li><a href="#" class="reset">Tout afficher</a></li>
-			<li><a href="#action">Action</a></li>
-			<li><a href="#comedie">Comédie</a></li>
-			<li><a href="#jeunesse">Jeunesse</a></li>
+<?php
+    while($genre = $genres->fetch()) {
+?>
+			<li><a href="#section-produits"><?php echo $genre[0];?></a></li>
+<?php
+    }
+?>
 		</ul>
 	</nav>
 	<article>
@@ -49,7 +55,7 @@
 					</a>
 					<!-- Affichage / Masquage au niveau d'un parent du input pour compatibilité avec méthode de rabatage via JQuery. -->
 					<span class="nb">
-						<input type="number" min="0" max="999" name="nb-<?php echo $data['id']; ?>" value="0" />
+						<input type="number" min="1" max="999" name="nb-<?php echo $data['id']; ?>" value="0" />
 					</span>
 				</td>
 				<td class="image">

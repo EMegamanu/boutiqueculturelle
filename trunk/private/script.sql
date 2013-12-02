@@ -241,19 +241,19 @@ Insert into produit values (43, 'Kirov Classics', 3, 41.99, './img/produits/kiro
 Insert into Film values (43, 'Ballet', 'Ileg Vinogradov' , 1998);
 
 Insert into produit values (16, 'Naruto - Tome 1', 1, 29.99, './img/produits/naruto-t1.jpg', './img/produits-min/naruto-t1.jpg');
-Insert into livre values(16, 'manga', 'Masashi Kishimoto', 2002);
+Insert into livre values(16, 'Manga', 'Masashi Kishimoto', 2002);
 
 Insert into produit values (17, 'Fairy Tail - Tome 14', 1, 6.99, './img/produits/fairy-tail-t14.jpg', './img/produits-min/fairy-tail-t14.jpg');
-Insert into livre values(17, 'manga', 'Hiro Mashima', 2010);
+Insert into livre values(17, 'Manga', 'Hiro Mashima', 2010);
 
 Insert into produit values (18, 'Death Note - Tome 1', 1, 7.99, './img/produits/death-note-t1.jpg', './img/produits-min/death-note-t1.jpg');
-Insert into livre values(18, 'manga', 'Takeshi Obata, Tsugumi Ohba', 2007);
+Insert into livre values(18, 'Manga', 'Takeshi Obata, Tsugumi Ohba', 2007);
 
 Insert into produit values (19, 'Divine Nanami - Tome 2', 1, 8.99, './img/produits/divine-nanami-t2.jpg', './img/produits-min/divine-nanami-t2.jpg');
-Insert into livre values(19, 'manga', 'Suzuki Julietta ', 2004);
+Insert into livre values(19, 'Manga', 'Suzuki Julietta ', 2004);
 
 Insert into produit values (20, 'King''s Game - Tome 2', 1, 7.99, './img/produits/kings-game-t2.jpg', './img/produits-min/kings-game-t2.jpg');
-Insert into livre values(20, 'manga', 'Hitori Renda, Nobuaki Kanazawa', 2013);
+Insert into livre values(20, 'Manga', 'Hitori Renda, Nobuaki Kanazawa', 2013);
 
 Insert into produit values (21, 'Tintin - Les 7 Boules de Cristal', 1, 6.99, './img/produits/tintin-les-7-boules-de-cristal.jpg', './img/produits-min/tintin-les-7-boules-de-cristal.jpg');
 Insert into livre values(21, 'BD', 'Hergé', 1948);

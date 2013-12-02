@@ -1,4 +1,6 @@
 <?php
+	session_start();
+	
 	$title = 'Paiement';
 
 	/* Inclusion script connexion base de données. */
@@ -36,16 +38,59 @@
 <?php
 			include_once('inc/footer.inc.php');
 		} else {
+			/* Si la commande a déjà été payée, retour à l'accueil... */
+			if($_SESSION['montant'] == 0) {
+				header("location: ./");
+			}
+
+			/* On vide le panier. */
+			setcookie("articles", null, time() - 3600);
+
 			$titulaire = $paiement['titulaire'];
 			$num = $paiement['num'];
 			$date = $paiement['date'];
 			$crypto = $paiement['crypto'];
 
-			/* Suppression du cookie du panier. */
-			setcookie("articles", null, time() - 3600);
+			$idUtilisateur = $_SESSION['utilisateur']['id'];
+
+			/* Ajout commande dans la base de données. */
+			$reqAjoutCommande = 'INSERT INTO Commande(date, idUtilisateur) VALUES(NOW(), :idUtilisateur)';
+			$stmt = $db->prepare($reqAjoutCommande);
+			$stmt->bindValue(':idUtilisateur', $idUtilisateur);
+
+			$stmt->execute();
+
+			$reqGetCommande = 'SELECT max(id) FROM Commande WHERE idUtilisateur = :idUtilisateur';
+			$stmt = $db->prepare($reqGetCommande);
+			$stmt->bindParam(':idUtilisateur', $idUtilisateur);
+			$stmt->execute();
+			$commande = $stmt->fetch();
+			$idCommande = $commande[0];
+
+			/* Ajout lignes de la commande dans la base de données. */
+			foreach($_SESSION['lignesProduits'] as $idProduit => $qte) {
+				$reqAjoutCommandeProduit = 'INSERT INTO Commande_Produit(idCommande, idProduit, quantite) VALUES(:idCommande, :idProduit, :qte)';
+				$stmt = $db->prepare($reqAjoutCommandeProduit);
+				// Solution trouvée ici : http://fr.openclassrooms.com/forum/sujet/probleme-bindparam-date-51009
+				$stmt->bindParam(':idCommande', $idCommande);
+				$stmt->bindParam(':idProduit', $idProduit);
+				$stmt->bindParam(':qte', $qte);
+
+				$stmt->execute();
+			}
+
+			/* Ajout facture dans la base de données. */
+			$reqAjoutFacture = 'INSERT INTO Facture(date, montant, idCommande) VALUES(NOW(), :montant, :idCommande)';
+			$stmt = $db->prepare($reqAjoutFacture);
+			// Solution trouvée ici : http://fr.openclassrooms.com/forum/sujet/probleme-bindparam-date-51009
+			$stmt->bindValue(':montant', $_SESSION['montant']);
+			$stmt->bindValue(':idCommande', $idCommande);
+
+			$stmt->execute();
 
 			/* Inclusion de l'en-tête. */
 			include_once('inc/header.inc.php');
+
 ?>
 	<section id="section-paiement">
 	<h2>
@@ -54,7 +99,7 @@
 		</span>
 	</h2>
 	<p class="result success">
-		Nous avons bien reçu votre paiement de <strong><?php echo $montant; ?> €</strong>.
+		Nous avons bien reçu votre paiement de <strong><?php printf("%.2f", $_SESSION['montant']); ?> €</strong>.
 	</p>
 	<p>
 		Merci d'avoir commandé chez nous, nous vous tiendrons informé de la bonne expédition de vos articles.
@@ -62,6 +107,9 @@
 
 	</section>
 <?php
+			$_SESSION['montant'] = 0;
+			$_SESSION['lignesProduits'] = null;
+
 			/* Inclusion du pied-de-page. */
 			include_once('inc/footer.inc.php');
 		}
@@ -69,6 +117,8 @@
 	} else if(!empty($_POST['articles'])) {
 		/* Articles du panier sous forme de paires (id, quantité). */
 		$articles = $_POST['articles'];
+		$_SESSION['lignesProduits'] = $articles;
+
 		$nbArticles = count($articles);
 
 		if($nbArticles == 0) {
@@ -144,12 +194,15 @@
 	<?php
 	            }
 				$prixTTTC = $prixTHT * $tva;
+				$_SESSION['montant'] = $prixTTTC;
 ?>
 	</tbody>
 	<tfoot>
-		<th colspan="4">Total</th>
-		<td class="prix prix-tht"><?php printf('%.2f', $prixTHT); ?></td>
-		<td class="prix prix-tttc"><?php printf('%.2f', $prixTTTC); ?></td>
+		<tr>
+			<th colspan="4">Total</th>
+			<td class="prix prix-tht"><?php printf('%.2f', $prixTHT); ?></td>
+			<td class="prix prix-tttc"><?php printf('%.2f', $prixTTTC); ?></td>
+		</tr>
 	</tfoot>
 </table>
 </article>
