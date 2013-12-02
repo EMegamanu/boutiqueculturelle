@@ -50,10 +50,7 @@ $title = 'Espace Personnel';
 			}
 ?>
 		</tbody>
-          
-	    
-
-        
+        </table>
 		</section>
 		</body>
 		
