@@ -330,7 +330,7 @@ Insert into Disque values (45, 'Classique', 'Itzhak Perlman' , 1990);
 -- -----------------------------------------------------
 -- Remplissage table Utilisateur
 -- -----------------------------------------------------
-Insert into Utilisateur values(1, 'Admin', 'Paul', 'Chemin du Nord', 69000, 'Lyon', 'Admin@gmail.com','000000',1);
+Insert into Utilisateur values(1, 'Admin', 'Paul', 'Chemin du Nord', 69000, 'Lyon', 'admin@gmail.com','000000',1);
 Insert into Utilisateur values(2, 'Durand', 'Thierry', 'Cours Albert Thomas', 69000, 'Lyon', 'durand@gmail.com','000000',0);
 
 -- -----------------------------------------------------

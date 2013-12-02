@@ -77,8 +77,8 @@
         		<td><?php echo $produit->categorie; ?></td>
         		<td>
         			<figure>
-	        			<img src="<?php echo $produit->image; ?>" alt=""/>
 	        			<figcaption><?php echo $produit->nom; ?></figcaption>
+	        			<img src="<?php echo $produit->image; ?>" alt=""/>
 	        		</figure>
         		</td>
         		<td class="prix prix-uht"><?php printf("%.2f", $prixUHT); ?></td>

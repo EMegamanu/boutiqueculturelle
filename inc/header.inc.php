@@ -2,7 +2,14 @@
 	date_default_timezone_set('Europe/Paris');
 
 	/* Démarrage de la session utilisateur. */
-	session_start();
+	if(empty($_SESSION)) {
+		session_start();
+	}
+
+	$utilisateur = null;
+	if(!empty($_SESSION) && !empty($_SESSION['utilisateur'])) {
+		$utilisateur = $_SESSION['utilisateur']; 
+	}
 
 ?><!DOCTYPE html>
 <html lang="fr">
@@ -61,8 +68,7 @@
 		<nav id="espace-client">
 			<ul>
 <?php
-	$connecte = false;
-	if($connecte) {
+	if($utilisateur) {
 ?>
 				<li>
 					<a href="Espace.php" tabindex="61">
@@ -109,7 +115,13 @@
 			<li><a href="films.php" tabindex="11">Films</a></li>
 			<li><a href="livres.php" tabindex="21">Livres</a></li>
 			<li><a href="packs.php" tabindex="31">Pack Culture</a></li>
+<?php
+	if($utilisateur['admin']) {
+?>
 			<li><a href="admin.php" tabindex="41">Administration</a></li>
+<?php
+	}
+?>
 			<li class="search-item">
 
 				<form method='get' action = 'recherche.php'>
