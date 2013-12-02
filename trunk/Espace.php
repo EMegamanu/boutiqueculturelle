@@ -18,30 +18,35 @@
         </nav>
 		
         <section class ="commande">
-		
-         <caption>
-		
+	<table class="results">
+			<caption>
 				<h2>
 					<span class="title">
-						<span class="fa fa-caret-square-o-right"></span> Commande passée
+						<span class="fa fa-caret-square-o-right"></span> Mes commandes
 					</span>
 				</h2>
-				
 			</caption>
-		
-					<Table> 
-						 <tr>
-							<th>date commande</th>
-							<th>Montant</th>
+			<thead>
+				<tr>
+					<th>date commande</th>
+					<th>Montant</th>
+				</tr>
+			</thead>
+			<tbody>
 <?php
-		$results = $db->query('SELECT * FROM Facture');
+		$results = $db->query('SELECT * FROM Facture D JOIN Commande P ON F.id = C.id');
         // $results->setFetchMode(PDO::FETCH_OBJ);
             while($data = $results->fetch()) {
 ?>
-				<td><?php echo $data['Date'];?></td>
-				<td><?php echo $data['Montant'];?></td>
-						</tr>
-					</table>
+			
+				<td><?php echo $data['date commande'];?></td>
+				<td><?php echo $data['montant facture'];?></td>
+				
+			</tr>
+<?php
+			}
+?>
+		</tbody>
           
 	    
 
