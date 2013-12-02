@@ -58,7 +58,7 @@
 					</span>
 				</td>
 				<td class="image">
-	                <img src="<?php echo $data['miniature'];?>" alt=""/>
+	                <a href="fiche_produit.php?p=<?php echo $data['id']; ?>"><img src="<?php echo $data['miniature'];?>" alt=""/></a>
 	            </td>
 				<td><?php echo $data['nom'];?></td>
 				<td><?php echo $data['genre'];?></td>
