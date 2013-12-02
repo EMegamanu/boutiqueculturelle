@@ -78,7 +78,7 @@
         		<td>
         			<figure>
 	        			<figcaption><?php echo $produit->nom; ?></figcaption>
-	        			<img src="<?php echo $produit->image; ?>" alt=""/>
+	        			<a href="fiche_produit.php?p=<?php echo $produit->id; ?>"><img src="<?php echo $produit->image; ?>" alt=""/></a>
 	        		</figure>
         		</td>
         		<td class="prix prix-uht"><?php printf("%.2f", $prixUHT); ?></td><?php // Formatte affichage du prix à 2 chiffres après virgule. ?>

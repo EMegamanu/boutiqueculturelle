@@ -85,7 +85,7 @@ while($produit = $results->fetch()) {
 			<input type="number" min="1" max="999" name="nb-<?php echo $produit['id']; ?>" value="0" />
 		</span>
 	</td>
-	<td><img src ="<?php echo $produit['image'];?>" alt="" </></td>
+	<td><a href="fiche_produit.php?p=<?php echo $produit['id']; ?>"><img src ="<?php echo $produit['image'];?>" alt="" /></a></td>
 	<td><?php echo $produit['nom'];?></td>
 	<td><?php echo $produit['genre'];?></td>
 	<td><?php echo $produit['artiste'];?></td>

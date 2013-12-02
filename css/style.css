@@ -683,10 +683,12 @@ section#section-panier .groupe-boutons button .fa {
 #section-detail dl {
   display: inline-block;
   vertical-align: text-top;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 #section-detail dt {
   font-weight: bold;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
 #section-detail img {
