@@ -305,5 +305,11 @@ $(function() {
 		actualiseProduitPanier($input);
 	});
 
+	/* Paiement --------- */
+	var $paiementReset = $("#section-paiement :reset");
 
+	/* Retour page panier. */
+	$paiementReset.click(function(evt) {
+		history.back();
+	});
 });
