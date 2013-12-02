@@ -42,8 +42,8 @@ $title = 'Espace Personnel';
             while($data = $results->fetch()) {
 ?>
 			
-				<td><?php echo $data['date commande'];?></td>
-				<td><?php echo $data['montant facture'];?></td>
+				<td><?php echo $data['date'];?></td>
+				<td><?php echo $data['montant'];?></td>
 				
 			</tr>
 <?php
