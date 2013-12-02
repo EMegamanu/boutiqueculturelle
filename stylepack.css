@@ -1,17 +1,16 @@
 
 
-h1{
-  text-align: center;
+#pack {
+	font-size: 1.5em;
+	font-weight: bold;
 }
 
-p {
-text-align:center;
+p{
+text-align: center;
 }
 
-p1 {;
-Margin:20 px;
-Margin-left:43%;
-}
+
+
 .gras
 {
 font-weight: bold;
@@ -29,7 +28,6 @@ td {
  border-color:black;
  width:50%;
  }
- 
  .blanc {
  border:1px solid black; 
  background-color:white;

@@ -12,7 +12,7 @@ $_SESSION['musique'] = $_POST['musique'];
 
 <center> <form action="recapitulatifcopie.php" method="post"><center>
 <body>
-       <h1> Etape 3: Choisir un film </h1>
+       <p id="pack"> Etape 3: Choisir un film </p>
 	   
 	   <p> Vous voila dans la troisi&#232me etape de votre PACK.</p>
 <p>	   Nous vous demanderons de choisir dans la liste ci apr&#232s le film que vous souhaitez mettre dans votre pack

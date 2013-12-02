@@ -10,7 +10,7 @@ $_SESSION['livre'] = $_POST['livre'];
 ?>
 <link rel="stylesheet" href="stylepack.css" />
 <body>
-       <h1> Etape 2: Choisir un Disque </h1>
+       <p id="pack"> Etape 2: Choisir un Disque </p>
 	   
 	   <p> Vous voila dans la deuxi&#232me etape de votre PACK.</p>
 <p>	   Nous vous demanderons de choisir dans la liste ci apr&#232s le Disque que vous souhaitez mettre dans votre pack
