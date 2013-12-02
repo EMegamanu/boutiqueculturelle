@@ -237,7 +237,7 @@ Insert into film values (14, 'Jeunesse', 'Gore Verbinski', 2004);
 Insert into produit values (15, 'Lizzy McGuire', 2, 8.99, './img/produits/lizzy-mc-guire-le-film.jpg', './img/produits-min/lizzy-mc-guire-le-film.jpg');
 Insert into film values (15, 'Jeunesse', 'Jim Fall', 2003);
 
-Insert into produit values (43, 'Kirov Classics', 3, 41.99, './img/produits/kirov-classics.jpg', './img/produits-min/kirov-classics.jpg');
+Insert into produit values (43, 'Kirov Classics', 2, 41.99, './img/produits/kirov-classics.jpg', './img/produits-min/kirov-classics.jpg');
 Insert into Film values (43, 'Ballet', 'Ileg Vinogradov' , 1998);
 
 Insert into produit values (16, 'Naruto - Tome 1', 1, 29.99, './img/produits/naruto-t1.jpg', './img/produits-min/naruto-t1.jpg');
