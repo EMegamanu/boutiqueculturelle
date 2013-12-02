@@ -1,17 +1,14 @@
 
 
-h1{
-  text-align: center;
+#titre-pack  {
+	text-align: center;
 }
+
 
 p {
 text-align:center;
 }
 
-p1 {;
-Margin:20 px;
-Margin-left:43%;
-}
 .gras
 {
 font-weight: bold
